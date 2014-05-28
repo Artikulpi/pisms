@@ -18,7 +18,7 @@ class Auth extends CI_Controller{
 		if($this->session->userdata('login') == FALSE){
 			$this->form_validation->set_rules('user', 'Username', 'required');
 			$this->form_validation->set_rules('pass', 'Password', 'required');
-
+			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
 			if($this->form_validation->run() == TRUE){
 				$user = $this->input->post('user');
 				$pass = $this->input->post('pass');
@@ -27,6 +27,7 @@ class Auth extends CI_Controller{
 					$data = array(
 						'user'=>$user,
 						'login'=>TRUE,
+						'id'=>$data_user->id,
 						'role'=>$data_user->role,
 						);
 					$this->session->set_userdata($data);

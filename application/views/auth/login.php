@@ -1,3 +1,4 @@
+<?=validation_errors()?>
 <div class="text-center">
 	<form class="form-inline" name="login" role="form" action="<?=site_url('auth/login');?>" method="POST">
 		<div class="form-group">
