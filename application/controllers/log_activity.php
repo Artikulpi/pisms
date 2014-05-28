@@ -18,7 +18,7 @@ class Log_activity extends CI_Controller{
 
 				$config['base_url'] = site_url('log_activity/index');
 				$config['total_rows'] = $count->num_rows();
-				$config['per_page'] = 2; 
+				$config['per_page'] = 10; 
 				$config['uri_segment'] = 3;
 				$num = $config['per_page'];
 				$this->pagination->initialize($config);

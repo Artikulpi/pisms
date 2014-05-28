@@ -19,8 +19,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:400,300,700' rel='stylesheet' type='text/css'>
 
-	<script src="media/js/jquery.min.js"></script>
-	<script type="text/javascript" src="media/js/bootstrap.custom.js"></script>
+	<script type="text/javascript" src="media/js/jquery.min.js"></script>
+	<script type="text/javascript" src="media/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -49,6 +49,9 @@
 				<a href="" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Tulis Pesan</a>
 				<a href="" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Inbox</a>
 				<a href="" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Outbox</a>
+				<br>
+				<a href="<?=site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Kontak</a>
+				<a href="<?=site_url('group')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Grup</a>
 				<br>
 				<?php if($this->session->userdata('role')==1){?>
 				<a href="<?=site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Log Aktifitas</a>

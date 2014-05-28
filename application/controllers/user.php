@@ -18,7 +18,7 @@ class User extends CI_Controller{
 
                                 $config['base_url'] = site_url('user/index');
                                 $config['total_rows'] = $count->num_rows();
-                                $config['per_page'] = 2; 
+                                $config['per_page'] = 10; 
                                 $config['uri_segment'] = 3;
                                 $num = $config['per_page'];
                                 $this->pagination->initialize($config);
@@ -57,7 +57,7 @@ class User extends CI_Controller{
                                         $log = array(
                                                 'user_id'=>$this->session->userdata('id'),
                                                 'activity'=>'Menambah user baru',
-                                                'date'=>date('Y-m-d H:i'),
+                                                'date'=>date('Y-m-d H:i:s'),
                                                 'module'=>'User',
                                                 );
                                         $this->Log_model->save($log);
@@ -108,7 +108,7 @@ class User extends CI_Controller{
                                         $log = array(
                                                 'user_id'=>$this->session->userdata('id'),
                                                 'activity'=>'Reset password',
-                                                'date'=>date('Y-m-d H:i'),
+                                                'date'=>date('Y-m-d H:i:s'),
                                                 'module'=>'User',
                                                 );
                                         $this->Log_model->save($log);
@@ -157,7 +157,7 @@ class User extends CI_Controller{
                                         $log = array(
                                                 'user_id'=>$this->session->userdata('id'),
                                                 'activity'=>'Edit user',
-                                                'date'=>date('Y-m-d H:i'),
+                                                'date'=>date('Y-m-d H:i:s'),
                                                 'module'=>'User',
                                                 );
                                         $this->Log_model->save($log);
@@ -178,7 +178,7 @@ class User extends CI_Controller{
                                 $log = array(
                                         'user_id'=>$this->session->userdata('id'),
                                         'activity'=>'Delete user',
-                                        'date'=>date('Y-m-d H:i'),
+                                        'date'=>date('Y-m-d H:i:s'),
                                         'module'=>'User',
                                         );
                                 $this->Log_model->save($log);
