@@ -34,7 +34,7 @@
 					<a class="navbar-brand" href="">piSMS | <small><?=$title?></small></a>
 				</div>
 				<ul>
-					<li><a style="margin-top: 15px" class="btn" href="<?=site_url('auth/logout');?>">Logout</a></li>
+					<li><a style="margin-top: 15px" class="btn" href="<?=site_url('auth/logout');?>">Logout | <?=$this->session->userdata('user');?></a></li>
 				</ul>
 			</div>
 		</div>
@@ -49,24 +49,28 @@
 				<a href="" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Tulis Pesan</a>
 				<a href="" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Inbox</a>
 				<a href="" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Outbox</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-camera"></i> Sent Item</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Link Terkait</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-check"></i> Event</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-tag"></i> Page</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Pengguna</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Media Manager</a>
-			</div>
+				<br>
+				<?php if($this->session->userdata('role')==1){?>
+				<a href="<?=site_url('user')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> List User</a>
+				<?php
+			}
+			?>
+			<a href="" class="list-group-item"><i class="glyphicon glyphicon-check"></i> Event</a>
+			<a href="" class="list-group-item"><i class="glyphicon glyphicon-tag"></i> Page</a>
+			<a href="" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Pengguna</a>
+			<a href="" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Media Manager</a>
 		</div>
-		<div class="content content-top">
-			<div class="panel-body">
-				<div class="main-admin">
-					<div class="panel panel-default">
-						<div style="background-color: #222;" class="panel-heading">
-							<h3 style="color: white;" class="panel-title"><?=$title?></h3>
-						</div>
-						<div class="panel-body">
-							<div class="panel" style="width: 100%; float: left;">
-								<?php isset($page) ? $this->load->view($page) : null; ?>
+	</div>
+	<div class="content content-top">
+		<div class="panel-body">
+			<div class="main-admin">
+				<div class="panel panel-default">
+					<div style="background-color: #222;" class="panel-heading">
+						<h3 style="color: white;" class="panel-title"><?=$title?></h3>
+					</div>
+					<div class="panel-body">
+						<div class="panel" style="width: 100%; float: left;">
+							<?php isset($page) ? $this->load->view($page) : null; ?>
 								<!--div class="panel-heading">
 									<h3 class="panel-title">Admin</h3>
 								</div-->

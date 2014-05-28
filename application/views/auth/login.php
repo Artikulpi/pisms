@@ -1,12 +1,12 @@
 <div class="text-center">
 	<form class="form-inline" name="login" role="form" action="<?=site_url('auth/login');?>" method="POST">
 		<div class="form-group">
-			<label class="sr-only" for="exampleInputEmail2">Email address</label>
-			<input type="text" name="user" class="form-control" id="exampleInputEmail2" placeholder="Username">
+			<label class="sr-only">Username</label>
+			<input type="text" name="user" class="form-control" placeholder="Username">
 		</div>
 		<div class="form-group">
-			<label class="sr-only" for="exampleInputPassword2">Password</label>
-			<input type="password" name="pass" class="form-control" id="exampleInputPassword2" placeholder="Password">
+			<label class="sr-only">Password</label>
+			<input type="password" name="pass" class="form-control" placeholder="Password">
 		</div>
 		<!--div class="checkbox">
 			<label>
