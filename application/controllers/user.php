@@ -10,12 +10,22 @@ class User extends CI_Controller{
                 $this->load->model('User_model');
         }
 
-        public function index(){
+        public function index($offset = NULL){
                 if($this->session->userdata('login') == TRUE){
                         if($this->session->userdata('role') == 1){
+                                $this->load->library('pagination');
+                                $count = $this->User_model->get();
+
+                                $config['base_url'] = site_url('user/index');
+                                $config['total_rows'] = $count->num_rows();
+                                $config['per_page'] = 2; 
+                                $config['uri_segment'] = 3;
+                                $num = $config['per_page'];
+                                $this->pagination->initialize($config);
+                                $data['halaman'] = $this->pagination->create_links();
                                 $data['title'] = 'Daftar User';
                                 $data['Header'] = 'Daftar User';
-                                $data['user'] = $this->User_model->getAll();
+                                $data['user'] = $this->User_model->getAll($num, $offset);
                                 $data['page'] = 'user/list';
                                 $this->load->view('template/layout', $data);
                         }else{
@@ -78,23 +88,34 @@ class User extends CI_Controller{
         public function saveEdit(){
                 if($this->session->userdata('login') == TRUE){
                         if($this->session->userdata('role') == 1){
-                                $this->form_validation->set_rules('user', 'Username', 'required');
                                 $this->form_validation->set_rules('full_name', 'Nama Lengkap', 'required');
                                 $this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
                                 if($this->form_validation->run() == TRUE){
+                                        $id = $this->input->post('id');
                                         $data = array(
-                                                'username' => $this->input->post('user'),
-                                                'password' => md5($this->input->post('pass')),
                                                 'role' => $this->input->post('role'),
                                                 'full_name' => $this->input->post('full_name'),
                                                 'email' => $this->input->post('email'),
-                                                'active' => '1',
+                                                'active' => $this->input->post('status'),
                                                 );
-                                        $this->User_model->save($data);
+                                        $this->User_model->saveEdit($id, $data);
                                         redirect('user');
                                 }
                         }else{
                                 redirect('admin');
+                        }
+                }else{
+                        redirect('auth');
+                }
+        }
+
+        public function delete($id){                
+                if($this->session->userdata('login') == TRUE){
+                        if($this->session->userdata('role') == 1){
+                                $this->User_model->delete($id);
+                                redirect('user');
+                        }else{
+                                redirect('admin');        
                         }
                 }else{
                         redirect('auth');

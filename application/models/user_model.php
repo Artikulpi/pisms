@@ -15,8 +15,12 @@ class User_model extends CI_Model{
 		return $this->db->get_where('user', array('username'=>$user))->row();
 	}
 
-	function getAll(){
-		return $this->db->get('user')->result();
+	function get(){
+		return $this->db->get('user');
+	}
+
+	function getAll($num, $offset){
+		return $this->db->get('user', $num, $offset)->result();
 	}
 
 	function save($data){
@@ -25,5 +29,15 @@ class User_model extends CI_Model{
 
 	function getById($id){
 		return $this->db->get_where('user', array('id'=>$id))->row();
+	}
+
+	function saveEdit($id, $data){
+		$this->db->where('id', $id);
+		$this->db->update('user', $data);
+	}
+
+	function delete($id){
+		$this->db->where('id', $id);
+		$this->db->delete('user');
 	}
 }

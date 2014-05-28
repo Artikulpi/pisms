@@ -31,3 +31,4 @@
 </table>
 <br>
 <a href="<?=site_url('user/add')?>" class="btn btn-success">Tambah User</a>
+<?=$halaman?>
