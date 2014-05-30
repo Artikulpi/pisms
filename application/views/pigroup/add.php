@@ -1,6 +1,6 @@
 <?php
 echo validation_errors();
-echo form_open('group/add'); ?>
+echo form_open('pigroup/add'); ?>
 
 <div class="form-group">
         <label class="control-label col-sm-3">Grup *</label>

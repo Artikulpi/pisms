@@ -52,7 +52,7 @@
 				<a href="<?=site_url('sms/sentitem')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Sent Item</a>
 				<br>
 				<a href="<?=site_url('contact')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Kontak</a>
-				<a href="<?=site_url('group')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Grup</a>
+				<a href="<?=site_url('pigroup')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Grup</a>
 				<a href="<?=site_url('contactgroup')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Anggota Grup</a>
 				<br>
 				<a href="<?=site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Log Aktifitas</a>

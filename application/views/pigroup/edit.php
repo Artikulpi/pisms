@@ -1,6 +1,6 @@
 <?php
 echo validation_errors();
-echo form_open('group/saveEdit'); ?>
+echo form_open('pigroup/saveEdit'); ?>
 
 <input type="hidden" name="id" value="<?=$group->id?>">
 <div class="form-group">

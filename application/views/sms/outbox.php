@@ -1,16 +1,16 @@
 <table class="table table-striped">
 	<thead>
-		<th>Pengirim</th>
+		<th>No. Tujuan</th>
 		<th>Isi</th>
 		<th>Tanggal</th>
 		<th>Aksi</th>
 	</thead>
 	<?php
-	foreach ($inbox as $row) { ?>
+	foreach ($outbox as $row) { ?>
 	<tr>
-		<td><?=$row->SenderNumber;?></td>
+		<td><?=$row->DestinationNumber;?></td>
 		<td><?=$row->TextDecode;?></td>
-		<td><?=date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
+		<td><?=date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></td>
 		<td><?='-';?></td>
 	</tr>
 

@@ -7,7 +7,7 @@ class Contact extends CI_Controller{
 		$this->load->helper(array('url','form','date'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->model(array('Contact_model','Log_model','Group_model','Contactgroup_model'));
+		$this->load->model(array('Contact_model','Log_model','Pigroup_model','Contactgroup_model'));
 	}
 
 	public function index($offset = NULL){
@@ -25,7 +25,7 @@ class Contact extends CI_Controller{
 			$data['title'] = 'List Contact';
 			$data['header'] = 'Daftar Kontak';
 			$data['contactgroup'] = $this->Contactgroup_model->getfor();
-			$data['group'] = $this->Group_model->getfor();
+			$data['group'] = $this->Pigroup_model->getfor();
 			$data['contact'] = $this->Contact_model->getAll($num, $offset);
 			$data['page'] = 'contact/list';
 			$this->load->view('template/layout', $data);

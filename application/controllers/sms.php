@@ -31,4 +31,48 @@ class Sms extends CI_Controller{
 			redirect('auth');
 		}
 	}
+
+	function outbox($offset = NULL){
+		if($this->session->userdata('login') == TRUE){
+			$this->load->library('pagination');
+			$count = $this->Sms_model->countOutbox();
+
+			$config['base_url'] = site_url('sms/outbox');
+			$config['total_rows'] = $count->num_rows();
+			$config['per_page'] = 10; 
+			$config['uri_segment'] = 3;
+			$num = $config['per_page'];
+			$this->pagination->initialize($config);
+			$data['halaman'] = $this->pagination->create_links();
+			$data['title'] = 'Outbox';
+			$data['header'] = 'Kotak Keluar';
+			$data['outbox'] = $this->Sms_model->getOutbox($num, $offset);
+			$data['page'] = 'sms/outbox';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
+	}
+
+	function sentitem($offset = NULL){
+		if($this->session->userdata('login') == TRUE){
+			$this->load->library('pagination');
+			$count = $this->Sms_model->countSentitems();
+
+			$config['base_url'] = site_url('sms/sentitem');
+			$config['total_rows'] = $count->num_rows();
+			$config['per_page'] = 10; 
+			$config['uri_segment'] = 3;
+			$num = $config['per_page'];
+			$this->pagination->initialize($config);
+			$data['halaman'] = $this->pagination->create_links();
+			$data['title'] = 'Sent Item';
+			$data['header'] = 'Terkirim';
+			$data['sentitem'] = $this->Sms_model->getSentitems($num, $offset);
+			$data['page'] = 'sms/sentitem';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
+	}
 }

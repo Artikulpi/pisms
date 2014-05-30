@@ -7,7 +7,7 @@ class Contactgroup extends CI_Controller{
 		$this->load->helper(array('url','form','date'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->model(array('Contactgroup_model','Log_model','Contact_model','Group_model'));
+		$this->load->model(array('Contactgroup_model','Log_model','Contact_model','Pigroup_model'));
 	}
 
 	public function index($offset = NULL){
@@ -25,7 +25,7 @@ class Contactgroup extends CI_Controller{
 			$data['title'] = 'List Group';
 			$data['header'] = 'Daftar Anggota Group';
 			$data['contact'] = $this->Contact_model->getfor();
-			$data['group'] = $this->Group_model->getfor();
+			$data['group'] = $this->Pigroup_model->getfor();
 			$data['contactgroup'] = $this->Contactgroup_model->getAll($num, $offset);
 			$data['page'] = 'contactgroup/list';
 			$this->load->view('template/layout', $data);
@@ -37,7 +37,7 @@ class Contactgroup extends CI_Controller{
 	public function add(){
 		if($this->session->userdata('login') == TRUE){
 			$this->form_validation->set_rules('contact', 'Kontak', 'required');
-			$this->form_validation->set_rules('group', 'Grupx', 'required');
+			$this->form_validation->set_rules('group', 'Grup', 'required');
 			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
 			if($this->form_validation->run() == TRUE){
 				$data = array(
@@ -55,7 +55,7 @@ class Contactgroup extends CI_Controller{
 				redirect('contactgroup');
 			}else{
 				$data['contact'] = $this->Contact_model->getfor();
-				$data['group'] = $this->Group_model->getfor();
+				$data['group'] = $this->Pigroup_model->getfor();
 				$data['title'] = 'Add Group';
 				$data['header'] = 'Tambah Anggota Grup';
 				$data['page'] = 'contactgroup/add';
@@ -69,7 +69,7 @@ class Contactgroup extends CI_Controller{
 	function edit($id){
 		if($this->session->userdata('login') == TRUE){
 			$data['contact'] = $this->Contact_model->getfor();
-			$data['group'] = $this->Group_model->getfor();
+			$data['group'] = $this->Pigroup_model->getfor();
 			$data['contactgroup'] = $this->Contactgroup_model->getById($id);
 			$data['title'] = 'Edit Anggota Group';
 			$data['header'] = 'Sunting Anggota Grup';
