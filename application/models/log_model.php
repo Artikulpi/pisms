@@ -11,6 +11,7 @@ class Log_model extends CI_Model{
 	}
 
 	function getAll($num, $offset){
+		$this->db->order_by('id', 'DESC');
 		return $this->db->get('log_activity', $num, $offset)->result();
 	}
 }

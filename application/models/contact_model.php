@@ -7,10 +7,12 @@ class Contact_model extends CI_Model{
 	}
 
 	function getfor(){
+		$this->db->order_by('name', 'ASC');
 		return $this->db->get('contact')->result();
 	}
 
 	function getAll($num, $offset){
+		$this->db->order_by('name', 'ASC');
 		return $this->db->get('contact', $num, $offset)->result();
 	}
 

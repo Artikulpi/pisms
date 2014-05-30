@@ -7,10 +7,12 @@ class Contactgroup_model extends CI_Model{
 	}
 
 	function getfor(){
+		$this->db->order_by('contact_id', 'DESC');
 		return $this->db->get('contact_has_group')->result();
 	}
 
 	function getAll($num, $offset){
+		$this->db->order_by('contact_id', 'DESC');
 		return $this->db->get('contact_has_group', $num, $offset)->result();
 	}
 

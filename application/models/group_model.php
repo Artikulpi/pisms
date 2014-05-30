@@ -7,10 +7,12 @@ class Group_model extends CI_Model{
 	}
 
 	function getfor(){
+		$this->db->order_by('group_name', 'ASC');
 		return $this->db->get('grup')->result();
 	}
 
 	function getAll($num, $offset){
+		$this->db->order_by('group_name', 'ASC');
 		return $this->db->get('grup', $num, $offset)->result();
 	}
 
