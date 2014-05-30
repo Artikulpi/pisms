@@ -50,16 +50,17 @@
 				<a href="" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Inbox</a>
 				<a href="" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Outbox</a>
 				<br>
-				<a href="<?=site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Kontak</a>
+				<a href="<?=site_url('contact')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Kontak</a>
 				<a href="<?=site_url('group')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Grup</a>
+				<a href="<?=site_url('contactgroup')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Anggota Grup</a>
 				<br>
-				<?php if($this->session->userdata('role')==1){?>
 				<a href="<?=site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Log Aktifitas</a>
+				<?php if($this->session->userdata('role')==1){?>
 				<a href="<?=site_url('user')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> List User</a>
 				<?php
 			}
 			?>
-			<a href="<?=site_url('user/reset/'.$this->session->userdata('id'));?>" class="list-group-item"><i class="glyphicon glyphicon-check"></i> Ubah Password <?=$this->session->userdata('user')?></a>
+			<a href="<?=site_url('user/reset/'.$this->session->userdata('id'));?>" class="list-group-item"><i class="glyphicon glyphicon-check"></i> Ubah Password <strong>[ <?=$this->session->userdata('user')?> ]</strong></a>
 			<!--a href="" class="list-group-item"><i class="glyphicon glyphicon-tag"></i> Page</a>
 			<a href="" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Pengguna</a>
 			<a href="" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Media Manager</a-->

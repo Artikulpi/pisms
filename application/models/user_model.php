@@ -3,7 +3,7 @@
 class User_model extends CI_Model{
 
 	function checkUser($user, $pass){
-		$query = $this->db->get_where('user', array('username'=> $user, 'password'=>md5($pass)));
+		$query = $this->db->get_where('user', array('username'=> $user, 'password'=>md5($pass), 'active'=>'1'));
 		if($query->num_rows() > 0){
 			return TRUE;
 		}else{

@@ -78,16 +78,12 @@ class User extends CI_Controller{
 
         public function reset($id){
                 if($this->session->userdata('login') == TRUE){
-                        if($this->session->userdata('role') == 1){
-                                $user = $this->User_model->getById($id);
-                                $data['user'] = $user;
-                                $data['title'] = 'Reset Password';
-                                $data['header'] = 'Atur Ulang Kata Sandi '.$user->username;
-                                $data['page'] = 'user/reset';
-                                $this->load->view('template/layout', $data); 
-                        }else{
-                                redirect('admin');
-                        }
+                        $user = $this->User_model->getById($id);
+                        $data['user'] = $user;
+                        $data['title'] = 'Reset Password';
+                        $data['header'] = 'Atur Ulang Kata Sandi '.$user->username;
+                        $data['page'] = 'user/reset';
+                        $this->load->view('template/layout', $data); 
                 }else{
                         redirect('auth');
                 }

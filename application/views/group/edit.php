@@ -10,6 +10,6 @@ echo form_open('group/saveEdit'); ?>
 	</div>
 </div>
 <div class="text-center">
-	<input type="submit" class="btn btn-success" value="Tambah"/>
+	<input type="submit" class="btn btn-success" value="Edit"/>
 </div>
 <?php echo form_close(); ?>

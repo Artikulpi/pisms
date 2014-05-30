@@ -6,6 +6,10 @@ class Group_model extends CI_Model{
 		return $this->db->get('grup');
 	}
 
+	function getfor(){
+		return $this->db->get('grup')->result();
+	}
+
 	function getAll($num, $offset){
 		return $this->db->get('grup', $num, $offset)->result();
 	}
