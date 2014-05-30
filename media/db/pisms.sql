@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 28, 2014 at 04:07 PM
+-- Generation Time: May 30, 2014 at 08:30 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `phone_number` varchar(20) NOT NULL,
   `organisation` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -41,13 +41,13 @@ CREATE TABLE IF NOT EXISTS `contact` (
 --
 
 CREATE TABLE IF NOT EXISTS `contact_has_group` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `contact_id` int(11) NOT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_contact_has_group_group1` (`group_id`),
   KEY `fk_contact_has_group_contact` (`contact_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 -- --------------------------------------------------------
 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `log_activity` (
   `module` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
 
 -- --------------------------------------------------------
 
