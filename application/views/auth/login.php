@@ -1,19 +1,9 @@
 <?=validation_errors()?>
-<div class="text-center">
-	<form class="form-inline" name="login" role="form" action="<?=site_url('auth/login');?>" method="POST">
-		<div class="form-group">
-			<label class="sr-only">Username</label>
-			<input type="text" name="user" class="form-control" placeholder="Username">
-		</div>
-		<div class="form-group">
-			<label class="sr-only">Password</label>
-			<input type="password" name="pass" class="form-control" placeholder="Password">
-		</div>
-		<!--div class="checkbox">
-			<label>
-				<input type="checkbox" name="remember_me"> Remember me
-			</label>
-		</div-->
-		<button type="submit" class="btn btn-default">Sign in</button>
+<link href="<?php echo base_url(); ?>media/css/signin.css" rel="stylesheet">
+<div class="container">
+	<form class="form-signin" action="<?=site_url('auth/login');?>" role="form" method="POST">
+		<input type="text" class="form-control" placeholder="Username" name="user" autofocus>
+		<input type="password" class="form-control" placeholder="Password" name="pass">
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Masuk</button>
 	</form>
 </div>
