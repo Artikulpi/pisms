@@ -7,7 +7,7 @@ class Sms extends CI_Controller{
 		$this->load->helper(array('url','form','date','text'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->model(array('Sms_model','Contact_model','Log_model'));
+		$this->load->model(array('Sms_model','Contact_model','Log_model','Pigroup_model'));
 	}
 
 	function inbox($offset = NULL){
@@ -97,6 +97,8 @@ class Sms extends CI_Controller{
 				$this->Log_model->save($log);
 				redirect('sms/outbox');
 			}else{
+				$data['contact'] = $this->Contact_model->getfor();
+				$data['group'] = $this->Pigroup_model->getfor();
 				$data['title'] = 'Create SMS';
 				$data['header'] = 'SMS';
 				$data['page'] = 'sms/create';

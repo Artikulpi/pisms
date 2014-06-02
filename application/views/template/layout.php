@@ -12,15 +12,15 @@
 
 	<link href="<?php echo base_url(); ?>media/css/style.css" rel="stylesheet" type='text/css'>
 	<link href="<?php echo base_url(); ?>media/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="shortcut icon" href="media/image/Pedoman-Logo-transparant.png">
+	<link rel="shortcut icon" href="<?=base_url();?>media/image/Pedoman-Logo-transparant.png">
 
 	<title>piSMS - <?=$title?></title>
 
 	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:400,300,700' rel='stylesheet' type='text/css'>
-
-	<script type="text/javascript" src="media/js/jquery.min.js"></script>
-	<script type="text/javascript" src="media/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>media/js/jquery.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>media/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>media/js/bootstrap.min.js"></script>
 
 </head>
 <body>

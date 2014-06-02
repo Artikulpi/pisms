@@ -9,14 +9,64 @@ echo form_open('sms/create'); ?>
 	</div>
 </div>
 
-<div class="form-group">
-	<label class="control-label col-sm-3">Nomor Tujuan *</label>
-	<div class="col-sm-9">
-		<input type="text"class="form-control" name="contact" style="max-width:300px"></textarea>
-	</div>
-</div>
-
 <div class="text-center">
 	<input type="submit" class="btn btn-success" value="Kirim"/>
 </div>
 <?php echo form_close(); ?>
+
+<div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+					Masukan Nomor Telepon
+				</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+			<div class="panel-body">
+				<input type="text" class="form-control" name="number" />
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+					Kontak
+				</a>
+			</h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+				<?php foreach ($contact as $row) {?>
+				<div class="checkbox">
+					<label>
+						<input name="contact" type="checkbox" value="<?=$row->phone_number?>"><?=$row->name?>
+					</label>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+					Grup
+				</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				<?php foreach ($group as $row) {?>
+				<div class="checkbox">
+					<label>
+						<input name="group" type="checkbox" value="<?=$row->id?>"><?=$row->group_name?>
+					</label>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+</div>
