@@ -46,7 +46,7 @@
 			<div class="list-group">
 				<a style="background-color: #222; border-color:transparent;" class="list-group-item active">List Menu</a>
 				<a href="<?=site_url('admin')?>" class="list-group-item"><i class="glyphicon glyphicon-home"></i> Dashboard</a>
-				<a href="<?=site_url('sms/new')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Tulis Pesan</a>
+				<a href="<?=site_url('sms/create')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Tulis Pesan</a>
 				<a href="<?=site_url('sms/inbox')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Inbox</a>
 				<a href="<?=site_url('sms/outbox')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Outbox</a>
 				<a href="<?=site_url('sms/sentitem')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Sent Item</a>

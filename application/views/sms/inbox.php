@@ -6,16 +6,26 @@
 		<th>Aksi</th>
 	</thead>
 	<?php
-	foreach ($inbox as $row) { ?>
-	<tr>
-		<td><?=$row->SenderNumber;?></td>
-		<td><?=$row->TextDecode;?></td>
-		<td><?=date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
-		<td><?='-';?></td>
-	</tr>
+	foreach ($inbox as $row) {
+		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
+		$reply = anchor('sms/reply/'.$row->ID,'<span class="glyphicon glyphicon-share"></span>');
+		$forward = anchor('sms/forwardInbox/'.$row->ID,'<span class="glyphicon glyphicon-share-alt"></span>');
+		$delete = anchor('sms/deleteInbox/'.$row->ID,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
+		?>
+		<tr>
+			<td><?=$row->SenderNumber;?></td>
+			<td>
+				<?php
+				$cut = character_limiter(strip_tags($row->TextDecoded),6);
+				echo anchor('sms/detailInbox/'.$row->ID, $cut);
+				?>
+			</td>
+			<td><?=date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
+			<td><?=$reply.' '.$forward.' '.$delete;?></td>
+		</tr>
 
-	<?php
-}
-?>
+		<?php
+	}
+	?>
 </table>
 <div class="text-right"><?=$halaman?></div>

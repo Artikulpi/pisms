@@ -4,10 +4,10 @@ class Sms extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
-		$this->load->helper(array('url','form','date'));
+		$this->load->helper(array('url','form','date','text'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->model(array('Sms_model'));
+		$this->load->model(array('Sms_model','Contact_model','Log_model'));
 	}
 
 	function inbox($offset = NULL){
@@ -24,6 +24,7 @@ class Sms extends CI_Controller{
 			$data['halaman'] = $this->pagination->create_links();
 			$data['title'] = 'Inbox';
 			$data['header'] = 'Kotak Masuk';
+			$data['contact'] = $this->Contact_model->getfor();
 			$data['inbox'] = $this->Sms_model->getInbox($num, $offset);
 			$data['page'] = 'sms/inbox';
 			$this->load->view('template/layout', $data);
@@ -71,6 +72,88 @@ class Sms extends CI_Controller{
 			$data['sentitem'] = $this->Sms_model->getSentitems($num, $offset);
 			$data['page'] = 'sms/sentitem';
 			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
+	}
+
+	function create(){
+		if($this->session->userdata('login') == TRUE){
+			$this->form_validation->set_rules('content', 'Isi', 'required');
+			$this->form_validation->set_rules('contact', 'Nomor Tujuan', 'required');
+			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
+			if($this->form_validation->run() == TRUE){
+				$data = array(
+					'DestinationNumber' => $this->input->post('contact'),
+					'Text' => md5($this->input->post('content')),
+					);
+				$this->Sms_model->sent($data);
+				$log = array(
+					'user_id'=>$this->session->userdata('id'),
+					'activity'=>'Kirim SMS',
+					'date'=>date('Y-m-d H:i:s'),
+					'module'=>'Sms',
+					);
+				$this->Log_model->save($log);
+				redirect('sms/outbox');
+			}else{
+				$data['title'] = 'Create SMS';
+				$data['header'] = 'SMS';
+				$data['page'] = 'sms/create';
+				$this->load->view('template/layout', $data);
+			}
+		}else{
+			redirect('auth');
+		}
+	}
+
+	function detailInbox($id){
+		if($this->session->userdata('login') == TRUE){
+			$data['sms'] = $this->Sms_model->getDetailInbox($id);
+			$data['title'] = 'Detail';
+			$data['header'] = 'Kotak Masuk';
+			$data['page'] = 'sms/detailInbox';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
+	}
+
+	function forwardInbox($id){
+		if($this->session->userdata('login') == TRUE){
+			$data['sms'] = $this->Sms_model->getDetailInbox($id);
+			$data['title'] = 'Forward';
+			$data['header'] = 'Teruskan Pesan';
+			$data['page'] = 'sms/forwardInbox';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}	
+	}
+
+	function reply($id){
+		if($this->session->userdata('login') == TRUE){
+			$data['sms'] = $this->Sms_model->getDetailInbox($id);
+			$data['title'] = 'Reply';
+			$data['header'] = 'Balas Pesan';
+			$data['page'] = 'sms/reply';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}	
+	}
+
+	function deleteInbox($id){
+		if($this->session->userdata('login')== TRUE){
+			$this->Sms_model->deleteInbox($id);
+			$log = array(
+				'user_id'=>$this->session->userdata('id'),
+				'activity'=>'Hapus SMS',
+				'date'=>date('Y-m-d H:i:s'),
+				'module'=>'Sms',
+				);
+			$this->Log_model->save($log);
+			redirect('sms/inbox');
 		}else{
 			redirect('auth');
 		}

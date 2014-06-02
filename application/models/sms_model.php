@@ -28,4 +28,17 @@ class Sms_model extends CI_Model{
 		$this->db->order_by('id', 'ASC');
 		return $this->db->get('sentitems', $num, $offset)->result();
 	}
+
+	function sent($data){
+		$this->db->insert('outbox', $data);
+	}
+
+	function deleteInbox($id){
+		$this->db->where('ID', $id);
+		$this->db->delete('inbox');
+	}
+
+	function getDetailInbox($id){
+		return $this->db->get_where('inbox', array('ID'=> $id))->row();
+	}
 }
