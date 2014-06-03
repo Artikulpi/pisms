@@ -9,10 +9,8 @@ echo form_open('sms/create'); ?>
 	</div>
 </div>
 
-<div class="text-center">
-	<input type="submit" class="btn btn-success" value="Kirim"/>
-</div>
-<?php echo form_close(); ?>
+<br>
+<br>
 
 <div class="panel-group" id="accordion">
 	<div class="panel panel-default">
@@ -23,9 +21,12 @@ echo form_open('sms/create'); ?>
 				</a>
 			</h4>
 		</div>
-		<div id="collapseOne" class="panel-collapse collapse in">
+		<div id="collapseOne" class="panel-collapse collapse">
 			<div class="panel-body">
 				<input type="text" class="form-control" name="number" />
+				<div class="text-center">
+					<input type="submit" name="input_manual" class="btn btn-success" value="Kirim"/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -46,6 +47,9 @@ echo form_open('sms/create'); ?>
 					</label>
 				</div>
 				<?php } ?>
+				<div class="text-center">
+					<input type="submit" name="input_contact" class="btn btn-success" value="Kirim"/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -66,7 +70,11 @@ echo form_open('sms/create'); ?>
 					</label>
 				</div>
 				<?php } ?>
+				<div class="text-center">
+					<input type="submit" name="input_group" class="btn btn-success" value="Kirim"/>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<?php echo form_close(); ?>

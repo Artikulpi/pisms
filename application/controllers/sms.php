@@ -80,11 +80,10 @@ class Sms extends CI_Controller{
 	function create(){
 		if($this->session->userdata('login') == TRUE){
 			$this->form_validation->set_rules('content', 'Isi', 'required');
-			$this->form_validation->set_rules('contact', 'Nomor Tujuan', 'required');
 			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
-			if($this->form_validation->run() == TRUE){
+			if($this->form_validation->run() == TRUE AND $this->input->post('input_manual')){
 				$data = array(
-					'DestinationNumber' => $this->input->post('contact'),
+					'DestinationNumber' => $this->input->post('number'),
 					'Text' => md5($this->input->post('content')),
 					);
 				$this->Sms_model->sent($data);
@@ -123,6 +122,8 @@ class Sms extends CI_Controller{
 
 	function forwardInbox($id){
 		if($this->session->userdata('login') == TRUE){
+			$data['contact'] = $this->Contact_model->getfor();
+			$data['group'] = $this->Pigroup_model->getfor();
 			$data['sms'] = $this->Sms_model->getDetailInbox($id);
 			$data['title'] = 'Forward';
 			$data['header'] = 'Teruskan Pesan';
