@@ -62,22 +62,36 @@
 			}
 			?>
 			<a href="<?=site_url('user/reset/'.$this->session->userdata('id'));?>" class="list-group-item"><i class="glyphicon glyphicon-check"></i> Ubah Password <strong>[ <?=$this->session->userdata('user')?> ]</strong></a>
-			<!--a href="" class="list-group-item"><i class="glyphicon glyphicon-tag"></i> Page</a>
-			<a href="" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Pengguna</a>
-			<a href="" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Media Manager</a-->
+		</div>
+	</div>
+	<div class="content content-top">
+		<div class="panel-body">
+			<div class="main-admin">
+				<div class="panel panel-default">
+					<div style="background-color: #222;" class="panel-heading">
+						<h3 style="color: white;" class="panel-title"><?=$header?></h3>
+					</div>
+					<div class="panel-body">
+						<div class="panel" style="width: 100%; float: left;">
+							<?php isset($page) ? $this->load->view($page) : null; ?>
+
+						</div>
+					</div>
+					</div
+				</div>
 			</div>
 		</div>
-		<div class="content content-top">
+		<div class="panel panel-success">
 			<div class="panel-body">
-				<div class="main-admin">
-					<div class="panel panel-default">
-						<div style="background-color: #222;" class="panel-heading">
-							<h3 style="color: white;" class="panel-title"><?=$header?></h3>
-						</div>
-						<div class="panel-body">
-							<div class="panel" style="width: 100%; float: left;">
-								<?php isset($page) ? $this->load->view($page) : null; ?>
-								<!--div class="panel-heading">
+				Copyright @2014
+				<button class="btn btn-primary">About Us</button>
+				<button class="btn btn-primary text-right">About Us</button>
+			</div>
+			<!--div class="panel-footer">Panel footer</div-->
+		</div>		
+	</body>
+	</html>
+		<!--div class="panel-heading">
 									<h3 class="panel-title">Admin</h3>
 								</div-->
 								<!--div class="panel-body">
@@ -88,15 +102,3 @@
 										</tbody>
 									</table>
 								</div-->
-							</div>
-						</div>
-						</div
-					</div>
-				</div>
-				<div id="dialog-confirm" title="Apakah anda yakin?" style="display: none">
-					<p>
-						<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
-						"Data akan dihapus !"
-					</p>
-				</div>
-			</div>
