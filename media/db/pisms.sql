@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `contact_has_group` (
 -- Table structure for table `grup`
 --
 
-CREATE TABLE IF NOT EXISTS `grup` (
+CREATE TABLE IF NOT EXISTS `pigroup` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `group_name` varchar(60) NOT NULL,
   PRIMARY KEY (`id`)
