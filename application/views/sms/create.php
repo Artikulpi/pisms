@@ -36,9 +36,6 @@ echo form_open('sms/create'); ?>
 			$(function(){
 				$('.autocomplete').autocomplete({
 					serviceUrl: site+'/sms/search',
-					var autoo = suggestion.value;
-					<?php $var = autoo; ?>
-					
 					onSelect: function (suggestion) {
 						alert('You selected: ' + suggestion.value + ', ' + suggestion.phone);
 						
@@ -47,9 +44,6 @@ echo form_open('sms/create'); ?>
 				document.getElementById('autoc').value="autoo";   
 			});
 			</script>
-			<?php
-			echo $var;?>
-			<input type="text" name="kontakk" value="">
 		</div>
 	</label>
 </div>

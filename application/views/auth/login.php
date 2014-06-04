@@ -1,4 +1,5 @@
 <?=validation_errors()?>
+<?php if(isset($error)) echo $error;?>
 <link href="<?php echo base_url(); ?>media/css/signin.css" rel="stylesheet">
 <div class="container">
 	<form class="form-signin" action="<?=site_url('auth/login');?>" role="form" method="POST">
