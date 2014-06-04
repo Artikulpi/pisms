@@ -3,10 +3,19 @@
  */
 
  /* Move down content because we have a fixed navbar that is 50px tall */
- body {
-  padding-top: 50px;
-  color: #044D29;
-}
+ body{margin:0px;}
+       #accordion .glyphicon { margin-right:10px; }
+       .panel-collapse>.list-group .list-group-item:first-child {border-top-right-radius: 0;border-top-left-radius: 0;}
+       .panel-collapse>.list-group .list-group-item {border-width: 1px 0;}
+       .panel-collapse>.list-group {margin-bottom: 0;}
+       .panel-collapse .list-group-item {border-radius:0;}
+
+       .panel-collapse .list-group .list-group {margin: 0;margin-top: 10px;}
+       .panel-collapse .list-group-item li.list-group-item {margin: 0 -15px;border-top: 1px solid #ddd;border-bottom: 0;padding-left: 30px;}
+       .panel-collapse .list-group-item li.list-group-item:last-child {padding-bottom: 0;}
+
+       .panel-collapse div.list-group div.list-group{margin: 0;}
+       .panel-collapse div.list-group .list-group a.list-group-item {border-top: 1px solid #ddd;border-bottom: 0;padding-left: 30px;}
 
 
 /*
@@ -38,7 +47,7 @@
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #5C832F;
+    background-color: #eeeeee;
     border-right: 1px solid #eee;
   }
 }
@@ -152,7 +161,7 @@
 }
 .navbar-inverse {
   padding: 0px;
-  background-color: #284907;
+  background-color: #222;
 }
 .navbar-inverse .nav > li.active:first-child > a:hover,
 .navbar-inverse .nav > li.active:first-child > a:focus {
@@ -334,7 +343,7 @@ transition:0.5s ease;
 a:hover
 {
 color:#284907;
-margin-left:5px;
+margin-left:0px;
 -webkit-transition:0.5s ease;
 -moz-transition:0.5s ease;
 -o-transition:0.5s ease;
@@ -362,4 +371,6 @@ text-align: left;
 font-family: verdana;
 padding-top:10px;
 }
+
+
 

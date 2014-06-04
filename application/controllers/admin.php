@@ -10,13 +10,9 @@ class Admin extends CI_Controller{
 	}
 
 	public function index(){
-		if($this->session->userdata('login') == TRUE){
-			$data['title'] = 'Dashboard';
-			$data['header'] = 'Dashboard';
-			$data['page'] = 'admin/dash';
-			$this->load->view('template/layout', $data);
-		}else{
-			redirect('auth');
-		}
+		$data['title'] = 'Dashboard';
+		$data['header'] = 'Dashboard';
+		$data['page'] = 'admin/dash';
+		$this->load->view('template/layout', $data);
 	}
 }

@@ -30,7 +30,6 @@ class Auth extends CI_Controller{
 						'id'=>$data_user->id,
 						'role'=>$data_user->role,
 						);
-					$this->session->sess_expiration = '1800';
 					$this->session->set_userdata($data);
 					redirect('admin/index');
 				}else{
