@@ -37,7 +37,7 @@ echo form_open('sms/create'); ?>
 				$('.autocomplete').autocomplete({
 					serviceUrl: site+'/sms/search',
 					onSelect: function (suggestion) {
-						alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+						alert('You selected: ' + suggestion.value + ', ' + suggestion.phone);
 					}
 				});   
 			});

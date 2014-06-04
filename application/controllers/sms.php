@@ -173,7 +173,8 @@ class Sms extends CI_Controller{
 			$arr['query'] = $keyword;
 			$arr['suggestions'][] = array(
 				'value'  =>$row->name,
-				'data'   =>$row->id
+				'data'   =>$row->id,
+				'phone'  =>$row->phone_number
 				);
 		}
       // minimal PHP 5.2
