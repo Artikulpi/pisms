@@ -33,4 +33,11 @@ class Contact_model extends CI_Model{
 		$this->db->where('id', $id);
 		$this->db->delete('contact');
 	}
+
+	function lookup($keyword){
+		$this->db->select('*')->from('contact');
+		$this->db->like('name',$keyword,'after');
+		$query = $this->db->get();    
+		return $query->result();
+	}
 }

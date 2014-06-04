@@ -4,26 +4,30 @@
 
 	<meta http-equiv="content-type" content="text/html" />
 	<meta name="author" content="lolkittens" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-	<link href="<?php echo base_url(); ?>media/css/style.css" rel="stylesheet" type='text/css'>
-	<link href="<?php echo base_url(); ?>media/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="shortcut icon" href="<?=base_url();?>media/image/Pedoman-Logo-transparant.png">
+	<link href='<?php echo base_url();?>media/css/jquery.autocomplete.css' rel='stylesheet' />
+	<link href="<?php echo base_url(); ?>media/css/style.css" rel="stylesheet" type='text/css'/>
+	<link href="<?php echo base_url(); ?>media/css/bootstrap.min.css" rel="stylesheet"/>
+	<link rel="shortcut icon" href="<?=base_url();?>media/image/Pedoman-Logo-transparant.png"/>
 
 	<title>piSMS - <?=$title?></title>
 
-	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:400,300,700' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="<?=base_url();?>media/js/jquery.js"></script>
-	<script type="text/javascript" src="<?=base_url();?>media/js/jquery.min.js"></script>
+	<!--link href='http://fonts.googleapis.com/css?family=Century-Gothic:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:400,300,700' rel='stylesheet' type='text/css'-->
+	<script type='text/javascript' src='<?php echo base_url();?>media/js/jquery-1.8.2.min.js'></script>
+	<script type='text/javascript' src='<?php echo base_url();?>media/js/jquery.autocomplete.js'></script>
 	<script type="text/javascript" src="<?=base_url();?>media/js/bootstrap.min.js"></script>
+	<!--script type="text/javascript" src="<?=base_url();?>media/js/jquery.js"></script>
+	<script type="text/javascript" src="<?=base_url();?>media/js/jquery.min.js"></script-->
 
-</head>
-<body>
+
+	</head>
+	<body>
 
 		<!-- /Header
 		================================================= -->

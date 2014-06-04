@@ -161,4 +161,22 @@ class Sms extends CI_Controller{
 			redirect('auth');
 		}
 	}
+
+	public function search()
+	{
+		$keyword = $this->uri->segment(3);
+
+		$data = $this->db->from('contact')->like('name',$keyword)->get(); 
+
+		foreach($data->result() as $row)
+		{
+			$arr['query'] = $keyword;
+			$arr['suggestions'][] = array(
+				'value'  =>$row->name,
+				'data'   =>$row->id
+				);
+		}
+      // minimal PHP 5.2
+		echo json_encode($arr);
+	}
 }
