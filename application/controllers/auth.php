@@ -30,11 +30,10 @@ class Auth extends CI_Controller{
 						'id'=>$data_user->id,
 						'role'=>$data_user->role,
 						);
-					$this->session->sess_expiration = '1800';
 					$this->session->set_userdata($data);
 					redirect('admin/index');
 				}else{
-					$data['error'] = "Username atau password tidak valid";
+//					$data['error'] = "Username atau password tidak valid";
 					$data['title'] = 'Login';
 					$data['page'] = 'auth/login';
 					$this->load->view('template/layout-dashboard', $data);					

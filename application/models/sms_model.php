@@ -41,12 +41,4 @@ class Sms_model extends CI_Model{
 	function getDetailInbox($id){
 		return $this->db->get_where('inbox', array('ID'=> $id))->row();
 	}
-
-	function lookup($keyword){
-		$this->db->select('*')->from('contact');
-		$this->db->like('propinsi',$keyword,'after');
-		$query = $this->db->get();    
-
-		return $query->result();
-	}
 }
