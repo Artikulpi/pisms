@@ -47,7 +47,7 @@ echo form_open('sms/create'); ?>
 				<?php foreach ($contact as $row) {?>
 				<div class="checkbox">
 					<label>
-						<input name="contact" type="checkbox" value="<?=$row->phone_number?>"><?=$row->name?>
+						<input name="contact" type="checkbox" value="<?php echo $row->phone_number?>"><?php echo $row->name?>
 					</label>
 				</div>
 				<?php } ?>
@@ -70,7 +70,7 @@ echo form_open('sms/create'); ?>
 				<?php foreach ($group as $row) {?>
 				<div class="checkbox">
 					<label>
-						<input name="group" type="checkbox" value="<?=$row->id?>"><?=$row->group_name?>
+						<input name="group" type="checkbox" value="<?php echo $row->id?>"><?php echo $row->group_name?>
 					</label>
 				</div>
 				<?php } ?>

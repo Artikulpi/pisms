@@ -11,6 +11,6 @@
 				Github : 
 				Jika terdapat bug pada aplikasi ini, maka sila kirim feedback pada link berikut <?php echo mailto('office@artikulpi.com', 'ini'); ?>
 			</p>
-			<a href="<?=site_url('admin')?>">Kembali ke halaman pengelolaan sms</a>
+			<a href="<?php echo site_url('admin')?>">Kembali ke halaman pengelolaan sms</a>
 		</div>
 	</div>

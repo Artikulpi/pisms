@@ -13,15 +13,15 @@
 	<link href="<?php echo base_url(); ?>media/css/style.css" rel="stylesheet" type='text/css'>
 	<link href="<?php echo base_url(); ?>media/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>media/css/dashboard.css" rel="stylesheet">
-	<link rel="shortcut icon" href="<?=base_url();?>media/image/Pedoman-Logo-transparant.png">
+	<link rel="shortcut icon" href="<?php echo base_url();?>media/image/Pedoman-Logo-transparant.png">
 
-	<title>piSMS - <?=$title?></title>
+	<title>piSMS - <?php echo $title?></title>
 
 	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:400,300,700' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="<?=base_url();?>media/js/jquery.js"></script>
-	<script type="text/javascript" src="<?=base_url();?>media/js/jquery.min.js"></script>
-	<script type="text/javascript" src="<?=base_url();?>media/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -40,7 +40,7 @@
 							<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
-									<li><a style="margin-top: 15px" class="btn" href="<?=site_url('auth/logout');?>"><i class="glyphicon glyphicon-user"></i> <?=$this->session->userdata('user');?> | Logout <i class="glyphicon glyphicon-lock"></i></a></li>
+									<li><a style="margin-top: 15px" class="btn" href="<?php echo site_url('auth/logout');?>"><i class="glyphicon glyphicon-user"></i> <?php echo $this->session->userdata('user');?> | Logout <i class="glyphicon glyphicon-lock"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -54,25 +54,25 @@
 						<div class="list-group">
 							
 							<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">List Menu</a>
-							<a href="<?=site_url('admin')?>" class="list-group-item"><i class="glyphicon glyphicon-home"></i> Dashboard</a>
-							<a href="<?=site_url('sms/create')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Tulis Pesan</a>
-							<a href="<?=site_url('sms/inbox')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Inbox</a>
-							<a href="<?=site_url('sms/outbox')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Outbox</a>
-							<a href="<?=site_url('sms/sentitem')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Sent Item</a>
+							<a href="<?php echo site_url('admin')?>" class="list-group-item"><i class="glyphicon glyphicon-home"></i> Dashboard</a>
+							<a href="<?php echo site_url('sms/create')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Tulis Pesan</a>
+							<a href="<?php echo site_url('sms/inbox')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Inbox</a>
+							<a href="<?php echo site_url('sms/outbox')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Outbox</a>
+							<a href="<?php echo site_url('sms/sentitem')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Sent Item</a>
 							<br>
 							<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">List Menu</a>
-							<a href="<?=site_url('contact')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Kontak</a>
-							<a href="<?=site_url('pigroup')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Grup</a>
-							<a href="<?=site_url('contactgroup')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Anggota Grup</a>
+							<a href="<?php echo site_url('contact')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Kontak</a>
+							<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Grup</a>
+							<a href="<?php echo site_url('contactgroup')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Anggota Grup</a>
 							<br>
 							<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">List Menu</a>
-							<a href="<?=site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Log Aktifitas</a>
+							<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Log Aktifitas</a>
 							<?php if($this->session->userdata('role')==1){?>
-							<a href="<?=site_url('user')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> List User</a>
+							<a href="<?php echo site_url('user')?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> List User</a>
 							<?php
 						}
 						?>
-						<a href="<?=site_url('user/reset/'.$this->session->userdata('id'));?>" class="list-group-item"><i class="glyphicon glyphicon-check"></i> Ubah Password <strong>[ <?=$this->session->userdata('user')?> ]</strong></a>
+						<a href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>" class="list-group-item"><i class="glyphicon glyphicon-check"></i> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong></a>
 			<!--a href="" class="list-group-item"><i class="glyphicon glyphicon-tag"></i> Page</a>
 			<a href="" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Pengguna</a>
 			<a href="" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Media Manager</a-->
@@ -85,7 +85,7 @@
 				<div class="main-admin">
 					<div class="panel panel-default">
 						<div style="background-color: #006E7D;" class="panel-heading">
-							<h3 style="color: white;" class="panel-title"><?=$header?></h3>
+							<h3 style="color: white;" class="panel-title"><?php echo $header?></h3>
 						</div>
 						<div class="panel-body">
 							<div class="panel" style="width: 100%; float: left;">
@@ -121,7 +121,7 @@
 				<p class="navbar-text pull-left">© pisms-2014
 				</p>
 				<div class="navbar-collapse collapse">
-					<a href="<?=site_url('about')?>"><p class="navbar-text pull-right">About Us
+					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right">About Us
 					</p>
 					<a href="#"><p class="navbar-text pull-right">Contact
 					</p>	

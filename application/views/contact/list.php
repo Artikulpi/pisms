@@ -12,11 +12,11 @@
 		<tr>
 			<td><?php echo anchor('contact/detail/'.$row->id,$row->name)?></td>
 
-			<td><?=$edit.'&nbsp;'.$delete?></td>
+			<td><?php echo $edit.'&nbsp;'.$delete?></td>
 		</tr>
 		<?php
 	} ?>  
 </table>
 <br>
-<a href="<?=site_url('contact/add')?>" class="btn btn-success">Tambah Kontak</a>
-<div class="text-right"><?=$halaman?></div>
+<a href="<?php echo site_url('contact/add')?>" class="btn btn-success">Tambah Kontak</a>
+<div class="text-right"><?php echo $halaman?></div>

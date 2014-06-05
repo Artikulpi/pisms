@@ -1,6 +1,6 @@
-Nama : <?=$contact->name?><br>
-Telepon : <?=$contact->phone_number?><br>
-Organisasi : <?=$contact->organisation?><br>
+Nama : <?php echo $contact->name?><br>
+Telepon : <?php echo $contact->phone_number?><br>
+Organisasi : <?php echo $contact->organisation?><br>
 Grup : 
 <?php
 foreach ($contactgroup as $cg) {
@@ -12,6 +12,6 @@ foreach ($contactgroup as $cg) {
 	}
 }
 ?>
-<a href="<?=site_url('contact')?>" class="btn btn-info btn-xs">Kontak</a>
-<a href="<?=site_url('sms/sendto/'.$contact->id)?>" class="btn btn-warning btn-xs">Kirim SMS</a>
-<a href="<?=site_url('contact/delete/'.$contact->id)?>" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a>
+<a href="<?php echo site_url('contact')?>" class="btn btn-info btn-xs">Kontak</a>
+<a href="<?php echo site_url('sms/sendto/'.$contact->id)?>" class="btn btn-warning btn-xs">Kirim SMS</a>
+<a href="<?php echo site_url('contact/delete/'.$contact->id)?>" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a>

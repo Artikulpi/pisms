@@ -13,7 +13,7 @@
 		$delete = anchor('contactgroup/delete/'.$row->id,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
 		?>
 		<tr>
-			<td><?=$no?></td>
+			<td><?php echo $no?></td>
 			<td>
 				<?php
 				foreach ($contact as $con) {
@@ -32,12 +32,12 @@
 				}
 				?>
 			</td>
-			<td><?=$edit.'&nbsp;'.$delete?></td>
+			<td><?php echo $edit.'&nbsp;'.$delete?></td>
 		</tr>
 		<?php
 		$no++;
 	} ?>  
 </table>
 <br>
-<a href="<?=site_url('contactgroup/add')?>" class="btn btn-success">Tambah Anggota Grup</a>
-<div class="text-right"><?=$halaman?></div>
+<a href="<?php echo site_url('contactgroup/add')?>" class="btn btn-success">Tambah Anggota Grup</a>
+<div class="text-right"><?php echo $halaman?></div>

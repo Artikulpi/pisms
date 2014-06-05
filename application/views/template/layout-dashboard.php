@@ -15,7 +15,7 @@
 	<link rel="shortcut icon" href="media/image/Pedoman-Logo-transparant.png">
 	<link href="<?php echo base_url(); ?>media/css/dashboard.css" rel="stylesheet">
 
-	<title>piSMS - <?=$title?></title>
+	<title>piSMS - <?php echo $title?></title>
 
 	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:400,300,700' rel='stylesheet' type='text/css'>
@@ -32,7 +32,7 @@
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href=""><img src="/pisms/media/img/SMS.png" class="img-rounded" width="30">piSMS | <small><?=$title?></small></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href=""><img src="/pisms/media/img/SMS.png" class="img-rounded" width="30">piSMS | <small><?php echo $title?></small></a>
 				</div>
 				
 					</div>

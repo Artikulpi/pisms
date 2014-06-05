@@ -10,12 +10,12 @@
 		$delete = anchor('pigroup/delete/'.$row->id,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
 		?>
 		<tr>
-			<td><?=anchor('pigroup/detail/'.$row->id, $row->group_name)?></td>
-			<td><?=$edit.'&nbsp;'.$delete?></td>
+			<td><?php echo anchor('pigroup/detail/'.$row->id, $row->group_name)?></td>
+			<td><?php echo $edit.'&nbsp;'.$delete?></td>
 		</tr>
 		<?php
 	} ?>  
 </table>
 <br>
-<a href="<?=site_url('pigroup/add')?>" class="btn btn-success">Tambah Grup</a>
-<div class="text-right"><?=$halaman?></div>
+<a href="<?php echo site_url('pigroup/add')?>" class="btn btn-success">Tambah Grup</a>
+<div class="text-right"><?php echo $halaman?></div>

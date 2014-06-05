@@ -12,7 +12,7 @@ echo form_open('sms/create'); ?>
 <div class="form-group">
 	<label class="control-label col-sm-3">Nomor Tujuan *</label>
 	<div class="col-sm-9">
-		<input type="text"class="form-control" name="contact" value="<?=$sms->SenderNumber;?>" style="max-width:300px">
+		<input type="text"class="form-control" name="contact" value="<?php echo $sms->SenderNumber;?>" style="max-width:300px">
 	</div>
 </div>
 

@@ -8,14 +8,14 @@
 	<?php
 	foreach ($sentitem as $row) { ?>
 	<tr>
-		<td><?=$row->DestinationNumber;?></td>
-		<td><?=$row->TextDecode;?></td>
-		<td><?=date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></td>
-		<td><?='-';?></td>
+		<td><?php echo $row->DestinationNumber;?></td>
+		<td><?php echo $row->TextDecode;?></td>
+		<td><?php echo date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></td>
+		<td><?php echo '-';?></td>
 	</tr>
 
 	<?php
 }
 ?>
 </table>
-<div class="text-right"><?=$halaman?></div>
+<div class="text-right"><?php echo $halaman?></div>

@@ -13,19 +13,19 @@
 		$delete = anchor('sms/deleteInbox/'.$row->ID,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
 		?>
 		<tr>
-			<td><?=$row->SenderNumber;?></td>
+			<td><?php echo $row->SenderNumber;?></td>
 			<td>
 				<?php
 				$cut = character_limiter(strip_tags($row->TextDecoded),6);
 				echo anchor('sms/detailInbox/'.$row->ID, $cut);
 				?>
 			</td>
-			<td><?=date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
-			<td><?=$reply.' '.$forward.' '.$delete;?></td>
+			<td><?php echo date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
+			<td><?php echo $reply.' '.$forward.' '.$delete;?></td>
 		</tr>
 
 		<?php
 	}
 	?>
 </table>
-<div class="text-right"><?=$halaman?></div>
+<div class="text-right"><?php echo $halaman?></div>

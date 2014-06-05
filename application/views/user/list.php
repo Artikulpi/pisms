@@ -18,18 +18,18 @@
 		$delete = anchor('user/delete/'.$row->id,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
 		?>
 		<tr>
-			<td><?=$no?></td>
-			<td><?=$row->username?></td>
-			<td><?=$row->full_name?></td>
-			<td><?=$row->email?></td>
-			<td><?=($row->role == 1) ? 'Admin' : 'General' ;?></td>
-			<td><?=($row->active == 1) ? 'Aktif' : 'Tidak aktif' ;?></td>
-			<td><?=$reset.'&nbsp;'.$edit.'&nbsp;'.$delete?></td>
+			<td><?php echo $no?></td>
+			<td><?php echo $row->username?></td>
+			<td><?php echo $row->full_name?></td>
+			<td><?php echo $row->email?></td>
+			<td><?php echo ($row->role == 1) ? 'Admin' : 'General' ;?></td>
+			<td><?php echo ($row->active == 1) ? 'Aktif' : 'Tidak aktif' ;?></td>
+			<td><?php echo $reset.'&nbsp;'.$edit.'&nbsp;'.$delete?></td>
 		</tr>
 		<?php
 		$no++;
 	} ?>
 </table>
 <br>
-<a href="<?=site_url('user/add')?>" class="btn btn-success">Tambah User</a>
-<div class="text-right"><?=$halaman?></div>
+<a href="<?php echo site_url('user/add')?>" class="btn btn-success">Tambah User</a>
+<div class="text-right"><?php echo $halaman?></div>

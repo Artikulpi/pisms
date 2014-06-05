@@ -1,7 +1,7 @@
 <?php
 echo validation_errors();
 echo form_open('user/saveReset'); ?>
-<input type="hidden" value="<?=$user->id?>" name="id">
+<input type="hidden" value="<?php echo $user->id?>" name="id">
 <div class="form-group">
 	<label class="control-label col-sm-3">Password Baru *</label>
 	<div class="col-sm-9">
