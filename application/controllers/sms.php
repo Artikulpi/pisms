@@ -84,9 +84,10 @@ class Sms extends CI_Controller{
 			if($this->form_validation->run() == TRUE AND $this->input->post('input_manual')){
 				$data = array(
 					'DestinationNumber' => $this->input->post('number'),
-					'Text' => md5($this->input->post('content')),
+					'Text' => $this->input->post('content')
 					);
 				$this->Sms_model->sent($data);
+
 				$log = array(
 					'user_id'=>$this->session->userdata('id'),
 					'activity'=>'Kirim SMS',
@@ -94,10 +95,12 @@ class Sms extends CI_Controller{
 					'module'=>'Sms',
 					);
 				$this->Log_model->save($log);
+
 				if($this->input->post('draft_id')){
 					$draft_id = $this->input->post('draft_id');
 					$this->Sms_model->deleteDraft($draft_id);
 				}
+				
 				redirect('sms/outbox');
 			}elseif($this->form_validation->run() == TRUE AND $this->input->post('draft')){
 				$content = $this->input->post('content');
