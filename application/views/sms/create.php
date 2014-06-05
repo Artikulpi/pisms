@@ -1,19 +1,18 @@
-<script src="<?php echo base_url(); ?>media/js/tinymce/tinymce.min.js"></script>
-<script>
-        tinymce.init({selector:'textarea'});
-</script>
+
 <?php
 echo validation_errors();
 echo form_open('sms/create'); ?>
 
-<div class="form-group">
-	<label class="control-label col-sm-3">Isi *</label>
-	<div class="col-sm-12 col-md-12">
+<label class="col-md-3 control-label" for="name">Isi *</label>
+	<div class="col-md-9">
 		<textarea class="form-control" name="content" rows="3" style="max-width:300px"></textarea><br>
 	</div>
+
+
+<label class="col-md-3 control-label" for="name">Judul</label>
+<div class="col-md-9">
+<input type="text" class="form-control" name="title" placeholder="Judul"/>
 </div>
-
-
 <div class="col-sm-12 col-md-12">
 <div class="panel-group" id="accordion">
 	<div class="panel panel-default">
@@ -26,9 +25,11 @@ echo form_open('sms/create'); ?>
 		</div>
 		<div id="collapseOne" class="panel-collapse collapse">
 			<div class="panel-body">
-				<input type="text" class="form-control" name="number" />
+				<input type="text" class="form-control" name="number"/>
 				<div class="text-center">
+					<div class="col-sm-2 col-md-2">
 					<input type="submit" name="input_manual" class="btn btn-success" value="Kirim"/>
+				</div>
 				</div>
 			</div>
 		</div>
