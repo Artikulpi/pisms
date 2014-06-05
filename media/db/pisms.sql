@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 05, 2014 at 09:27 AM
+-- Generation Time: May 30, 2014 at 08:30 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `phone_number` varchar(20) NOT NULL,
   `organisation` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -47,7 +47,19 @@ CREATE TABLE IF NOT EXISTS `contact_has_group` (
   PRIMARY KEY (`id`),
   KEY `fk_contact_has_group_group1` (`group_id`),
   KEY `fk_contact_has_group_contact` (`contact_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `grup`
+--
+
+CREATE TABLE IF NOT EXISTS `grup` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_name` varchar(60) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 -- --------------------------------------------------------
 
@@ -63,19 +75,7 @@ CREATE TABLE IF NOT EXISTS `log_activity` (
   `module` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pigroup`
---
-
-CREATE TABLE IF NOT EXISTS `pigroup` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `group_name` varchar(60) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(60) DEFAULT NULL,
   `active` enum('0','1') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Constraints for dumped tables
@@ -102,8 +102,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Constraints for table `contact_has_group`
 --
 ALTER TABLE `contact_has_group`
-  ADD CONSTRAINT `fk_contact_has_group_contact` FOREIGN KEY (`contact_id`) REFERENCES `contact` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_contact_has_group_group1` FOREIGN KEY (`group_id`) REFERENCES `pigroup` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_contact_has_group_contact` FOREIGN KEY (`contact_id`) REFERENCES `contact` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_contact_has_group_group1` FOREIGN KEY (`group_id`) REFERENCES `grup` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `log_activity`
