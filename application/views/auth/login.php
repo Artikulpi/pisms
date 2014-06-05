@@ -10,19 +10,17 @@ if(isset($error)){echo $error;}
 					<h3 class="panel-title">Login piSMS<small></small></h3>
 				</div>
 				<div class="panel-body">
-					<form class="form" action="<?php echo site_url('auth/login');?>" role="form" method="POST">
-						<div class="row">
-							<div class="col-xs-6 col-sm-6 col-md-12">
-								<div class="form-group">
-									<input type="text" name="user" id="user" class="form-control input-sm" placeholder="Username">
-									<input type="password" class="form-control input-sm" placeholder="Password" name="pass" id="pass">
-								</div>
-								
-								<input type="submit" value="Masuk" class="btn btn-success btn-block">
-								
-							</form>
+					<?php echo form_open('auth/login');?>						<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-12">
+						<div class="form-group">
+							<input type="text" name="user" id="user" class="form-control input-sm" placeholder="Username">
+							<input type="password" class="form-control input-sm" placeholder="Password" name="pass" id="pass">
 						</div>
+
+						<input type="submit" value="Masuk" class="btn btn-success btn-block">
+						<?php echo form_close(); ?>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
