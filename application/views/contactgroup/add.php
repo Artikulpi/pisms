@@ -8,11 +8,11 @@ echo form_open('contactgroup/add'); ?>
                 <select class="form-control" name="contact">
                         <?php foreach ($contact as $row) {
                                 ?>
-                                <option value="<?php echo $row->id?>"><?php echo $row->name?></option>
+                                <option value="<?=$row->id?>"><?=$row->name?></option>
                                 <?php
                         } 
                         ?>
-                </select>
+                </select><br>
         </div>
 </div>
 <div class="form-group">
@@ -21,15 +21,17 @@ echo form_open('contactgroup/add'); ?>
                 <select class="form-control" name="group">
                         <?php foreach ($group as $row) {
                                 ?>
-                                <option value="<?php echo $row->id?>"><?php echo $row->group_name?></option>
+                                <option value="<?=$row->id?>"><?=$row->group_name?></option>
                                 <?php
                         } 
                         ?>
-                </select>
+                </select><br>
         </div>
 </div>
 
-<div class="text-center">
+<div class="text-left">
+	<label class="control-label col-sm-3"></label>
+	<div class="col-sm-2">
         <input type="submit" class="btn btn-success" value="Tambah"/>
-</div>
+</div></div>
 <?php echo form_close(); ?>

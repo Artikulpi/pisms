@@ -8,7 +8,9 @@ echo form_open('pigroup/add'); ?>
                 <input type="text" class="form-control span5" name="group" placeholder="Nama Grup">
         </div>
 </div>
-<div class="text-center">
+<div class="text-left">
+	<label class="control-label col-sm-3"></label>
+	<div class="col-sm-2">
         <input type="submit" class="btn btn-success" value="Tambah"/>
-</div>
+</div></div>
 <?php echo form_close(); ?>

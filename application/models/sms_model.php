@@ -38,7 +38,7 @@ class Sms_model extends CI_Model{
 	}
 
 	function getOutbox($num, $offset){
-		$this->db->order_by('id', 'DESC');
+		$this->db->order_by('id', 'ASC');
 		return $this->db->get('outbox', $num, $offset)->result();
 	}
 

@@ -21,7 +21,9 @@ echo form_open('contact/saveEdit'); ?>
 		<input type="text" class="form-control span5" name="organisation" value="<?=$contact->organisation?>">
 	</div>
 </div>
-<div class="text-center">
+<div class="text-left">
+	<label class="control-label col-sm-3"></label>
+	<div class="col-sm-2">
 	<input type="submit" class="btn btn-success" value="Edit"/>
-</div>
+</div></div>
 <?php echo form_close(); ?>
