@@ -84,7 +84,7 @@ class Sms extends CI_Controller{
 			if($this->form_validation->run() == TRUE AND $this->input->post('input_manual')){
 				$data = array(
 					'DestinationNumber' => $this->input->post('number'),
-					'Text' => $this->input->post('content')
+					'TextDecoded' => $this->input->post('content')
 					);
 				$this->Sms_model->sent($data);
 
@@ -100,7 +100,7 @@ class Sms extends CI_Controller{
 					$draft_id = $this->input->post('draft_id');
 					$this->Sms_model->deleteDraft($draft_id);
 				}
-				
+
 				redirect('sms/outbox');
 			}elseif($this->form_validation->run() == TRUE AND $this->input->post('draft')){
 				$content = $this->input->post('content');
