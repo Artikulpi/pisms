@@ -1,9 +1,6 @@
 <table class="table table-striped">
 	<thead>
 		<th>Nama</th>
-		<th>Telepon</th>
-		<th>Organisasi</th>
-		<th>Grup</th>
 		<th>Aksi</th>
 	</thead>
 	<?php
@@ -13,21 +10,8 @@
 		$delete = anchor('contact/delete/'.$row->id,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
 		?>
 		<tr>
-			<td><?=$row->name?></td>
-			<td><?=$row->phone_number?></td>
-			<td><?=$row->organisation?></td>
-			<td>
-				<?php
-				foreach ($contactgroup as $cg) {
-					if($cg->contact_id==$row->id){
-						foreach ($group as $gr) {
-							if($cg->group_id==$gr->id)
-								echo '<li>'.$gr->group_name.'</li>';
-						}
-					}
-				}
-				?>
-			</td>
+			<td><?php echo anchor('contact/detail/'.$row->id,$row->name)?></td>
+
 			<td><?=$edit.'&nbsp;'.$delete?></td>
 		</tr>
 		<?php
