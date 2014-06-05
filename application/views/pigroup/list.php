@@ -10,7 +10,7 @@
 		$delete = anchor('pigroup/delete/'.$row->id,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
 		?>
 		<tr>
-			<td><?=$row->group_name?></td>
+			<td><?=anchor('pigroup/detail/'.$row->id, $row->group_name)?></td>
 			<td><?=$edit.'&nbsp;'.$delete?></td>
 		</tr>
 		<?php

@@ -33,4 +33,16 @@ class Pigroup_model extends CI_Model{
 		$this->db->where('id', $id);
 		$this->db->delete('pigroup');
 	}
+
+	function memberGroup($id){
+		$this->db->select('contact_has_group.contact_id, contact_has_group.group_id');
+		$this->db->select('contact.name as NAMA');
+		$this->db->select('pigroup.group_name as GRUP');
+		$this->db->from('contact_has_group');
+		$this->db->join('pigroup', 'pigroup.id = contact_has_group.group_id');
+		$this->db->join('contact', 'contact.id = contact_has_group.contact_id');
+		$this->db->where('contact_has_group.id', $id);
+		$query = $this->db->get();
+		return $query->row();
+	}
 }

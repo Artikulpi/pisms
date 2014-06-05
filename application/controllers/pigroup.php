@@ -7,7 +7,7 @@ class Pigroup extends CI_Controller{
 		$this->load->helper(array('url','form','date'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->model(array('Pigroup_model','Log_model'));
+		$this->load->model(array('Pigroup_model','Log_model','Contact_model','Contactgroup_model'));
 	}
 
 	public function index($offset = NULL){
@@ -26,6 +26,20 @@ class Pigroup extends CI_Controller{
 			$data['header'] = 'Daftar Grup';
 			$data['group'] = $this->Pigroup_model->getAll($num, $offset);
 			$data['page'] = 'pigroup/list';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
+	}
+
+	public function detail($id){
+		if($this->session->userdata('login') == TRUE){
+			$data['title'] = 'Detail Group';
+			$data['header'] = 'Rinci Grup';
+			$data['chg'] = $this->Contactgroup_model->getByGroup($id);
+			$data['group'] = $this->Pigroup_model->getById($id);
+			$data['contact'] = $this->Contact_model->getfor();
+			$data['page'] = 'pigroup/detail';
 			$this->load->view('template/layout', $data);
 		}else{
 			redirect('auth');
