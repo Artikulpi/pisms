@@ -59,6 +59,7 @@
 							<a href="<?php echo site_url('sms/inbox')?>" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Inbox</a>
 							<a href="<?php echo site_url('sms/outbox')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Outbox</a>
 							<a href="<?php echo site_url('sms/sentitem')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Sent Item</a>
+							<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Draft</a>
 							<br>
 							<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">List Menu</a>
 							<a href="<?php echo site_url('contact')?>" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Kontak</a>

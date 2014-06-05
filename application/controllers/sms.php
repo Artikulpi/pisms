@@ -173,4 +173,56 @@ class Sms extends CI_Controller{
 			redirect('auth');
 		}
 	}
+
+	function draft($offset = NULL){
+		if($this->session->userdata('login') == TRUE){
+			$this->load->library('pagination');
+			$count = $this->Sms_model->countDraft();
+
+			$config['base_url'] = site_url('sms/draft');
+			$config['total_rows'] = $count->num_rows();
+			$config['per_page'] = 10; 
+			$config['uri_segment'] = 3;
+			$num = $config['per_page'];
+			$this->pagination->initialize($config);
+			$data['halaman'] = $this->pagination->create_links();
+			$data['title'] = 'Draft';
+			$data['header'] = 'Draft';
+			$data['draft'] = $this->Sms_model->getDraft($num, $offset);
+			$data['page'] = 'sms/draftlist';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
+	}
+
+	function editDraft($id){
+		if($this->session->userdata('login') == TRUE){
+			$data['draft'] = $this->Sms_model->getDraftById($id);
+			$data['contact'] = $this->Contact_model->getfor();
+			$data['group'] = $this->Pigroup_model->getfor();
+			$data['title'] = 'Edit draft';
+			$data['header'] = 'Sunting Draft';
+			$data['page'] = 'sms/editDraft';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}	
+	}
+
+	function deleteDraft($id){
+		if($this->session->userdata('login')== TRUE){
+			$this->Sms_model->deleteDraft($id);
+			$log = array(
+				'user_id'=>$this->session->userdata('id'),
+				'activity'=>'Hapus Draft',
+				'date'=>date('Y-m-d H:i:s'),
+				'module'=>'Sms',
+				);
+			$this->Log_model->save($log);
+			redirect('sms/draft');
+		}else{
+			redirect('auth');
+		}	
+	}
 }

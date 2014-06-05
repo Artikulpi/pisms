@@ -11,6 +11,19 @@ class Sms_model extends CI_Model{
 		return $this->db->get('inbox', $num, $offset)->result();
 	}
 
+	function countDraft(){
+		return $this->db->get('draft');
+	}
+
+	function getDraft($num, $offset){
+		$this->db->order_by('id', 'ASC');
+		return $this->db->get('draft', $num, $offset)->result();
+	}
+
+	function getDraftById($id){
+		return $this->db->get_where('draft', array('id'=>$id))->row();
+	}
+
 	function countOutbox(){
 		return $this->db->get('outbox');
 	}
@@ -36,6 +49,11 @@ class Sms_model extends CI_Model{
 	function deleteInbox($id){
 		$this->db->where('ID', $id);
 		$this->db->delete('inbox');
+	}
+
+	function deleteDraft($id){
+		$this->db->where('id', $id);
+		$this->db->delete('draft');
 	}
 
 	function getDetailInbox($id){
