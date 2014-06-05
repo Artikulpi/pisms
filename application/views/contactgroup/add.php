@@ -8,7 +8,7 @@ echo form_open('contactgroup/add'); ?>
                 <select class="form-control" name="contact">
                         <?php foreach ($contact as $row) {
                                 ?>
-                                <option value="<?=$row->id?>"><?=$row->name?></option>
+                                <option value="<?php echo $row->id?>"><?php echo $row->name?></option>
                                 <?php
                         } 
                         ?>
@@ -21,7 +21,7 @@ echo form_open('contactgroup/add'); ?>
                 <select class="form-control" name="group">
                         <?php foreach ($group as $row) {
                                 ?>
-                                <option value="<?=$row->id?>"><?=$row->group_name?></option>
+                                <option value="<?php echo $row->id?>"><?php echo $row->group_name?></option>
                                 <?php
                         } 
                         ?>

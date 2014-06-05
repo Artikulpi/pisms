@@ -2,23 +2,23 @@
 echo validation_errors();
 echo form_open('contact/saveEdit'); ?>
 
-<input type="hidden" name="id" value="<?=$contact->id?>">
+<input type="hidden" name="id" value="<?php echo $contact->id?>">
 <div class="form-group">
 	<label class="control-label col-sm-3">Nama *</label>
 	<div class="col-sm-9">
-		<input type="text" class="form-control span5" name="name" value="<?=$contact->name?>">
+		<input type="text" class="form-control span5" name="name" value="<?php echo $contact->name?>">
 	</div>
 </div>
 <div class="form-group">
 	<label class="control-label col-sm-3">Telepon *</label>
 	<div class="col-sm-9">
-		<input type="text" class="form-control span5" name="phone" value="<?=$contact->phone_number?>">
+		<input type="text" class="form-control span5" name="phone" value="<?php echo $contact->phone_number?>">
 	</div>
 </div>
 <div class="form-group">
 	<label class="control-label col-sm-3">Organisasi</label>
 	<div class="col-sm-9">
-		<input type="text" class="form-control span5" name="organisation" value="<?=$contact->organisation?>">
+		<input type="text" class="form-control span5" name="organisation" value="<?php echo $contact->organisation?>">
 	</div>
 </div>
 <div class="text-left">
