@@ -1,6 +1,6 @@
 <table class="table table-striped">
 	<thead>
-		<th>ID User</th>
+		<th>User</th>
 		<th>Aktifitas</th>
 		<th>Tanggal</th>
 		<th>Modul</th>

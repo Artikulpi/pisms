@@ -26,7 +26,7 @@ echo form_open('sms/create'); ?>
 			<div class="panel-body">
 				<input type="text" class="form-control" name="number" />
 				<div class="text-center">
-					<input type="text" name="draft_id" value="<?php echo $draft->id;?>">
+					<input type="hidden" name="draft_id" value="<?php echo $draft->id;?>">
 					<input type="submit" name="input_manual" class="btn btn-success" value="Kirim"/>
 					<input type="submit" name="draft" class="btn btn-success" value="Simpan ke Draft"/>
 				</div>
