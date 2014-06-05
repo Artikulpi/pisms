@@ -17,8 +17,6 @@
 
 	<title>piSMS - <?php echo $title?></title>
 
-	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:400,300,700' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/bootstrap.min.js"></script>
@@ -57,7 +55,7 @@
 					<div class="list-group">
 				
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Pesan</a>
-						<a href="<?=site_url('admin')?>" class="list-group-item"><img src="/pisms/media/img/house.png" class="img-rounded" width="20"> Dashboard</a>
+						<a href="<?=site_url('admin')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/house.png" class="img-rounded" width="20"> Dashboard</a>
 						<a href="<?=site_url('sms/create')?>" class="list-group-item"><img src="/pisms/media/img/file.png" class="img-rounded" width="20"> Tulis Pesan</a>
 						<a href="<?=site_url('sms/inbox')?>" class="list-group-item"><img src="/pisms/media/img/inbox.png" class="img-rounded" width="20"> Inbox</a>
 						<a href="<?=site_url('sms/outbox')?>" class="list-group-item"><img src="/pisms/media/img/outbox.png" class="img-rounded" width="20"> Outbox</a>
