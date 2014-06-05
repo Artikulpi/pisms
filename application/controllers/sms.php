@@ -146,6 +146,18 @@ class Sms extends CI_Controller{
 		}	
 	}
 
+	function sendto($id){
+		if($this->session->userdata('login') == TRUE){
+			$data['contact'] = $this->Contact_model->getById($id);
+			$data['title'] = 'Kirim Pesan';
+			$data['header'] = 'Kirim Pesan';
+			$data['page'] = 'sms/sendto';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}	
+	}
+
 	function deleteInbox($id){
 		if($this->session->userdata('login')== TRUE){
 			$this->Sms_model->deleteInbox($id);
