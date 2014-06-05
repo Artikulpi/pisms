@@ -24,6 +24,10 @@ class Sms_model extends CI_Model{
 		return $this->db->get_where('draft', array('id'=>$id))->row();
 	}
 
+	function saveDraft($data){
+		$this->db->insert('draft', $data);
+	}
+
 	function countOutbox(){
 		return $this->db->get('outbox');
 	}

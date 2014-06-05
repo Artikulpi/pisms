@@ -8,11 +8,6 @@ echo form_open('sms/create'); ?>
 	<textarea class="form-control" name="content" rows="3" style="max-width:300px"></textarea><br>
 </div>
 
-
-<label class="col-md-3 control-label" for="name">Judul</label>
-<div class="col-md-9">
-	<input type="text" class="form-control" name="title" placeholder="Judul"/>
-</div>
 <div class="col-sm-12 col-md-12">
 	<div class="panel-group" id="accordion">
 		<div class="panel panel-default">

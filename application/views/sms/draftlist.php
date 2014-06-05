@@ -1,6 +1,6 @@
 <table class="table table-striped">
 	<thead>
-		<th>Pengirim</th>
+		<th>Nomor tujuan</th>
 		<th>Isi</th>
 		<th>Aksi</th>
 	</thead>

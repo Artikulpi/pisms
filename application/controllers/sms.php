@@ -95,6 +95,13 @@ class Sms extends CI_Controller{
 					);
 				$this->Log_model->save($log);
 				redirect('sms/outbox');
+			}elseif($this->form_validation->run() == TRUE AND $this->input->post('draft')){
+				$content = $this->input->post('content');
+				$data = array(
+					'content'=> $content,
+					);
+				$this->Sms_model->saveDraft($data);
+				redirect('sms/draft');
 			}else{
 				$data['contact'] = $this->Contact_model->getfor();
 				$data['group'] = $this->Pigroup_model->getfor();
