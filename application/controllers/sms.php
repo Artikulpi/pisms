@@ -94,6 +94,10 @@ class Sms extends CI_Controller{
 					'module'=>'Sms',
 					);
 				$this->Log_model->save($log);
+				if($this->input->post('draft_id')){
+					$draft_id = $this->input->post('draft_id');
+					$this->Sms_model->deleteDraft($id);
+				}
 				redirect('sms/outbox');
 			}elseif($this->form_validation->run() == TRUE AND $this->input->post('draft')){
 				$content = $this->input->post('content');

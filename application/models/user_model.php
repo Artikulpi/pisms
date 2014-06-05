@@ -19,6 +19,10 @@ class User_model extends CI_Model{
 		return $this->db->get('user');
 	}
 
+	function getfor(){
+		return $this->db->get('user')->result();
+	}
+
 	function getAll($num, $offset){
 		return $this->db->get('user', $num, $offset)->result();
 	}

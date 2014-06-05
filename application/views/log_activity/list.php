@@ -8,13 +8,20 @@
 	<?php
 	foreach ($log as $row) { ?>
 	<tr>
-		<td><?php echo $row->user_id;?></td>
-		<td><?php echo $row->activity;?></td>
-		<td><?php echo date ("D, d M Y H:i:s",strtotime($row->date));?></td>
-		<td><?php echo $row->module;?></td>
-	</tr>
+		<td><?php
+		foreach ($user as $key) {
+			if($key->id == $row->user_id){
+				echo $key->username;
+			}
+		}
+		$row->user_id;?>
+	</td>
+	<td><?php echo $row->activity;?></td>
+	<td><?php echo date ("D, d M Y H:i:s",strtotime($row->date));?></td>
+	<td><?php echo $row->module;?></td>
+</tr>
 
-	<?php
+<?php
 }
 ?>
 </table>

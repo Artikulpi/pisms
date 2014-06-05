@@ -7,7 +7,7 @@ class Log_activity extends CI_Controller{
 		$this->load->helper(array('url','form','date'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->model('Log_model');
+		$this->load->model(array('Log_model','User_model'));
 	}
 
 	function index($offset = NULL){
@@ -25,6 +25,7 @@ class Log_activity extends CI_Controller{
 				$data['halaman'] = $this->pagination->create_links();
 				$data['title'] = 'Log';
 				$data['header'] = 'Log Aktifitas';
+				$data['user'] = $this->User_model->getfor();
 				$data['log'] = $this->Log_model->getAll($num, $offset);
 				$data['page'] = 'log_activity/list';
 				$this->load->view('template/layout', $data);
