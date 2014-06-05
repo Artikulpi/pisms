@@ -7,9 +7,16 @@ class Admin extends CI_Controller{
 		$this->load->helper(array('url','form','date'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
+		$this->load->model(array('Sms_model', 'Contact_model'));
+		if($this->session->userdata('login')== FALSE){
+			redirect('auth');
+		}
 	}
 
 	public function index(){
+		$data['sum_contact'] = $this->Contact_model->get()->num_rows();
+		$data['sum_inbox'] = $this->Sms_model->countInbox()->num_rows();
+		$data['sum_sentitem'] = $this->Sms_model->countSentitems()->num_rows();
 		$data['title'] = 'Dashboard';
 		$data['header'] = 'Dashboard';
 		$data['page'] = 'admin/dash';

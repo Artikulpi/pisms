@@ -33,8 +33,10 @@ class Auth extends CI_Controller{
 					$this->session->set_userdata($data);
 					redirect('admin/index');
 				}else{
-					$this->form_validation->set_message('message', 'Username atau password tidak valid');
-					redirect('auth/login');
+					$data['error'] = "Username atau password tidak valid";
+					$data['title'] = 'Login';
+					$data['page'] = 'auth/login';
+					$this->load->view('template/layout-dashboard', $data);
 				}
 			}else{
 				$data['title'] = 'Login';
