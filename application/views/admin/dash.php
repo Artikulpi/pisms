@@ -23,7 +23,7 @@
         <div class="col-sm-3">
             <div class="hero-widget well well-sm">
                 <div class="icon">
-                     <a href="<?php echo site_url('contact')?>"><img src="<?php echo base_url();?>media/img/inbox.png" class="img-rounded" width="70"></a>
+                     <a href="<?php echo site_url('sms/inbox')?>"><img src="<?php echo base_url();?>media/img/inbox.png" class="img-rounded" width="70"></a>
                 </div>
                 <div class="text">
                     <var><?php echo $sum_inbox?></var>
@@ -35,7 +35,7 @@
         <div class="col-sm-3">
             <div class="hero-widget well well-sm">
                 <div class="icon">
-                     <a href="<?php echo site_url('contact')?>"><img src="<?php echo base_url();?>media/img/outbox.png" class="img-rounded" width="70"></a>
+                     <a href="<?php echo site_url('sms/sentitem')?>"><img src="<?php echo base_url();?>media/img/outbox.png" class="img-rounded" width="70"></a>
                 </div>
                 <div class="text">
                     <var><?php echo $sum_sentitem?></var>
@@ -46,3 +46,7 @@
     	</div>
 	</div>
 </div>
+
+
+
+	

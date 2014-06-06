@@ -16,7 +16,7 @@ echo form_open('user/saveEdit'); ?>
                 <select class="form-control" name="role">
                         <option value="0">User</option>
                         <option value="1" <?php echo $selected?>>Admin</option>
-                </select>
+                </select><br>
         </div>
 </div>
 <div class="form-group">
@@ -26,7 +26,7 @@ echo form_open('user/saveEdit'); ?>
                 <select class="form-control" name="status">
                         <option value="0">Tidak Aktif</option>
                         <option value="1" <?php echo $selected?>>Aktif</option>
-                </select>
+                </select><br>
         </div>
 </div>
 <div class="form-group">
@@ -41,7 +41,9 @@ echo form_open('user/saveEdit'); ?>
                 <input type="text" class="form-control span5" name="email" value="<?php echo $user->email?>">
         </div>
 </div>
-<div class="text-center">
+<div class="text-left">
+	<label class="control-label col-sm-3"></label>
+	<div class="col-sm-2">
         <input type="submit" class="btn btn-success" value="Tambah"/>
-</div>
+</div></div>
 <?php echo form_close(); ?>

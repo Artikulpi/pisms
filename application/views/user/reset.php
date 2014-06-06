@@ -20,3 +20,30 @@ echo form_open('user/saveReset'); ?>
 	<input type="submit" class="btn btn-success" value="Ubah"/>
 </div></div>
 <?php echo form_close(); ?>
+
+
+		<div class="row">
+			<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+ 
+	                <div class="modal-header">
+	                    <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+	                    <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
+	                </div>
+	                <div class="modal-body">
+						
+	                </div>
+	                <div class="modal-footer">
+	                    <div class="btn-group">
+	                    <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+	                    <button class="btn btn-primary">Save changes</button>
+	                </div>
+	                </div>
+ 
+	            </div><!-- /.modal-content -->
+	        </div><!-- /.modal-dalog -->
+	</div><!-- /.modal -->
+    
+	<a data-toggle="modal" href="#myModal">Launch demo modal</a>
+		</div>
