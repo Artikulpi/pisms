@@ -17,7 +17,7 @@
 		$row->user_id;?>
 	</td>
 	<td><?php echo $row->activity;?></td>
-	<td><?php echo date ("D, d M Y H:i:s",strtotime($row->date));?></td>
+	<td><?php echo $row->date;//date ("D, d M Y H:i:s",strtotime($row->date));?></td>
 	<td><?php echo $row->module;?></td>
 </tr>
 
