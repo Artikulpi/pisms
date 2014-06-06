@@ -23,6 +23,7 @@ echo form_open('user/saveReset'); ?>
 
 
 		<div class="row">
+			<div class="col-sm-12 col-sm-12">
 			<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	        <div class="modal-dialog">
 	            <div class="modal-content">
@@ -30,7 +31,7 @@ echo form_open('user/saveReset'); ?>
 	                <div class="modal-header">
 	                    <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
 	                    <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
-	                </div>
+	                </div><hr>
 	                <div class="modal-body">
 						
 	                </div>
@@ -46,4 +47,8 @@ echo form_open('user/saveReset'); ?>
 	</div><!-- /.modal -->
     
 	<a data-toggle="modal" href="#myModal">Launch demo modal</a>
-		</div>
+		</div></div>
+		
+		
+		
+		
