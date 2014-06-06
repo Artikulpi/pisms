@@ -16,12 +16,8 @@
 	<link href="<?php echo base_url(); ?>media/css/dashboard.css" rel="stylesheet">
 
 	<title>piSMS - <?php echo $title?></title>
-
-	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Century-Gothic:400,300,700' rel='stylesheet' type='text/css'>
-
-	<script src="media/js/jquery.min.js"></script>
-	<script type="text/javascript" src="media/js/bootstrap.custom.js"></script>
+	<script src="<?php echo base_url(); ?>media/js/jquery.min.js"></script>
+	
 
 </head>
 <body>
