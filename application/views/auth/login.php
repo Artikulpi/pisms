@@ -10,8 +10,9 @@ if(isset($error)){echo $error;}
 					<h3 class="panel-title">Login piSMS<small></small></h3>
 				</div>
 				<div class="panel-body">
-					<?php echo form_open('auth/login');?>						<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-12">
+					<?php echo form_open('auth/login');?>
+					<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12">
 						<div class="form-group">
 							<input type="text" name="user" id="user" class="form-control input-sm" placeholder="Username">
 							<input type="password" class="form-control input-sm" placeholder="Password" name="pass" id="pass">
@@ -24,3 +25,4 @@ if(isset($error)){echo $error;}
 			</div>
 		</div>
 	</div>
+	
