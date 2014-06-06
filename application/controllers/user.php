@@ -186,4 +186,16 @@ class User extends CI_Controller{
                         redirect('auth');
                 }
         }
+
+        public function detail($id){
+                if($this->session->userdata('login') == TRUE){
+                        $data['user'] = $this->User_model->getById($id);
+                        $data['title'] = 'Detail User';
+                        $data['header'] = 'Rincian Pengguna';
+                        $data['page'] = 'user/detail';
+                        $this->load->view('template/layout', $data);
+                }else{
+                        redirect('auth');
+                }
+        }
 }
