@@ -36,12 +36,14 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('user');?><b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li>
-									<a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong> </a>
-								</li>
-								<li>
-									<a href="<?php echo site_url('auth/logout');?>"><img src="<?php echo base_url();?>media/img/lock.png" class="img-rounded" width="30"> Logout</a>
-								</li>
+								<li align="center" class="well">
+								                <div><img src="<?php echo base_url();?>media/img/Manager.png" class="img-rounded" width="70"><a class="change" href="">Change Picture</a></div>
+								                <li><a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong></a>
+												</li><hr>
+								               <li><a href="<?php echo site_url('auth/logout');?>" class="btn btn-sm btn-danger"><img src="<?php echo base_url();?>media/img/lock.png" class="img-rounded" width="30"> Logout</a>
+											   </li>
+								            </li>
+								
 							</ul>
 						</div>
 					</div>
