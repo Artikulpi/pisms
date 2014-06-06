@@ -60,6 +60,7 @@
 						<a href="<?php echo site_url('sms/inbox')?>" class="list-group-item"><img src="/pisms/media/img/inbox.png" class="img-rounded" width="20"> Inbox</a>
 						<a href="<?php echo site_url('sms/outbox')?>" class="list-group-item"><img src="/pisms/media/img/outbox.png" class="img-rounded" width="20"> Outbox</a>
 						<a href="<?php echo site_url('sms/sentitem')?>" class="list-group-item"><img src="/pisms/media/img/item.png" class="img-rounded" width="20"> Item Terkirim</a>
+						<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><img src="/pisms/media/img/item.png" class="img-rounded" width="20"> Draft</a>
 						<br>
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Kontak & Grup</a>
 						<a href="<?php echo site_url('contact')?>" class="list-group-item"><img src="/pisms/media/img/kontak.png" class="img-rounded" width="20"> Kontak</a>
