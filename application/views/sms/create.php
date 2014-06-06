@@ -1,11 +1,22 @@
-
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#karakter').keyup(function() {
+		var len = this.value.length;
+		if (len >= 160) {
+			this.value = this.value.substring(0, 160);
+		}
+		$('#hitung').text(160 - len);
+	});
+});
+</script>
 <?php
 echo validation_errors();
 echo form_open('sms/create'); ?>
 
 <label class="col-md-3 control-label" for="name">Isi *</label>
 <div class="col-md-12">
-	<textarea class="form-control" name="content" rows="4" placeholder="Message"></textarea><br>
+	<textarea class="form-control" id="karakter" name="content" maxlength="160" rows="4" placeholder="Message"></textarea><br>
+	<div style="width:264px;text-align: center" class="alert alert-danger"><span id="hitung">160</span> Karakter Tersisa.</div>
 </div>
 
 <div class="col-sm-12 col-md-12">
