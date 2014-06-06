@@ -37,8 +37,21 @@
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('user');?> <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li align="center" class="well">
-								                <div><img src="<?php echo base_url();?>media/img/Manager.png" class="img-rounded" width="70"><a class="change" href="">Change Picture</a></div>
-								                <li><a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong></a>
+									<div class="navbar-content">
+									    <div class="row">
+									       <div class="col-md-5">
+									         <img src="<?php echo base_url();?>media/img/Manager.png" class="img-rounded" width="70"><p class="text-center small">
+							 <a href="#">Change Photo</a></p>
+							</div>
+							<div class="col-md-7">
+							<span><?php echo $this->session->userdata('user');?></span>
+							 <p class="text-muted small">mail@gmail.com</p>
+								<div class="divider"></div>
+									<a href="#" class="btn btn-primary btn-sm active">View Profile</a>
+									    </div>
+									     </div>
+									       </div>
+									  <li><a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong></a>
 												</li><hr>
 								               <li><a href="<?php echo site_url('auth/logout');?>" class="btn btn-sm btn-danger"><img src="<?php echo base_url();?>media/img/lock.png" class="img-rounded" width="30"> Logout</a>
 											   </li>
@@ -110,7 +123,7 @@
 		
 		<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 			<div class="container-fluid">
-				<p class="navbar-text pull-left">© pisms-2014
+				<p class="navbar-text pull-left">© Copyright pisms-2014
 				</p>
 				<div class="navbar-collapse collapse">
 					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/about.png" class="img-rounded" width="20"> Tentang Kami
