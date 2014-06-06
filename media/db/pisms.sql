@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 05, 2014 at 05:17 PM
+-- Generation Time: Jun 06, 2014 at 08:22 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `phone_number` varchar(20) NOT NULL,
   `organisation` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -44,38 +44,9 @@ CREATE TABLE IF NOT EXISTS `pigroup` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `group_name` varchar(60) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `contact_has_group`
---
-
-CREATE TABLE IF NOT EXISTS `contact_has_group` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `contact_id` int(11) NOT NULL,
-  `group_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_contact_has_group_group1` (`group_id`),
-  KEY `fk_contact_has_group_contact` (`contact_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `draft`
---
-
-CREATE TABLE IF NOT EXISTS `draft` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `number` varchar(20) NOT NULL,
-  `content` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
-
--- --------------------------------------------------------
-
 
 --
 -- Table structure for table `user`
@@ -93,6 +64,34 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
+-- Table structure for table `contact_has_group`
+--
+
+CREATE TABLE IF NOT EXISTS `contact_has_group` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `contact_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_contact_has_group_group1` (`group_id`),
+  KEY `fk_contact_has_group_contact` (`contact_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `draft`
+--
+
+CREATE TABLE IF NOT EXISTS `draft` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `number` varchar(20) NOT NULL,
+  `content` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `log_activity`
 --
 
@@ -104,11 +103,9 @@ CREATE TABLE IF NOT EXISTS `log_activity` (
   `module` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=84 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=85 ;
 
 -- --------------------------------------------------------
-
-
 
 
 
