@@ -12,7 +12,6 @@
 <br>
 <br>
 <div class="text-right">
-	<a href="<?php echo site_url('sms/inbox')?>" class="btn btn-info btn-xs">Inbox</a>
 	<a href="<?php echo site_url('sms/reply/'.$sms->ID)?>" class="btn btn-success btn-xs">Balas</a>
 	<a href="<?php echo site_url('sms/forwardInbox/'.$sms->ID)?>" class="btn btn-warning btn-xs">Forward</a>
 	<a href="<?php echo site_url('sms/deleteInbox/'.$sms->ID)?>" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a>
