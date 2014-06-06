@@ -376,10 +376,6 @@ padding-top:10px;
 .hero-widget var { display: block; height: 64px; font-size: 64px; line-height: 64px; font-style: normal; }
 .hero-widget label { font-size: 17px; }
 .hero-widget .options { margin-top: 10px; }
-.ds-btn li{ list-style:none; float:left; padding:10px; }
-.ds-btn li a span{padding-left:15px;padding-right:5px;width:100%;display:inline-block; text-align:left;}
-.ds-btn li a span small{width:100%; display:inline-block; text-align:left;}
-
 .modal .modal-header {
   border-bottom: none;
   position: relative;
@@ -411,11 +407,6 @@ padding-top:10px;
      margin-bottom:-60px;
 }
 
-.panel
-{
-    background-image:url("http://autoimagesize.com/wp-content/uploads/2014/01/rainbow-aurora-background-wallpaper-colour-images-rainbow-background.jpg"); 
-}
-
 .name
 {
     position:absolute;
@@ -444,4 +435,20 @@ padding-top:10px;
  background-color:black;
  color:white;
 }
-
+.destacados{
+    padding: 20px 0;
+	text-align: center;
+}
+.destacados > div > div{
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	transition: 0.2s;
+}
+.destacados > div:hover > div{
+	margin-top: -10px;
+	border: 1px solid rgb(200, 200, 200);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+	background: rgba(200, 200, 200, 0.1);
+	transition: 0.5s;
+}
