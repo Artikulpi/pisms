@@ -34,7 +34,7 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('user');?><b class="caret"></b></a>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('user');?> <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li align="center" class="well">
 								                <div><img src="<?php echo base_url();?>media/img/Manager.png" class="img-rounded" width="70"><a class="change" href="">Change Picture</a></div>
@@ -113,9 +113,9 @@
 				<p class="navbar-text pull-left">© pisms-2014
 				</p>
 				<div class="navbar-collapse collapse">
-					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/Info.png" class="img-rounded" width="20"> Tentang Kami
+					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/about.png" class="img-rounded" width="20"> Tentang Kami
 					</p>
-					<a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/kontak.png" class="img-rounded" width="20"> Kontak Kami
+					<a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/Info.png" class="img-rounded" width="20"> Help
 					</p>	
 				</div>
 			</div>
