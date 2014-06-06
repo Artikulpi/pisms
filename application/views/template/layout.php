@@ -34,13 +34,13 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<b class="caret"></b></a>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('user');?><b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a style="margin-top: 15px" class="btn" href=""><?php echo $this->session->userdata('user');?> <img src="/pisms/media/img/User.png" class="img-rounded" width="30"></a>
+									<a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong> </a>
 								</li>
 								<li>
-									<a href="<?php echo site_url('auth/logout');?>">Logout <img src="/pisms/media/img/Lock.png" class="img-rounded" width="30"></a>
+									<a href="<?php echo site_url('auth/logout');?>"><img src="/pisms/media/img/Lock.png" class="img-rounded" width="30"> Logout</a>
 								</li>
 							</ul>
 						</div>
@@ -56,25 +56,25 @@
 						
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Pesan</a>
 						<a href="<?php echo site_url('admin')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/house.png" class="img-rounded" width="20"> Dashboard</a>
-						<a href="<?php echo site_url('sms/create')?>" class="list-group-item"><img src="/pisms/media/img/file.png" class="img-rounded" width="20"> Tulis Pesan</a>
-						<a href="<?php echo site_url('sms/inbox')?>" class="list-group-item"><img src="/pisms/media/img/inbox.png" class="img-rounded" width="20"> Inbox</a>
-						<a href="<?php echo site_url('sms/outbox')?>" class="list-group-item"><img src="/pisms/media/img/outbox.png" class="img-rounded" width="20"> Outbox</a>
-						<a href="<?php echo site_url('sms/sentitem')?>" class="list-group-item"><img src="/pisms/media/img/item.png" class="img-rounded" width="20"> Item Terkirim</a>
-						<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><img src="/pisms/media/img/item.png" class="img-rounded" width="20"> Draft</a>
+						<a href="<?php echo site_url('sms/create')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/file.png" class="img-rounded" width="20"> Tulis Pesan</a>
+						<a href="<?php echo site_url('sms/inbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/inbox.png" class="img-rounded" width="20"> Kotak Masuk</a>
+						<a href="<?php echo site_url('sms/outbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/outbox.png" class="img-rounded" width="20"> Kotak Keluar</a>
+						<a href="<?php echo site_url('sms/sentitem')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/item.png" class="img-rounded" width="20"> Item Terkirim</a>
+						<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/trash.png" class="img-rounded" width="20"> Draft</a>
 						<br>
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Kontak & Grup</a>
-						<a href="<?php echo site_url('contact')?>" class="list-group-item"><img src="/pisms/media/img/kontak.png" class="img-rounded" width="20"> Kontak</a>
-						<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><img src="/pisms/media/img/grup.png" class="img-rounded" width="20"> Grup</a>
-						<a href="<?php echo site_url('contactgroup')?>" class="list-group-item"><img src="/pisms/media/img/anggota.png" class="img-rounded" width="20"> Anggota Grup</a>
+						<a href="<?php echo site_url('contact')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/daftar.png" class="img-rounded" width="20"> Kontak</a>
+						<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/grup.png" class="img-rounded" width="20"> Grup</a>
+						<a href="<?php echo site_url('contactgroup')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/anggota.png" class="img-rounded" width="20"> Anggota Grup</a>
 						<br>
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Catatan</a>
-						<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><img src="/pisms/media/img/log.png" class="img-rounded" width="20"> Log Aktifitas</a>
+						<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/log.png" class="img-rounded" width="20"> Log Aktifitas</a>
 						<?php if($this->session->userdata('role')==1){?>
-						<a href="<?php echo site_url('user')?>" class="list-group-item"><img src="/pisms/media/img/User.png" class="img-rounded" width="20"> List User</a>
+						<a href="<?php echo site_url('user')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/user.png" class="img-rounded" width="20"> List User</a>
 						<?php
 					}
 					?>
-					<a href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>" class="list-group-item"><img src="/pisms/media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong></a>
+				
 					
 				</div>
 			</div>
@@ -90,17 +90,7 @@
 							<div class="panel-body">
 								<div class="panel" style="width: 100%; float: left;">
 									<?php isset($page) ? $this->load->view($page) : null; ?>
-								<!--div class="panel-heading">
-									<h3 class="panel-title">Admin</h3>
-								</div-->
-								<!--div class="panel-body">
-									<table class="table table-condensed">
-										<tbody>
-											<tr><td align="center"><b>Total Admin</b></td></tr>
-											<tr><td align="center">ADMIN</td></tr>
-										</tbody>
-									</table>
-								</div-->
+								
 							</div>
 						</div>
 						</div
@@ -121,9 +111,9 @@
 				<p class="navbar-text pull-left">© pisms-2014
 				</p>
 				<div class="navbar-collapse collapse">
-					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right">About Us
+					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/info.png" class="img-rounded" width="20"> Tentang Kami
 					</p>
-					<a href="#"><p class="navbar-text pull-right">Contact
+					<a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/kontak.png" class="img-rounded" width="20"> Kontak Kami
 					</p>	
 				</div>
 			</div>
