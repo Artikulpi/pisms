@@ -111,7 +111,7 @@
 				<p class="navbar-text pull-left">© pisms-2014
 				</p>
 				<div class="navbar-collapse collapse">
-					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/info.png" class="img-rounded" width="20"> Tentang Kami
+					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/Info.png" class="img-rounded" width="20"> Tentang Kami
 					</p>
 					<a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/kontak.png" class="img-rounded" width="20"> Kontak Kami
 					</p>	
