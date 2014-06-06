@@ -24,7 +24,7 @@ echo form_open('user/add'); ?>
         <label class="control-label col-sm-3">Role *</label>
         <div class="col-sm-9">
                 <select class="form-control" name="role">
-                        <option value="0">General</option>
+                        <option value="0">User</option>
                         <option value="1">Admin</option>
                 </select>
         </div>

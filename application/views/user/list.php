@@ -22,7 +22,7 @@
 			<td><?php echo $row->username?></td>
 			<td><?php echo $row->full_name?></td>
 			<td><?php echo $row->email?></td>
-			<td><?php echo ($row->role == 1) ? 'Admin' : 'General' ;?></td>
+			<td><?php echo ($row->role == 1) ? 'Admin' : 'User' ;?></td>
 			<td><?php echo ($row->active == 1) ? 'Aktif' : 'Tidak aktif' ;?></td>
 			<td><?php echo $reset.'&nbsp;'.$edit.'&nbsp;'.$delete?></td>
 		</tr>

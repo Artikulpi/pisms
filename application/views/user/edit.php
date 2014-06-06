@@ -14,7 +14,7 @@ echo form_open('user/saveEdit'); ?>
         <div class="col-sm-9">
                 <?php $selected = ($user->role == 1) ? 'selected' : NULL ; ?>
                 <select class="form-control" name="role">
-                        <option value="0">General</option>
+                        <option value="0">User</option>
                         <option value="1" <?php echo $selected?>>Admin</option>
                 </select>
         </div>
