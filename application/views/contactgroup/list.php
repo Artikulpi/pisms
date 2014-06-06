@@ -39,5 +39,5 @@
 	} ?>  
 </table>
 <br>
-<a href="<?php echo site_url('contactgroup/add')?>" class="btn btn-success">Tambah Anggota Grup</a>
+<a href="<?php echo site_url('contactgroup/add')?>" class="btn btn-success btn-md"><b>+</b> Tambah Anggota Grup</a>
 <div class="text-right"><?php echo $halaman?></div>

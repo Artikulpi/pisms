@@ -1,4 +1,5 @@
 <table class="table table-striped">
+	
 	<thead>
 		<th>Nama</th>
 		<th>Aksi</th>
@@ -18,5 +19,6 @@
 	} ?>  
 </table>
 <br>
-<a href="<?php echo site_url('contact/add')?>" class="btn btn-success">Tambah Kontak</a>
+<a href="<?php echo site_url('contact/add')?>" class="btn btn-success btn-md"><b>+</b> Tambah Kontak</a>
+
 <div class="text-right"><?php echo $halaman?></div>
