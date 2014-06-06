@@ -20,7 +20,7 @@
 				echo anchor('sms/detailInbox/'.$row->ID, $cut);
 				?>
 			</td>
-			<td><?php echo date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
+			<td><?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
 			<td><?php echo $reply.' '.$forward.' '.$delete;?></td>
 		</tr>
 

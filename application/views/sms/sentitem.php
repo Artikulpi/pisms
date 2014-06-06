@@ -10,7 +10,7 @@
 	<tr>
 		<td><?php echo $row->DestinationNumber;?></td>
 		<td><?php echo $row->TextDecode;?></td>
-		<td><?php echo date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></td>
+		<td><?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></td>
 		<td><?php echo '-';?></td>
 	</tr>
 
