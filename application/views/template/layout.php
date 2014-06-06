@@ -59,7 +59,7 @@
 						<a href="<?php echo site_url('sms/create')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/file.png" class="img-rounded" width="20"> Tulis Pesan</a>
 						<a href="<?php echo site_url('sms/inbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/inbox.png" class="img-rounded" width="20"> Kotak Masuk</a>
 						<a href="<?php echo site_url('sms/outbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/outbox.png" class="img-rounded" width="20"> Kotak Keluar</a>
-						<a href="<?php echo site_url('sms/sentitem')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/item.png" class="img-rounded" width="20"> Item Terkirim</a>
+						<a href="<?php echo site_url('sms/sentitem')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/item.png" class="img-rounded" width="20"> Pesan Terkirim</a>
 						<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/trash.png" class="img-rounded" width="20"> Draft</a>
 						<br>
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Kontak & Grup</a>
@@ -67,7 +67,7 @@
 						<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/grup.png" class="img-rounded" width="20"> Grup</a>
 						<a href="<?php echo site_url('contactgroup')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/anggota.png" class="img-rounded" width="20"> Anggota Grup</a>
 						<br>
-						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Catatan</a>
+						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Utility</a>
 						<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/log.png" class="img-rounded" width="20"> Log Aktifitas</a>
 						<?php if($this->session->userdata('role')==1){?>
 						<a href="<?php echo site_url('user')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/User.png" class="img-rounded" width="20"> List User</a>

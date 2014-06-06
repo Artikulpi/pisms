@@ -39,7 +39,7 @@
                 </div>
                 <div class="text">
                     <var><?php echo $sum_sentitem?></var>
-                    <label class="text-muted">Jumlah Item Terkirim</label>
+                    <label class="text-muted">Jumlah Pesan Terkirim</label>
                 </div>
                 
             </div>
