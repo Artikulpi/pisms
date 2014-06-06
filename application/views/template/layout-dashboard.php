@@ -32,30 +32,14 @@
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href=""><img src="/pisms/media/img/SMS.png" class="img-rounded" width="30">piSMS | <small><?php echo $title?></small></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href=""><img src="<?php echo base_url();?>media/img/SMS.png" class="img-rounded" width="30">piSMS | <small><?php echo $title?></small></a>
 				</div>
 				
 					</div>
 		</div>
 		
 		<div class="login"></div>
-		<!-- List Menu -->
 		
-		<!--div class="list">
-			<div class="list-group">
-				<a style="background-color: #222; border-color:transparent;" href class="list-group-item active">List Menu</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Dashboard</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-file"></i> Berita</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-tasks"></i> Kategori Berita</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-book"></i> Banner</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-camera"></i> Sorotan</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Link Terkait</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-check"></i> Event</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-tag"></i> Page</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Pengguna</a>
-				<a href="" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Media Manager</a>
-			</div>
-		</div-->
 		<div class="content content-top">
 			<?php for($i=0; $i<3; $i++){
 				echo '<br>';
@@ -64,30 +48,7 @@
 			<?php isset($page) ? $this->load->view($page) : null; ?>
 
 
-			<!--div class="panel-body">
-				<div class="main-admin">
-					<div class="panel panel-default">
-						<div style="background-color: #222;" class="panel-heading">
-							<h3 style="color: white;" class="panel-title">Dashboard</h3>
-						</div>
-						<div class="panel-body">
-							<div class="panel panel-default" style="width: 20%; float: left; margin-left: 20px">
-								<div class="panel-heading">
-									<h3 class="panel-title">Admin</h3>
-								</div>
-								<div class="panel-body">
-									<table class="table table-condensed">
-										<tbody>
-											<tr><td align="center"><b>Total Admin</b></td></tr>
-											<tr><td align="center">ADMIN</td></tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div-->
+			
 			<div id="dialog-confirm" title="Apakah anda yakin?" style="display: none">
 				<p>
 					<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
