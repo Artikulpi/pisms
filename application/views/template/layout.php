@@ -30,7 +30,7 @@
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href=""><img src="<?php echo base_url();?>media/img/SMS.png" class="img-rounded" width="30">piSMS</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href=""><img src="<?php echo base_url();?>media/img/sms.png" class="img-rounded" width="30">piSMS</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
@@ -40,7 +40,7 @@
 									<a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong> </a>
 								</li>
 								<li>
-									<a href="<?php echo site_url('auth/logout');?>"><img src="<?php echo base_url();?>media/img/Lock.png" class="img-rounded" width="30"> Logout</a>
+									<a href="<?php echo site_url('auth/logout');?>"><img src="<?php echo base_url();?>media/img/lock.png" class="img-rounded" width="30"> Logout</a>
 								</li>
 							</ul>
 						</div>
@@ -70,7 +70,7 @@
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Catatan</a>
 						<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/log.png" class="img-rounded" width="20"> Log Aktifitas</a>
 						<?php if($this->session->userdata('role')==1){?>
-						<a href="<?php echo site_url('user')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/user.png" class="img-rounded" width="20"> List User</a>
+						<a href="<?php echo site_url('user')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/User.png" class="img-rounded" width="20"> List User</a>
 						<?php
 					}
 					?>
