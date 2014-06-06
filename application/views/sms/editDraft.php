@@ -14,18 +14,14 @@ $(document).ready(function() {
 echo validation_errors();
 echo form_open('sms/create'); ?>
 
-<div class="form-group">
-	<label class="control-label col-sm-3">Isi *</label>
-	<div class="col-sm-9">
-		<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3" style="max-width:300px"><?php echo $draft->content;?></textarea>
+	<label class="control-label col-sm-2">Isi *</label>
+	<div class="col-sm-12 col-md-12">
+		<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3"><?php echo $draft->content;?></textarea><br>
 		<div style="width:264px;text-align: center" class="alert alert-danger"><span id="hitung">160</span> Karakter Tersisa.</div>
 	</div>
 </div>
 
-
-<br>
-<br>
-
+	<div class="col-sm-12 col-md-12">
 <div class="panel-group" id="accordion">
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -35,17 +31,20 @@ echo form_open('sms/create'); ?>
 				</a>
 			</h4>
 		</div>
-		<div id="collapseOne" class="panel-collapse collapse">
+		<div id="collapseOne" class="panel-collapse collapse"><br>
+			<label class="control-label col-sm-3">Telepon *</label>
+			<div class="col-sm-9">
 			<div class="panel-body">
 				<input type="text" class="form-control" name="number" />
-				<div class="text-center">
+				<div class="text-left">
+					<div class="col-sm-3 col-md-3">
 					<input type="hidden" name="draft_id" value="<?php echo $draft->id;?>">
 					<input type="submit" name="input_manual" class="btn btn-success" value="Kirim"/>
 					<input type="submit" name="draft" class="btn btn-success" value="Simpan ke Draft"/>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div></div></div>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h4 class="panel-title">
@@ -54,7 +53,9 @@ echo form_open('sms/create'); ?>
 				</a>
 			</h4>
 		</div>
-		<div id="collapseTwo" class="panel-collapse collapse">
+		<div id="collapseTwo" class="panel-collapse collapse"><br>
+			<label class="control-label col-sm-3">Kontak *</label>
+			<div class="col-sm-9">
 			<div class="panel-body">
 				<?php foreach ($contact as $row) {?>
 				<div class="checkbox">
@@ -63,12 +64,13 @@ echo form_open('sms/create'); ?>
 					</label>
 				</div>
 				<?php } ?>
-				<div class="text-center">
+				<div class="text-left">
+					<div class="col-sm-2 col-md-2">
 					<input type="submit" name="input_contact" class="btn btn-success" value="Kirim"/>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div></div></div>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h4 class="panel-title">
@@ -77,7 +79,9 @@ echo form_open('sms/create'); ?>
 				</a>
 			</h4>
 		</div>
-		<div id="collapseThree" class="panel-collapse collapse">
+		<div id="collapseThree" class="panel-collapse collapse"><br>
+			<label class="control-label col-sm-3">Kontak *</label>
+			<div class="col-sm-9">
 			<div class="panel-body">
 				<?php foreach ($group as $row) {?>
 				<div class="checkbox">
@@ -86,11 +90,12 @@ echo form_open('sms/create'); ?>
 					</label>
 				</div>
 				<?php } ?>
-				<div class="text-center">
+				<div class="text-left">
+					<div class="col-sm-2 col-md-2">
 					<input type="submit" name="input_group" class="btn btn-success" value="Kirim"/>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</div></div></div>
 <?php echo form_close(); ?>
