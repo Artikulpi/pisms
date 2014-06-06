@@ -3,6 +3,9 @@
 class About extends CI_Controller{
 
 	function index(){
-		$this->load->view('about/about');
+		$data['header'] = 'About';
+		$data['title'] = 'About';
+		$data['page'] = 'about/about';
+		$this->load->view('template/layout', $data);
 	}
 }

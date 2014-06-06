@@ -84,7 +84,7 @@ class Sms extends CI_Controller{
 			if($this->form_validation->run() == TRUE AND $this->input->post('input_manual')){
 				$data = array(
 					'DestinationNumber' => $this->input->post('number'),
-					'Text' => md5($this->input->post('content')),
+					'TextDecoded' => $this->input->post('content'),
 					);
 				$this->Sms_model->sent($data);
 				$log = array(
