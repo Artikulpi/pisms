@@ -20,7 +20,7 @@
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/bootstrap.min.js"></script>
-
+	
 </head>
 <body>
 
