@@ -80,7 +80,6 @@
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Kontak & Grup</a>
 						<a href="<?php echo site_url('contact')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/daftar.png" class="img-rounded" width="20"> Kontak</a>
 						<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/grup.png" class="img-rounded" width="20"> Grup</a>
-						<a href="<?php echo site_url('contactgroup')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/anggota.png" class="img-rounded" width="20"> Anggota Grup</a>
 						<br>
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Utility</a>
 						<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/log.png" class="img-rounded" width="20"> Log Aktifitas</a>
