@@ -122,15 +122,11 @@ class User extends CI_Controller{
 
         public function edit($id){
                 if($this->session->userdata('login') == TRUE){
-                        if($this->session->userdata('role') == 1){
-                                $data['user'] = $this->User_model->getById($id);
-                                $data['title'] = 'Edit User';
-                                $data['header'] = 'Sunting Pengguna';
-                                $data['page'] = 'user/edit';
-                                $this->load->view('template/layout', $data);
-                        }else{
-                                redirect('admin');
-                        }
+                        $data['user'] = $this->User_model->getById($id);
+                        $data['title'] = 'Edit User';
+                        $data['header'] = 'Sunting Pengguna';
+                        $data['page'] = 'user/edit';
+                        $this->load->view('template/layout', $data);
                 }else{
                         redirect('auth');
                 }

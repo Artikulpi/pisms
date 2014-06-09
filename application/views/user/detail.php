@@ -16,7 +16,7 @@
 <br>
 <span class="label label-success">Status</span>
 <br>
-<?php echo $user->active;?>
+<?php echo ($user->active == 1) ? 'Aktif' : 'Tidak Aktif';?>
 <br>
 <br>
 <div class="text-right">

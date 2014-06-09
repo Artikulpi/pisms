@@ -47,7 +47,7 @@
 							<span><?php echo $this->session->userdata('user');?></span>
 							 <p class="text-muted small">mail@gmail.com</p>
 								<div class="divider"></div>
-									<a href="#" class="btn btn-primary btn-sm active">View Profile</a>
+									<a href="<?php echo site_url('user/detail/'.$this->session->userdata('id'));?>" class="btn btn-primary btn-sm active">View Profile</a>
 									    </div>
 									     </div>
 									       </div>
