@@ -33,12 +33,20 @@
 							</table>
 		                </div>
 		                <hr>
- 
+					   <div class="modal-footer">
+					   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					   </div>
 		            </div><!-- /.modal-content -->
 		        </div><!-- /.modal-dalog -->
 		</div><!-- /.modal -->
     
-		<a data-toggle="modal" href="#myModal" class="label label-success"><img src="<?php echo base_url();?>media/img/plane.png" class="img-rounded" width="70"> Lihat pesan terkirim</a>
+	    <div class="span3 well">
+	        <center>
+	        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">  <img src="<?php echo base_url();?>media/img/plane.png" alt="" name="aboutme" width="140" height="140" class="img-rounded"></a>
+	        
+	        <em>Klik gambar untuk melihat pesan terkirim.</em>
+			</center>
+	    </div>
 			</div></div>
 	
 <div class="text-right"><?php echo $halaman?></div>

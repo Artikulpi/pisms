@@ -11,7 +11,7 @@
 		<div class="col-md-4">
     	    <div class="hero-widget well well-sm">
                 <div class="icon">
-                     <a href="#"><img src="<?php echo base_url();?>media/img/daftar.png" class="img-rounded" width="80"></a>
+                     <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="<?php echo base_url();?>media/img/daftar.png" class="img-rounded" width="80"></a>
                 </div>
                 <div class="text">
                     <var><?php echo $sum_contact?></var>

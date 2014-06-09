@@ -36,6 +36,12 @@
 		        </div><!-- /.modal-dalog -->
 		</div><!-- /.modal -->
     
-		<a data-toggle="modal" href="#myModal" class="label label-success"><img src="<?php echo base_url();?>media/img/eye.png" class="img-rounded" width="70"> Detail pesan</a>
+	    <div class="span3 well">
+	        <center>
+	        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">  <img src="<?php echo base_url();?>media/img/eye.png" alt="" name="aboutme" width="140" height="140" class="img-rounded"></a>
+	        
+	        <em>Klik gambar untuk melihat detail pesan.</em>
+			</center>
+	    </div>
 			</div></div>
 	
