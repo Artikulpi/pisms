@@ -19,7 +19,7 @@
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 <h4 class="modal-title" id="myModalLabel"><?php echo $user->username;?>, <small>piSMS</small></h4>
-</div>
+</div><hr>
 <div class="modal-body">
 	
 <span class="label label-success">Username</span>
