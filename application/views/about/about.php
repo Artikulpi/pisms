@@ -9,3 +9,5 @@
 		Github : 
 		Jika terdapat bug pada aplikasi ini, maka sila kirim feedback pada link berikut <?php echo mailto('office@artikulpi.com', 'ini'); ?>
 	</p>
+
+
