@@ -9,6 +9,7 @@
 		                    <h4 class="modal-title" id="myModalLabel">Detail Pesan</h4>
 		                </div>
 		                <div class="modal-body">
+				<form class="form-horizontal" method="post" action="<?php echo site_url('sms/inbox')?>">
 					<div class="col-sm-12 col-md-6">
 					<span class="label label-success">Pengirim</span> <?php echo $sms->SenderNumber;?>
 					</div>
@@ -27,7 +28,7 @@
 					<div class="well well-sm">
 					<?php echo $sms->TextDecoded;?>
 					</div></div>
-					
+				</form>
 		                <div class="modal-footer">
 		                    
 		                </div>

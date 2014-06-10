@@ -1,14 +1,14 @@
-<form class="navbar-form navbar-left" role="search">
-	<div class="form-group">
-		<input type="text" class="form-control" placeholder="Search">
-		<button type="submit" class="btn btn-default">Submit</button>
-	</div>
-	
-</form>
-
+<div class="col-sm-12 col-md-12">
+						<form class="navbar-form navbar-right" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>	
+						</form>
+					</div>
 							<table class="table table-striped">
 								<thead>
-									<th>No. Tujuan</th>
+									<th>Dari</th>
 									<th>Isi</th>
 									<th>Tanggal</th>
 									<th>Aksi</th>
@@ -25,10 +25,10 @@
 								<td><span class="label label-success"><?php echo $row->SenderNumber;?></span></td>
 							
 							
-								<td><?php
+								<td><a href="#aboutModal" data-toggle="modal" data-target="#myModal"><?php
 								$cut = character_limiter(strip_tags($row->TextDecoded),6);
 								echo anchor('sms/detailInbox/'.$row->ID, $cut);
-								?></td>
+								?></a></td>
 							
 						
 								<td><?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
@@ -42,6 +42,6 @@
 						}
 						?>
 
+
+
 <div class="text-right"><?php echo $halaman?></div>
-
-
