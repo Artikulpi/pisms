@@ -22,15 +22,17 @@ echo form_open('contact/add'); ?>
 </div>
 <div class="form-group">
 	<label class="control-label col-sm-3">Group</label>
-	<div class="col-sm-9">
+	<div class="col-sm-1"
+	<form>
 		<?php foreach ($group as $key) {
 			?>
 			<input type="checkbox" name="group[]" value="<?php echo $key->id;?>"><?php echo $key->group_name;?>
 			<?php 		} ?>
 		</div>
+	</form>
 	</div>
 	<div class="text-left">
-		<label class="control-label col-sm-3"></label>
+		<label class="control-label col-sm-12"></label>
 		<div class="col-sm-2">
 			<input type="submit" class="btn btn-success" value="Tambah"/>
 		</div></div>

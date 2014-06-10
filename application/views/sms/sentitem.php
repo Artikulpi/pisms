@@ -1,16 +1,3 @@
-
-			<div class="row">
-				<div class="col-sm-12 col-md-12">
-				<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		        <div class="modal-dialog">
-		            <div class="modal-content">
- 
-		                <div class="modal-header">
-		                    <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-		                    <h4 class="modal-title" id="myModalLabel">Pesan Terkirim</h4>
-		                </div><hr>
-		                <div class="modal-body">
-						
 							<table class="table table-striped">
 								<thead>
 									<th>No. Tujuan</th>
@@ -31,23 +18,6 @@
 							}
 							?>
 							</table>
-		                </div>
-		                <hr>
-					   <div class="modal-footer">
-					   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					   </div>
-		            </div><!-- /.modal-content -->
-		        </div><!-- /.modal-dalog -->
-		</div><!-- /.modal -->
-    
-	    <div class="span3 well">
-	        <center>
-	        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">  <img src="<?php echo base_url();?>media/img/plane.png" alt="" name="aboutme" width="140" height="140" class="img-rounded"></a>
-	        
-	        <em>Klik gambar untuk melihat pesan terkirim.</em>
-			</center>
-	    </div>
-			</div></div>
-	
+		
 <div class="text-right"><?php echo $halaman?></div>
 
