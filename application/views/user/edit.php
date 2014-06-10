@@ -44,6 +44,6 @@ echo form_open('user/saveEdit'); ?>
 <div class="text-left">
 	<label class="control-label col-sm-3"></label>
 	<div class="col-sm-2">
-        <input type="submit" class="btn btn-success" value="Tambah"/>
+        <input type="submit" class="btn btn-success" value="Ubah"/>
 </div></div>
 <?php echo form_close(); ?>
