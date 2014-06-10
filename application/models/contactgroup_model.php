@@ -43,4 +43,9 @@ class Contactgroup_model extends CI_Model{
 		$this->db->where('id', $id);
 		$this->db->delete('contact_has_group');
 	}
+
+	function delByConId($id){
+		$this->db->where('contact_id', $id);
+		$this->db->delete('contact_has_group');
+	}
 }

@@ -108,6 +108,16 @@ class Contact extends CI_Controller{
 					'organisation' => $this->input->post('organisation'),
 					);
 				$this->Contact_model->saveEdit($id, $data);
+				$this->Contactgroup_model->delByConId($id);
+
+				foreach ($this->input->post('group') as $key) {
+					$chg = array(
+						'contact_id' => $id,
+						'group_id' => $key
+						);
+					$this->Contactgroup_model->save($chg);
+				}
+
 				$log = array(
 					'user_id'=>$this->session->userdata('id'),
 					'activity'=>'Sunting kontak',

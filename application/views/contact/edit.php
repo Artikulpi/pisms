@@ -31,8 +31,6 @@ echo form_open('contact/saveEdit'); ?>
 				}else{
 					$checked = NULL;
 				}
-//				$checked = ($val->group_id == $key->id) ? 'checked' : '' ;
-
 			}
 			?>
 			<input type="checkbox" name="group[]" value="<?php echo $key->id;?>" <?php echo $checked;?>><?php echo $key->group_name;?>
