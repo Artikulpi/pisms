@@ -27,6 +27,7 @@ class Sms extends CI_Controller{
 			$data['contact'] = $this->Contact_model->getfor();
 			$data['inbox'] = $this->Sms_model->getInbox($num, $offset);
 			$data['page'] = 'sms/inbox';
+			$this->session->set_flashdata('detail', 'oke');
 			$this->load->view('template/layout', $data);
 		}else{
 			redirect('auth');

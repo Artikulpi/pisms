@@ -107,7 +107,7 @@
 							<div class="panel-body">
 								<div class="panel" style="width: 100%; float: left;">
 									<?php isset($page) ? $this->load->view($page) : null; ?>
-								
+									<?php $this->load->view('sms/detailInbox')?>
 							</div>
 						</div>
 						</div

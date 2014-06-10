@@ -25,9 +25,9 @@
 								<td><span class="label label-success"><?php echo $row->SenderNumber;?></span></td>
 							
 							
-								<td><a href="#aboutModal" data-toggle="modal" data-target="#myModal"><?php
+								<td><a href="" data-toggle="modal" data-target="#test"><?php
 								$cut = character_limiter(strip_tags($row->TextDecoded),6);
-								echo anchor('sms/detailInbox/'.$row->ID, $cut);
+								echo $cut;
 								?></a></td>
 							
 						

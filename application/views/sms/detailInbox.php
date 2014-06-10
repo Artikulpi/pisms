@@ -1,6 +1,6 @@
 <div class="row">
 				<div class="col-sm-12 col-md-12">
-				<div id="myModal" class="modal fade in" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div id="test" class="modal fade in" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		        <div class="modal-dialog">
 		            <div class="modal-content">
  
@@ -37,12 +37,9 @@
 		        </div><!-- /.modal-dalog -->
 		</div><!-- /.modal -->
     
-	    <div class="span3 well">
-	        <center>
-	        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">  <img src="<?php echo base_url();?>media/img/eye.png" alt="" name="aboutme" width="140" height="140" class="img-rounded"></a>
-	        
-	        <em>Klik gambar untuk melihat detail pesan.</em>
-			</center>
-	    </div>
+	
+	
+	
+	   
 			</div></div>
 	
