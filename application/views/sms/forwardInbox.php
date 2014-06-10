@@ -16,7 +16,7 @@ echo form_open('sms/create'); ?>
 
 <div class="form-group">
 	<label class="control-label col-sm-2">Isi *</label>
-	<div class="col-sm-9">
+	<div class="col-sm-12 col-md-10">
 		<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3" style="max-width:1000px"><?php echo $sms->TextDecoded;?></textarea><br>
 		<div style="width:264px;text-align: center" class="alert alert-danger"><span id="hitung">160</span> Karakter Tersisa.</div>
 	</div>
@@ -26,7 +26,7 @@ echo form_open('sms/create'); ?>
 <br>
 <br>
 	<label class="control-label col-sm-2"></label>
-	<div class="col-sm-9">
+	<div class="col-sm-12 col-md-6">
 <div class="panel-group" id="accordion">
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -39,9 +39,7 @@ echo form_open('sms/create'); ?>
 		<div id="collapseOne" class="panel-collapse collapse">
 			<div class="panel-body">
 				<input type="text" class="form-control" name="number" />
-
-				
-				<div class="col-sm-2">
+				<div class="col-sm-3">
 					<input type="submit" name="input_manual" class="btn btn-success" value="Kirim"/>
 				</div>
 			</div>
@@ -58,13 +56,13 @@ echo form_open('sms/create'); ?>
 		<div id="collapseTwo" class="panel-collapse collapse">
 			<div class="panel-body">
 				<?php foreach ($contact as $row) {?>
-				<div class="checkbox">
+				<form>
 					<label>
 						<input name="contact" type="checkbox" value="<?php echo $row->phone_number?>"><?php echo $row->name?>
 					</label>
-				</div>
-				<?php } ?>
-				<div class="col-sm-2">
+				</form>
+				<?php } ?><hr>
+				<div class="col-sm-3">
 					<input type="submit" name="input_contact" class="btn btn-success" value="Kirim"/>
 				</div>
 			</div>
@@ -81,13 +79,13 @@ echo form_open('sms/create'); ?>
 		<div id="collapseThree" class="panel-collapse collapse">
 			<div class="panel-body">
 				<?php foreach ($group as $row) {?>
-				<div class="checkbox">
+				<form>
 					<label>
 						<input name="group" type="checkbox" value="<?php echo $row->id?>"><?php echo $row->group_name?>
 					</label>
-				</div>
-				<?php } ?>
-				<div class="col-sm-2">
+				</form>
+				<?php } ?><hr>
+				<div class="col-sm-3">
 					<input type="submit" name="input_group" class="btn btn-success" value="Kirim"/>
 				</div>
 			</div>
