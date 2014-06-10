@@ -21,9 +21,27 @@ echo form_open('contact/saveEdit'); ?>
 		<input type="text" class="form-control span5" name="organisation" value="<?php echo $contact->organisation?>">
 	</div>
 </div>
-<div class="text-left">
-	<label class="control-label col-sm-3"></label>
-	<div class="col-sm-2">
-	<input type="submit" class="btn btn-success" value="Edit"/>
-</div></div>
-<?php echo form_close(); ?>
+<div class="form-group">
+	<label class="control-label col-sm-3">Group</label>
+	<div class="col-sm-9">
+		<?php foreach ($group as $key) {
+			foreach ($chg as $val) {
+				if ($val->group_id == $key->id) {
+					$checked = 'checked';
+				}else{
+					$checked = NULL;
+				}
+//				$checked = ($val->group_id == $key->id) ? 'checked' : '' ;
+
+			}
+			?>
+			<input type="checkbox" name="group[]" value="<?php echo $key->id;?>" <?php echo $checked;?>><?php echo $key->group_name;?>
+			<?php		} ?>
+		</div>
+	</div>
+	<div class="text-left">
+		<label class="control-label col-sm-3"></label>
+		<div class="col-sm-2">
+			<input type="submit" class="btn btn-success" value="Edit"/>
+		</div></div>
+		<?php echo form_close(); ?>

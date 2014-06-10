@@ -24,6 +24,10 @@ class Contact_model extends CI_Model{
 		return $this->db->get_where('contact', array('id'=>$id))->row();
 	}
 
+	function getByName($name, $phone){
+		return $this->db->get_where('contact', array('name'=>$name, 'phone_number'=>$phone))->row();
+	}
+
 	function saveEdit($id, $data){
 		$this->db->where('id', $id);
 		$this->db->update('contact', $data);

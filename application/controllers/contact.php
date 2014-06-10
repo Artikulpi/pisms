@@ -40,12 +40,26 @@ class Contact extends CI_Controller{
 			$this->form_validation->set_rules('phone', 'Telepon', 'required');
 			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
 			if($this->form_validation->run() == TRUE){
+				$name = $this->input->post('name');
+				$phone = $this->input->post('phone');
 				$data = array(
-					'name' => $this->input->post('name'),
-					'phone_number' => $this->input->post('phone'),
+					'name' => $name,
+					'phone_number' => $phone,
 					'organisation' => $this->input->post('organisation'),
 					);
 				$this->Contact_model->save($data);
+
+				$getcon = $this->Contact_model->getByName($name, $phone);
+				$id = $getcon->id;
+
+				foreach ($this->input->post('group') as $key) {
+					$chg = array(
+						'contact_id' => $id,
+						'group_id' => $key
+						);
+					$this->Contactgroup_model->save($chg);
+				}
+				
 				$log = array(
 					'user_id'=>$this->session->userdata('id'),
 					'activity'=>'Menambah kontak baru',
@@ -53,10 +67,12 @@ class Contact extends CI_Controller{
 					'module'=>'Contact',
 					);
 				$this->Log_model->save($log);
+				
 				redirect('contact');
 			}else{
 				$data['title'] = 'Add Contact';
 				$data['header'] = 'Tambah Kontak';
+				$data['group'] = $this->Pigroup_model->getfor();
 				$data['page'] = 'contact/add';
 				$this->load->view('template/layout', $data);
 			}
@@ -67,6 +83,8 @@ class Contact extends CI_Controller{
 
 	function edit($id){
 		if($this->session->userdata('login') == TRUE){
+			$data['group'] = $this->Pigroup_model->getfor();
+			$data['chg'] = $this->Contactgroup_model->getAllId($id);
 			$data['contact'] = $this->Contact_model->getById($id);
 			$data['title'] = 'Edit Contact';
 			$data['header'] = 'Sunting Kontak';
