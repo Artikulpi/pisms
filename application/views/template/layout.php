@@ -124,7 +124,7 @@
 
 			<div class="footer" role="navigation">
 				<div class="container-fluid">
-					<p class="navbar-text pull-left">© Copyright pisms-2014
+					<p class="navbar-text pull-left">&copy; Copyright pisms-2014
 					</p>
 					<div class="navbar-collapse collapse">
 						<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right">Tentang Kami

@@ -3,7 +3,7 @@
 		  <div class="well well-sm">
 		<input type="text" name="cari" class="form-control" placeholder="Search">
 	<div class="col-sm-4">
-	  <button type="submit" class="btn btn-default">Sign in</button>
+	  <button type="submit" class="btn btn-default">Submit</button>
   </div></div></div>
 	</form>
 	
