@@ -98,7 +98,7 @@ echo form_open('sms/create'); ?>
 	                </div>
 	                </form>
 	            </div>
-
+</div></div></div>
 
 	
 <?php echo form_close(); ?>
