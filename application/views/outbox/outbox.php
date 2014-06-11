@@ -8,7 +8,7 @@
 	<?php
 	foreach ($outbox as $row) { 
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$delete = anchor('outbox/delete/'.$row->ID,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
+		$delete = anchor('outbox/delete/'.$row->ID,'<span class="btn btn-sm btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
 		?>
 		<tr>
 			<td><?php echo $row->DestinationNumber;?></td>

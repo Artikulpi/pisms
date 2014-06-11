@@ -13,9 +13,9 @@
 	$no = 1;
 	foreach ($user as $row) {
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$reset = anchor('user/reset/'.$row->id,'<span class="glyphicon glyphicon-wrench"></span>');
-		$edit = anchor('user/edit/'.$row->id,'<span class="glyphicon glyphicon-edit"></span>');
-		$delete = anchor('user/delete/'.$row->id,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
+		$reset = anchor('user/reset/'.$row->id,'<span class="btn btn-sm btn-success"><span class="glyphicon glyphicon-wrench" data-toggle="tooltip" data-placement="bottom" title="Reset"></span></span>');
+		$edit = anchor('user/edit/'.$row->id,'<span class="btn btn-sm btn-success"><span class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="bottom" title="Ubah"></span></span>');
+		$delete = anchor('user/delete/'.$row->id,'<span class="btn btn-sm btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
 		?>
 		<tr>
 			<td><?php echo $no?></td>

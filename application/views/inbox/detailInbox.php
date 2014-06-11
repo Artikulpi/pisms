@@ -7,8 +7,8 @@
 	<?php echo $sms->TextDecoded;?>
 </div></div>
 
-<div class="text-right">
-	<a href="<?php echo site_url('sms/reply/'.$sms->ID)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-share">Reply</span></a>
-	<a href="<?php echo site_url('inbox/forward/'.$sms->ID)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-share-alt">Forward</span></a>
-	<a href="<?php echo site_url('inbox/delete/'.$sms->ID)?>" class="btn btn-success btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash">Hapus<span></a>
+<div class="text-left">
+	<a href="<?php echo site_url('sms/reply/'.$sms->ID)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"></span></a>
+	<a href="<?php echo site_url('inbox/forward/'.$sms->ID)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></a>
+	<a href="<?php echo site_url('inbox/delete/'.$sms->ID)?>" class="btn btn-success btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"><span></a>
 </div>
