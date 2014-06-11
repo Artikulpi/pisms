@@ -17,7 +17,15 @@
 
 	<title>piSMS - <?php echo $title?></title>
 	<script src="<?php echo base_url(); ?>media/js/jquery.min.js"></script>
-	
+	<script>
+	  $('#loading-example-btn').click(function () {
+	    var btn = $(this)
+	    btn.button('loading')
+	    $.ajax(...).always(function () {
+	      btn.button('reset')
+	    });
+	  });
+	</script>
 
 </head>
 <body>
