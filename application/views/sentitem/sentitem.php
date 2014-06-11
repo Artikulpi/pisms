@@ -48,7 +48,7 @@
 								                                    
 								                                  </ul>
 								  
-                                <p class="hidden-xs"><?php echo $row->TextDecoded;?></p><hr><span class="fnt-smaller fnt-lighter fnt-arial"></span>
+                                <h5><p class="hidden-xs"><?php echo $row->TextDecoded;?></p></h5><hr><span class="fnt-smaller fnt-lighter fnt-arial"></span>
                             </div>
                         </div>
                     </div><!-- End Listing-->

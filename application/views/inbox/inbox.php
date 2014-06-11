@@ -73,7 +73,7 @@
                                 <a href="#" target="_parent"></a>
 
                                 <h4 class="media-heading">
-                                  <a href="#" target="_parent">@_<?php echo $row->SenderNumber;?> <span class="fnt-smaller fnt-lighter fnt-arial"></span><small class="pull-right"><i class="glyphicon glyphicon-globe" data-toggle="tooltip" data-placement="bottom" title="Home"></i></small></a></h4><br>
+                                  <a href="#" target="_parent">@_<?php echo $row->SenderNumber;?> <span class="fnt-smaller fnt-lighter fnt-arial"></span><small class="pull-right"></small></a></h4><br>
 								  <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
 								                                      <li><?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></li>
 
