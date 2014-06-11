@@ -31,7 +31,7 @@ class Sms extends CI_Controller{
 					$draft_id = $this->input->post('draft_id');
 					$this->Sms_model->deleteDraft($draft_id);
 				}
-				redirect('sms/outbox');
+				redirect('outbox');
 			}elseif($this->form_validation->run() == TRUE AND $this->input->post('draft')){
 				$content = $this->input->post('content');
 				$data = array(

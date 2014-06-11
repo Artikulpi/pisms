@@ -15,7 +15,7 @@ class Inbox extends CI_Controller{
 			$this->load->library('pagination');
 			$count = $this->Inbox_model->countInbox();
 
-			$config['base_url'] = site_url('sms/inbox');
+			$config['base_url'] = site_url('inbox/index');
 			$config['total_rows'] = $count->num_rows();
 			$config['per_page'] = 10; 
 			$config['uri_segment'] = 3;

@@ -15,7 +15,7 @@ class Outbox extends CI_Controller{
 			$this->load->library('pagination');
 			$count = $this->Outbox_model->countOutbox();
 
-			$config['base_url'] = site_url('sms/outbox');
+			$config['base_url'] = site_url('outbox/index');
 			$config['total_rows'] = $count->num_rows();
 			$config['per_page'] = 10; 
 			$config['uri_segment'] = 3;

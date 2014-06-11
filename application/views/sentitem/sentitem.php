@@ -12,7 +12,7 @@
 		?>
 		<tr>
 			<td><?php echo $row->DestinationNumber;?></td>
-			<td><?php echo $row->TextDecode;?></td>
+			<td><?php echo $row->TextDecoded;?></td>
 			<td><?php echo $row->SendingDateTime;?></td>
 			<td><?php echo $delete;?></td>
 		</tr>
