@@ -16,7 +16,7 @@ echo form_open('sms/create'); ?>
 	<label class="control-label col-sm-2">Isi *</label>
 		<div class="col-sm-12 col-md-10">
 		<textarea class="form-control" id="karakter" name="content" maxlength="260" rows="4" placeholder="Message"></textarea><br>
-		<div style="width:264px;text-align: center" class="alert alert-danger"><span id="hitung">160</span> Karakter Tersisa.</div>
+		<div style="width:264px;text-align: center" class="alert alert-warning"><span id="hitung">160</span> Karakter Tersisa.</div>
 	</div>
 		<label class="control-label col-sm-2"></label>
 		<div class="col-sm-12 col-md-6">

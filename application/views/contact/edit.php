@@ -23,7 +23,7 @@ echo form_open('contact/saveEdit'); ?>
 </div>
 <div class="form-group">
 	<label class="control-label col-sm-3">Group</label>
-	<div class="col-sm-1">
+	<div class="col-sm-3">
 		<form>
 		<?php foreach ($group as $key) {
 			foreach ($chg as $val) {
