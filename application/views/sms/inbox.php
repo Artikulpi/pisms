@@ -29,7 +29,7 @@
 								$cut = character_limiter(strip_tags($row->TextDecoded),6);
 								echo $cut;
 								?></a></td>
-							
+								
 						
 								<td><?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></td>
 							
