@@ -23,10 +23,10 @@ foreach ($contactgroup as $cg) {
 	}
 }
 ?></p>
-<div class="col-sm-6 col-md-10">
-<a href="<?php echo site_url('contact')?>" class="btn btn-info btn-xs">Kontak</a>
-<a href="<?php echo site_url('sms/sendto/'.$contact->id)?>" class="btn btn-warning btn-xs">Kirim SMS</a>
-<a href="<?php echo site_url('contact/delete/'.$contact->id)?>" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a><br>
+<div class="col-sm-6 col-md-11">
+<a href="<?php echo site_url('contact')?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-phone-alt"> Kontak</a>
+<a href="<?php echo site_url('sms/sendto/'.$contact->id)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"> KirimSMS</a>
+<a href="<?php echo site_url('contact/delete/'.$contact->id)?>" class="btn btn-success btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash"> Hapus</a><br>
 
       
        

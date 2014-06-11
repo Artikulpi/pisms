@@ -8,7 +8,7 @@
 </div></div>
 
 <div class="text-right">
-	<a href="<?php echo site_url('sms/reply/'.$sms->ID)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-share"></span></a>
-	<a href="<?php echo site_url('inbox/forward/'.$sms->ID)?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-share-alt"></span></a>
-	<a href="<?php echo site_url('inbox/delete/'.$sms->ID)?>" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash"><span></a>
+	<a href="<?php echo site_url('sms/reply/'.$sms->ID)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-share">Reply</span></a>
+	<a href="<?php echo site_url('inbox/forward/'.$sms->ID)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-share-alt">Forward</span></a>
+	<a href="<?php echo site_url('inbox/delete/'.$sms->ID)?>" class="btn btn-success btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash">Hapus<span></a>
 </div>
