@@ -24,10 +24,7 @@
                                 <h4 class="media-heading">
                                   <a href="#" target="_parent">@_<?php echo $row->DestinationNumber;?> <span class="fnt-smaller fnt-lighter fnt-arial"></span><small class="pull-right"><i class="glyphicon glyphicon-globe" data-toggle="tooltip" data-placement="bottom" title="Home"></i></small></a></h4><br>
 								  <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
-								                                      <li><?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></</li>
-
-								                                     	
-								                                  </ul>
+								                                      <li><?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></</li></ul>
 								  
                                 <p class="hidden-xs"><?php echo $row->TextDecoded;?></p><hr><span class="fnt-smaller fnt-lighter fnt-arial"><?php echo $delete.' hapus';?></span>
                             </div>

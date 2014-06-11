@@ -1,3 +1,12 @@
+	
+	<form class="navbar-form navbar-right" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
+		
+			<input type="text" name="cari" class="form-control" placeholder="Search">
+		<div class="col-sm-4">
+		<button type="submit" class="btn btn-default">Submit</button>
+	</div>	
+	</form>
+	
 <form action="<?php echo site_url('inbox/filter')?>" method="POST">
 	<div class="col-sm-2">
 	<select name="tgl" class="form-control">
@@ -33,14 +42,8 @@
 	</div>
 </form>
 
-	<form class="navbar-form navbar-right" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
-		<div class="well well-sm">
-			<input type="text" name="cari" class="form-control" placeholder="Search">
-		<div class="col-sm-4">
-		<button type="submit" class="btn btn-default">Submit</button>
-	</div>	
-	</form>
-</div>
+		
+
 
 	<?php
 	foreach ($inbox as $row) {
