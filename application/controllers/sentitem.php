@@ -34,11 +34,13 @@ class Sentitem extends CI_Controller{
 
 	function search(){
 		if($this->session->userdata('login') == TRUE){
-			$cari = $this->input->post('cari');
+			$search = $this->input->post('cari');
 			$data['title'] = 'Sent Item';
 			$data['header'] = 'Pesan Terkirim';
 			$data['contact'] = $this->Contact_model->getfor();
-			$data['sentitem'] = $this->Sentitem_model->getSearch($cari);
+			$data['sentitem'] = $this->Sentitem_model->getSearch($search);
+			$data['jumlah'] = $this->Sentitem_model->countSearch($search);
+			$data['search'] = $search;
 			$data['page'] = 'sentitem/search_sentitem';
 			$this->load->view('template/layout', $data);
 		}else{

@@ -6,6 +6,7 @@
 		<button type="submit" class="btn btn-default">Submit</button>	
 	</form>
 </div>
+Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kunci <strong><em><?php echo $search;?></em></strong>
 <table class="table table-striped">
 	<thead>
 		<th>Dari</th>

@@ -36,11 +36,13 @@ class Inbox extends CI_Controller{
 
 	function search(){
 		if($this->session->userdata('login') == TRUE){
-			$cari = $this->input->post('cari');
+			$search = $this->input->post('cari');
 			$data['title'] = 'Inbox';
 			$data['header'] = 'Kotak Masuk';
 			$data['contact'] = $this->Contact_model->getfor();
-			$data['inbox'] = $this->Inbox_model->getSearch($cari);
+			$data['inbox'] = $this->Inbox_model->getSearch($search);
+			$data['jumlah'] = $this->Inbox_model->countSearch($search);
+			$data['search'] = $search;
 			$data['page'] = 'inbox/search_inbox';
 			$this->load->view('template/layout', $data);
 		}else{

@@ -25,4 +25,11 @@ class Inbox_model extends CI_Model{
 		$query = $this->db->get('inbox');
 		return $query->result();
 	}
+
+	function countSearch($search){
+		$this->db->like('SenderNumber',$search);
+		$this->db->or_like('TextDecoded',$search);
+		$query = $this->db->count_all_results('inbox');
+		return $query;
+	}
 }

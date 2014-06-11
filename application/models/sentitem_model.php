@@ -16,10 +16,17 @@ class Sentitem_model extends CI_Model{
 		$this->db->delete('sentitems');
 	}
 
-	function getSearch($cari){
-		$this->db->like('DestinationNumber',$cari);
-		$this->db->or_like('TextDecoded',$cari);
+	function getSearch($search){
+		$this->db->like('DestinationNumber',$search);
+		$this->db->or_like('TextDecoded',$search);
 		$query = $this->db->get('sentitems');
 		return $query->result();
+	}
+
+	function countSearch($search){
+		$this->db->like('DestinationNumber',$search);
+		$this->db->or_like('TextDecoded',$search);
+		$query = $this->db->count_all_results('sentitems');
+		return $query;
 	}
 }

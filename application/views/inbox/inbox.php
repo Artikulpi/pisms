@@ -1,3 +1,33 @@
+<form action="<?php echo site_url('inbox/filter')?>" method="POST">
+	<select name="tgl">
+		<option value="0">Tanggal</option>
+		<?php
+		for($i=1;$i<=31;$i++){
+			?>
+			<option value="<?php echo $i?>"><?php echo $i?></option>
+			<?php
+		}
+		?>
+	</select>
+	<select name="bln">
+		<option value="0">Bulan</option>
+		<?php $bulan = array('1'=>'Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember');
+		foreach ($bulan as $key => $value) {
+			?>
+			<option value="<?php echo $key?>"><?php echo $value?></option>
+			<?php
+		}
+		?>
+	</select>
+	<select name="thn">
+		<option value="0">Tahun</option>
+		<?php for($i=2010;$i<2050;$i++){?>
+		<option value="<?php echo $i?>"><?php echo $i?></option>
+		<?php } ?>
+	</select>
+	<input type="submit" value="Filter" class="btn btn-primary">
+</form>
+
 <div class="col-sm-12 col-md-12">
 	<form class="navbar-form navbar-right" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
 		<div class="form-group">
