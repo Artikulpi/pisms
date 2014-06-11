@@ -122,7 +122,7 @@
 			</div>
 
 
-			<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+			<div class="navbar-fixed-bottom" role="navigation">
 				<div class="container-fluid">
 					<p class="navbar-text pull-left">© Copyright pisms-2014
 					</p>
