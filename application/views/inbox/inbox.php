@@ -1,11 +1,13 @@
-	
-	<form class="navbar-form navbar-right" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
-		
-			<input type="text" name="cari" class="form-control" placeholder="Search">
-		<div class="col-sm-4">
-		<button type="submit" class="btn btn-default">Submit</button>
-	</div>	
+	<form class="form-inline navbar-right" role="form" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
+	  <div class="form-group">
+		  <div class="well well-sm">
+		<input type="text" name="cari" class="form-control" placeholder="Search">
+	<div class="col-sm-4">
+	  <button type="submit" class="btn btn-default">Sign in</button>
+  </div></div></div>
 	</form>
+	
+	
 	
 <form action="<?php echo site_url('inbox/filter')?>" method="POST">
 	<div class="col-sm-2">
@@ -42,7 +44,7 @@
 	</div>
 </form>
 
-		
+	
 
 
 	<?php
