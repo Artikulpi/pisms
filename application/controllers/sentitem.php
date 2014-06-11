@@ -32,6 +32,20 @@ class Sentitem extends CI_Controller{
 		}
 	}
 
+	function search(){
+		if($this->session->userdata('login') == TRUE){
+			$cari = $this->input->post('cari');
+			$data['title'] = 'Sent Item';
+			$data['header'] = 'Pesan Terkirim';
+			$data['contact'] = $this->Contact_model->getfor();
+			$data['sentitem'] = $this->Sentitem_model->getSearch($cari);
+			$data['page'] = 'sentitem/search_sentitem';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
+	}
+
 	function delete($id){
 		if($this->session->userdata('login')== TRUE){
 			$this->Sentitem_model->delete($id);

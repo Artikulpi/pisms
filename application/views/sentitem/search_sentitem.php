@@ -27,6 +27,3 @@
 	}
 	?>
 </table>
-
-<div class="text-right"><?php echo $halaman?></div>
-
