@@ -20,10 +20,10 @@
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/bootstrap.min.js"></script>
-    <style type="text/css">
-    body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}
+	<style type="text/css">
+	body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}
 
-    </style>
+	</style>
 </head>
 <body>
 
@@ -41,24 +41,24 @@
 							<ul class="dropdown-menu">
 								<li align="center" class="well">
 									<div class="navbar-content">
-									    <div class="row">
-									       <div class="col-md-5">
-									         <img src="<?php echo base_url();?>media/img/Manager.png" class="img-rounded" width="70"><p class="text-center small">
-							 <a href="#">Change Photo</a></p>
-							</div>
-							<div class="col-md-7">
-							<span><?php echo $this->session->userdata('user');?></span>
-							 <p class="text-muted small">mail@gmail.com</p>
-								<div class="divider"></div>
-									<a href="<?php echo site_url('user/detail/'.$this->session->userdata('id'));?>" class="btn btn-primary btn-sm active">View Profile</a>
-									    </div>
-									     </div>
-									       </div>
-									  <li><a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong></a>
-												</li><hr>
-								               <li><a href="<?php echo site_url('auth/logout');?>" class="btn btn-sm btn-danger"><img src="<?php echo base_url();?>media/img/lock.png" class="img-rounded" width="30"> Logout</a>
-											   </li>
-								            </li>
+										<div class="row">
+											<div class="col-md-5">
+												<img src="<?php echo base_url();?>media/img/Manager.png" class="img-rounded" width="70"><p class="text-center small">
+												<a href="#">Change Photo</a></p>
+											</div>
+											<div class="col-md-7">
+												<span><?php echo $this->session->userdata('user');?></span>
+												<p class="text-muted small">mail@gmail.com</p>
+												<div class="divider"></div>
+												<a href="<?php echo site_url('user/detail/'.$this->session->userdata('id'));?>" class="btn btn-primary btn-sm active">View Profile</a>
+											</div>
+										</div>
+									</div>
+									<li><a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong></a>
+									</li><hr>
+									<li><a href="<?php echo site_url('auth/logout');?>" class="btn btn-sm btn-danger"><img src="<?php echo base_url();?>media/img/lock.png" class="img-rounded" width="30"> Logout</a>
+									</li>
+								</li>
 								
 							</ul>
 						</div>
@@ -75,9 +75,9 @@
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Pesan</a>
 						<a href="<?php echo site_url('admin')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/house.png" class="img-rounded" width="20"> Dashboard</a>
 						<a href="<?php echo site_url('sms/create')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/file.png" class="img-rounded" width="20"> Tulis Pesan</a>
-						<a href="<?php echo site_url('sms/inbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/inbox.png" class="img-rounded" width="20"> Kotak Masuk</a>
-						<a href="<?php echo site_url('sms/outbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/outbox.png" class="img-rounded" width="20"> Kotak Keluar</a>
-						<a href="<?php echo site_url('sms/sentitem')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/item.png" class="img-rounded" width="20"> Pesan Terkirim</a>
+						<a href="<?php echo site_url('inbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/inbox.png" class="img-rounded" width="20"> Kotak Masuk</a>
+						<a href="<?php echo site_url('outbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/outbox.png" class="img-rounded" width="20"> Kotak Keluar</a>
+						<a href="<?php echo site_url('sentitem')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/item.png" class="img-rounded" width="20"> Pesan Terkirim</a>
 						<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/trash.png" class="img-rounded" width="20"> Draft</a>
 						<br>
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Kontak & Grup</a>
@@ -91,7 +91,7 @@
 						<?php
 					}
 					?>
-				
+
 					
 				</div>
 			</div>
@@ -107,33 +107,32 @@
 							<div class="panel-body">
 								<div class="panel" style="width: 100%; float: left;">
 									<?php isset($page) ? $this->load->view($page) : null; ?>
-									<?php $this->load->view('sms/detailInbox')?>
+								</div>
 							</div>
+							</div
 						</div>
-						</div
+					</div>
+					<div id="dialog-confirm" title="Apakah anda yakin?" style="display: none">
+						<p>
+							<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+							"Data akan dihapus !"
+						</p>
 					</div>
 				</div>
-				<div id="dialog-confirm" title="Apakah anda yakin?" style="display: none">
-					<p>
-						<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
-						"Data akan dihapus !"
+			</div>
+
+
+			<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+				<div class="container-fluid">
+					<p class="navbar-text pull-left">© Copyright pisms-2014
 					</p>
+					<div class="navbar-collapse collapse">
+						<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/about.png" class="img-rounded" width="20"> Tentang Kami
+						</p>
+						<a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/Info.png" class="img-rounded" width="20"> Bantuan
+						</p>	
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		
-		<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-			<div class="container-fluid">
-				<p class="navbar-text pull-left">© Copyright pisms-2014
-				</p>
-				<div class="navbar-collapse collapse">
-					<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/about.png" class="img-rounded" width="20"> Tentang Kami
-					</p>
-					<a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/Info.png" class="img-rounded" width="20"> Bantuan
-					</p>	
-				</div>
-			</div>
-		</div>
-	</div>
-	
+
