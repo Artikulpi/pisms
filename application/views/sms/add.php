@@ -19,11 +19,11 @@ $(document).ready(function() {
 	        <div class="col-md-12">
 	                <form>
 	                <div class="row">
-	                    <div class="col-sm-12 col-md-6">
+	                    <div class="col-sm-12 col-md-12">
 	                        <div class="form-group">
 					          <?php echo validation_errors(); ?>
 					          <Label>Pesan Anda</Label>
-					          <textarea id="karakter" style="width: 500px"  name="content"  class="form-control" maxlength="160" rows="5"></textarea><br>
+					          <textarea id="karakter" style="width: 1000px"  name="content"  class="form-control" maxlength="160" rows="5"></textarea><br>
 					          <div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung">160</span> Karakter Tersisa.</div>  
 	                        </div>
 	                    </div>

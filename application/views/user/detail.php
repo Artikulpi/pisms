@@ -21,8 +21,8 @@
 
 
 <td>
-	<a href="<?php echo site_url('user/edit/'.$user->id)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pencil"> Ubah</a>
-	<a href="<?php echo site_url('user/reset/'.$user->id)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pencil"> Ganti Password</a>
-	<a href="<?php echo site_url('user/delete/'.$user->id)?>" class="btn btn-success btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash"> Hapus</a>
+	<a href="<?php echo site_url('user/edit/'.$user->id)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="bottom" title="Ubah"> </a>
+	<a href="<?php echo site_url('user/reset/'.$user->id)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="bottom" title="Ganti Password"> </a>
+	<a href="<?php echo site_url('user/delete/'.$user->id)?>" class="btn btn-success btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> </a>
 </td>
 </tr>

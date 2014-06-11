@@ -19,7 +19,7 @@ echo form_open('sms/create'); ?>
 	        <div class="col-md-12">
 	                <form>
 	                <div class="row">
-	                    <div class="col-sm-12 col-md-6">
+	                    <div class="col-sm-12 col-md-12">
 	                        <div class="form-group">
 					          <?php echo validation_errors(); ?>
 					          <Label>Isi *</Label>
@@ -27,10 +27,9 @@ echo form_open('sms/create'); ?>
 					  		<div style="width:264px;text-align: center" class="alert alert-warning"><span id="hitung">160</span> Karakter Tersisa.</div>
 	                        </div>
 	                    </div>
-	                    <div class="col-sm-12 col-md-6">
+	                  <label class="col-sm-12">Kirim Berdasarkan :</label>
 	                        <div class="form-group">
-							<label class="col-sm-12">Kirim Berdasarkan :</label>
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 						<div class="panel-group" id="accordion">
 							<div class="panel panel-default">
 								<div class="panel-heading">

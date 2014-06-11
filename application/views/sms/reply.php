@@ -19,7 +19,7 @@ echo form_open('sms/create'); ?>
 	        <div class="col-md-12">
 	                <form>
 	                <div class="row">
-	                    <div class="col-sm-12 col-md-6">
+	                    <div class="col-sm-12 col-md-12">
 	                        <div class="form-group">
 								<label>Isi *</label>
 					  		<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3" style="max-width:1000px" placeholder="massage"></textarea><br>

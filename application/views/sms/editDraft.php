@@ -18,14 +18,14 @@ echo form_open('sms/create'); ?>
 	        <div class="col-md-12">
 	                <form>
 	                <div class="row">
-	                    <div class="col-sm-12 col-md-6">
+	                    <div class="col-sm-12 col-md-12">
 	                        <div class="form-group">
 								<label>Isi *</label>
 							<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3"><?php echo $draft->content;?></textarea><br>
 							<div style="width:264px;text-align: center" class="alert alert-warning"><span id="hitung">160</span> Karakter Tersisa.</div>
 	                        </div>
 	                    </div>
-						<label class="control-label col-sm-2">Kirim Berdasarkan :</label>
+						<label class="control-label col-sm-12">Kirim Berdasarkan :</label>
 							<div class="col-sm-12 col-md-6">
 						<div class="panel-group" id="accordion">
 							<div class="panel panel-default">
