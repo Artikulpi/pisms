@@ -1,5 +1,5 @@
 <div class="col-sm-12 col-md-12">
-	<form class="navbar-form navbar-right" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
+		<form class="navbar-form navbar-right" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
 		<div class="form-group">
 			<input type="text" name="cari" class="form-control" placeholder="Search">
 		</div>
@@ -41,7 +41,3 @@
 		<?php
 	}
 	?>
-
-
-
-	<div class="text-right"><?php echo $halaman?></div>

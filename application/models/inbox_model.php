@@ -18,4 +18,11 @@ class Inbox_model extends CI_Model{
 	function getDetailInbox($id){
 		return $this->db->get_where('inbox', array('ID'=> $id))->row();
 	}
+
+	function getSearch($search){
+		$this->db->like('SenderNumber',$search);
+		$this->db->or_like('TextDecoded',$search);
+		$query = $this->db->get('inbox');
+		return $query->result();
+	}
 }
