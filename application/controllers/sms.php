@@ -14,9 +14,9 @@ class Sms extends CI_Controller{
 		if($this->session->userdata('login') == TRUE){
 			$this->form_validation->set_rules('content', 'Isi', 'required');
 			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
-			if($this->form_validation->run() == TRUE AND $this->input->post('input_manual')){
+			if($this->form_validation->run() == TRUE AND $this->input->post('optionsRadios')=='frominput'){
 				$data = array(
-					'DestinationNumber' => $this->input->post('number'),
+					'DestinationNumber' => $this->input->post('no_tujuan'),
 					'TextDecoded' => $this->input->post('content'),
 					);
 				$this->Sms_model->sent($data);
@@ -44,7 +44,7 @@ class Sms extends CI_Controller{
 				$data['group'] = $this->Pigroup_model->getfor();
 				$data['title'] = 'Create SMS';
 				$data['header'] = 'SMS';
-				$data['page'] = 'sms/create';
+				$data['page'] = 'sms/add';
 				$this->load->view('template/layout', $data);
 			}
 		}else{
