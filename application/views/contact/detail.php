@@ -1,13 +1,12 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2 col-md-2">
-            <img src="<?php echo base_url();?>media/img/Manager.png"
-            alt="" class="img-rounded img-responsive" width="250"/>
-        </div>
+        
+           
+			
         <div class="col-sm-4 col-md-4">
             <blockquote>
-                <p>Nama : <?php echo $contact->name?><br></p> 
+                <p><span class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="Detail Kontak"> Nama: <?php echo $contact->name?></span><br></p> 
             </blockquote>
             <p> <i class="glyphicon glyphicon-envelope"></i> Telepon : <?php echo $contact->phone_number?>
                 <br

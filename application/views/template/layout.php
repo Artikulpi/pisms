@@ -33,7 +33,7 @@
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href="<?php echo site_url('admin') ?>"><img src="<?php echo base_url();?>media/img/sms.png" class="img-rounded" width="30">piSMS</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href="<?php echo site_url('admin') ?>"><i class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="piSMS">_piSMS</i></a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
@@ -43,7 +43,7 @@
 									<div class="navbar-content">
 										<div class="row">
 											<div class="col-md-5">
-												<img src="<?php echo base_url();?>media/img/Manager.png" class="img-rounded" width="70"><p class="text-center small">
+												<blockquote><span class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="User"></blockquote><p class="text-center small">
 												<a href="#">Change Photo</a></p>
 											</div>
 											<div class="col-md-7">
@@ -54,9 +54,9 @@
 											</div>
 										</div>
 									</div>
-									<li><a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><img src="<?php echo base_url();?>media/img/edit.png" class="img-rounded" width="20"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</strong></a>
+									<li><a style="margin-top: 15px" class="btn" href="<?php echo site_url('user/reset/'.$this->session->userdata('id'));?>"><i class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="bottom" title="Ubah password"> Ubah Password <strong>[ <?php echo $this->session->userdata('user')?> ]</i></strong></a>
 									</li><hr>
-									<li><a href="<?php echo site_url('auth/logout');?>" class="btn btn-sm btn-danger"><img src="<?php echo base_url();?>media/img/lock.png" class="img-rounded" width="30"> Logout</a>
+									<li><a href="<?php echo site_url('auth/logout');?>" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-lock" data-toggle="tooltip" data-placement="bottom" title="Keluar"> Logout</i></a>
 									</li>
 								</li>
 								
@@ -73,21 +73,21 @@
 					<div class="list-group">
 						
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Pesan</a>
-						<a href="<?php echo site_url('admin')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/house.png" class="img-rounded" width="20"> Dashboard</a>
-						<a href="<?php echo site_url('sms/create')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/file.png" class="img-rounded" width="20"> Tulis Pesan</a>
-						<a href="<?php echo site_url('inbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/inbox.png" class="img-rounded" width="20"> Kotak Masuk</a>
-						<a href="<?php echo site_url('outbox')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/outbox.png" class="img-rounded" width="20"> Kotak Keluar</a>
-						<a href="<?php echo site_url('sentitem')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/item.png" class="img-rounded" width="20"> Pesan Terkirim</a>
-						<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/trash.png" class="img-rounded" width="20"> Draft</a>
+						<a href="<?php echo site_url('admin')?>" class="list-group-item"><i class="glyphicon glyphicon-home" data-toggle="tooltip" data-placement="bottom" title="Home"> Dashboard</i></a>
+						<a href="<?php echo site_url('sms/create')?>" class="list-group-item"><i class="glyphicon glyphicon-file" data-toggle="tooltip" data-placement="bottom" title="Tulis pesan"> Tulis Pesan</i></a>
+						<a href="<?php echo site_url('inbox')?>" class="list-group-item"><i class="glyphicon glyphicon-download-alt" data-toggle="tooltip" data-placement="bottom" title="Pesan masuk"> Kotak Masuk</i></a>
+						<a href="<?php echo site_url('outbox')?>" class="list-group-item"><i class="glyphicon glyphicon-open" data-toggle="tooltip" data-placement="bottom" title="Pesan keluar"> Kotak Keluar</i></a>
+						<a href="<?php echo site_url('sentitem')?>" class="list-group-item"><i class="glyphicon glyphicon-send" data-toggle="tooltip" data-placement="bottom" title="Pesan terkirim"> Pesan Terkirim</i></a>
+						<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><i class="glyphicon glyphicon-folder-open" data-toggle="tooltip" data-placement="bottom" title="Draf"> Draft</i></a>
 						<br>
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Kontak & Grup</a>
-						<a href="<?php echo site_url('contact')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/daftar.png" class="img-rounded" width="20"> Kontak</a>
-						<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/grup.png" class="img-rounded" width="20"> Grup</a>
+						<a href="<?php echo site_url('contact')?>" class="list-group-item"><i class="glyphicon glyphicon-phone-alt" data-toggle="tooltip" data-placement="bottom" title="Draf Kontak"> Kontak</i></a>
+						<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="bottom" title="Daftar grup"> Grup</i></a>
 						<br>
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Utility</a>
-						<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/log.png" class="img-rounded" width="20"> Log Aktifitas</a>
+						<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-indent-left" data-toggle="tooltip" data-placement="bottom" title="Log"> Log Aktifitas</i></a>
 						<?php if($this->session->userdata('role')==1){?>
-						<a href="<?php echo site_url('user')?>" class="list-group-item"><img src="<?php echo base_url();?>media/img/User.png" class="img-rounded" width="20"> List User</a>
+						<a href="<?php echo site_url('user')?>" class="list-group-item"><i class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="User"> List User</i></a>
 						<?php
 					}
 					?>
@@ -102,7 +102,7 @@
 					<div class="main-admin">
 						<div class="panel panel-default">
 							<div style="background-color: #006E7D;" class="panel-heading">
-								<h3 style="color: white;" class="panel-title"><?php echo $header?></h3>
+								<h3 style="color: white;" class="panel-title"><i class="glyphicon glyphicon-align-left" data-toggle="tooltip" data-placement="bottom" title="Title"> <?php echo $header?></i></h3>
 							</div>
 							<div class="panel-body">
 								<div class="panel" style="width: 100%; float: left;">
