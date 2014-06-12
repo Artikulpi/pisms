@@ -5,7 +5,7 @@ $(document).ready(function() {
         if (len >= 160) {
             this.value = this.value.substring(0, 160);
         }else{
-				$('#hitung').text(100 - len).css("color","#FF0004");
+			
         	 $('#hitung').text(160 - len).css("color","#00A41E");
         };
        
