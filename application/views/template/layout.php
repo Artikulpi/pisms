@@ -109,7 +109,7 @@
 									<?php isset($page) ? $this->load->view($page) : null; ?>
 								</div>
 							</div>
-							</div
+						</div>
 						</div>
 					</div>
 					<div id="dialog-confirm" title="Apakah anda yakin?" style="display: none">
