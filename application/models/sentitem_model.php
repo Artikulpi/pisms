@@ -29,4 +29,15 @@ class Sentitem_model extends CI_Model{
 		$query = $this->db->count_all_results('sentitems');
 		return $query;
 	}
+
+	function getFilter($filter){
+		$this->db->like('SendingDateTime', $filter);
+		return $this->db->get('sentitems')->result();
+	}
+
+	function countFilter($filter){
+		$this->db->like('SendingDateTime',$filter);
+		$query = $this->db->count_all_results('sentitems');
+		return $query;
+	}
 }

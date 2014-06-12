@@ -48,6 +48,27 @@ class Sentitem extends CI_Controller{
 		}
 	}
 
+	function filter(){
+		if($this->session->userdata('login') == TRUE){
+			$tgl = $this->input->post('tgl');
+			$tanggal = ($tgl < 10) ? '0'.$tgl : $tgl ;
+			$bln = $this->input->post('bln');
+			$bulan = ($bln < 10) ? '0'.$bln : $bln ;
+			$thn = $this->input->post('thn');
+			$filter = $thn.'-'.$bulan.'-'.$tanggal;
+			$data['title'] = 'Sentitem';
+			$data['header'] = 'Berita Terkirim';
+			$data['contact'] = $this->Contact_model->getfor();
+			$data['sentitem'] = $this->Sentitem_model->getFilter($filter);
+			$data['jumlah'] = $this->Sentitem_model->countFilter($filter);
+			$data['search'] = $filter;
+			$data['page'] = 'sentitem/filter_sentitem';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}	
+	}
+
 	function delete($id){
 		if($this->session->userdata('login')== TRUE){
 			$this->Sentitem_model->delete($id);
