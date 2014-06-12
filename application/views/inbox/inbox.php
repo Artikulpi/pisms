@@ -45,8 +45,12 @@
 					</form>
 			<div class="container-fluid">
 				<div class="row">
-					
 				</div>
+				<div class="message-item" id="m1">
+					<div class="message-inner">
+						<div class="message-head clearfix">
+							<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a></div>
+							<div class="user-detail">
 			<?php
 					foreach ($inbox as $row) {
 						$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
@@ -57,11 +61,7 @@
 							<?php
 						}
 						?>
-											<div class="message-item" id="m1">
-												<div class="message-inner">
-													<div class="message-head clearfix">
-														<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a></div>
-														<div class="user-detail">
+											
 															<h5 class="handle">@_<?php echo $row->SenderNumber;?></h5>
 															<div class="post-meta">
 																<div class="asker-meta">
@@ -83,11 +83,12 @@
 										?>
 										</div>
 										<p class="hidden-xs"></p><hr><span class="fnt-smaller fnt-lighter fnt-arial"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></p></span>
-											</div></div>
-			
+											</div>
 										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						</div></div>
 									
 								
 								<div class="text-right"><?php echo $halaman?></div>
