@@ -88,7 +88,7 @@
 									<?php }   ?>
 								<div class="text-right"><?php echo $halaman?></div>
 								
-								</div></div></div>
+								</div></div></div></div></div></div></div></div></div>
 								
 								
 								
