@@ -80,11 +80,8 @@
 											</div>
 										</div>
 									</div><!-- End Listing-->
-
-
-									<!-- Begin Listing: 704 SAINT GEORGES ST-->
-
-								</div>
+								</div></div>
+										</div>
 									<?php
 								}
 								?>
