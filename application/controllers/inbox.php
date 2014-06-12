@@ -50,6 +50,26 @@ class Inbox extends CI_Controller{
 		}
 	}
 
+	function filter(){
+		if($this->session->userdata('login') == TRUE){
+			$tgl = $this->input->post('tgl');
+			$bln = $this->input->post('bln');
+			$bulan = ($bln < 10) ? '0'.$bln : $bln ;
+			$thn = $this->input->post('thn');
+			$filter = $thn.'-'.$bulan.'-'.$tgl;
+			$data['title'] = 'Inbox';
+			$data['header'] = 'Kotak Masuk';
+			$data['contact'] = $this->Contact_model->getfor();
+			$data['inbox'] = $this->Inbox_model->getFilter($filter);
+			$data['jumlah'] = $this->Inbox_model->countFilter($filter);
+			$data['search'] = $filter;
+			$data['page'] = 'inbox/filter_inbox';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}	
+	}
+
 
 	function detail($id){
 		if($this->session->userdata('login') == TRUE){

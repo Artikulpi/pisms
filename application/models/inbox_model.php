@@ -32,4 +32,15 @@ class Inbox_model extends CI_Model{
 		$query = $this->db->count_all_results('inbox');
 		return $query;
 	}
+
+	function getFilter($filter){
+		$this->db->like('ReceivingDateTime', $filter);
+		return $this->db->get('inbox')->result();
+	}
+
+	function countFilter($filter){
+		$this->db->like('ReceivingDateTime',$filter);
+		$query = $this->db->count_all_results('inbox');
+		return $query;
+	}
 }
