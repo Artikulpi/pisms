@@ -14,7 +14,7 @@
 
 				if($con->id == $cehage){ ?>
 				<tr>
-					<td><?php echo $con->name; ?></td>
+					<td><?php echo anchor('contact/detail/'.$con->id, $con->name); ?></td>
 					<td><?php echo $delete; ?></td>
 				</tr>
 				<?php
