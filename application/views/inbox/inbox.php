@@ -81,7 +81,7 @@
 										</div>
 									</div><!-- End Listing-->
 								</div></div>
-										</div></div></div><hr>
+										</div></div><hr>
 									<?php
 								}
 								?>
