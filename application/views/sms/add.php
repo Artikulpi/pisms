@@ -44,7 +44,7 @@ $(document).ready(function() {
 							              <div id="wilayah" class="panel-collapse collapse">
 							                  <div class="panel-body">
 							                      <div class="control-group">
-							                          <input type="text" name="fromcontact">
+							                          <input type="text" class="form-control" name="fromcontact">
 							                      </div>
 							                  </div>
 							                  <div class="control-group">
@@ -54,7 +54,7 @@ $(document).ready(function() {
 							                  </div>
 							              </div>
 							          </div>
-							      </div>
+							      
 							      <div class="panel panel-default">
 							          <div class="panel-heading">
 							              <h4 class="panel-title">
@@ -94,9 +94,9 @@ $(document).ready(function() {
 							          <div id="phone" class="panel-collapse collapse">
 							              <div class="panel-body">
 							                  <div class="control-group">
-							                      <label><b>Nomor Telepon Tujuan :</b></label>
+							                      
 							                      <div class="control-group">
-							                          <input  type="text" maxlength="12" name="no_tujuan" placeholder="No.Telp Tujuan">
+							                          <input  type="text" maxlength="12" class="form-control" name="no_tujuan" placeholder="No.Telp Tujuan">
 							                      </div>
 							                      <div class="control-group">
 							                          <span>&nbsp;</span>
@@ -115,7 +115,7 @@ $(document).ready(function() {
 	                    </div>
 	                </div>
 	                </form>
-	            </div>
+	            </div> </div>
 				
 <?php
 form_close();
