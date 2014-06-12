@@ -15,11 +15,7 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 		$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></span>');
 		$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
 		?>
-		
-		<?php
-	}
-	?>
-	
+
 	            <div class="row">
 	                <div class="col-sm-12"> 
 	<!-- Begin Listing: 218 LYNNEBROOK LN-->
@@ -48,8 +44,8 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 	                            </div>
 	                        </div>
 	                    </div><!-- End Listing-->
-
-                   
-	                    <!-- Begin Listing: 704 SAINT GEORGES ST-->
-                    
-	                </div>
+					</div>
+						<?php
+					}
+					?>
+					</div></div></div></div>

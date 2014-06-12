@@ -4,8 +4,11 @@ $(document).ready(function() {
         var len = this.value.length;
         if (len >= 160) {
             this.value = this.value.substring(0, 160);
-        }
-        $('#hitung').text(160 - len);
+        }else{
+				$('#hitung').text(100 - len).css("color","#FF0004");
+        	 $('#hitung').text(160 - len).css("color","#00A41E");
+        };
+       
     });
 });
 </script>
