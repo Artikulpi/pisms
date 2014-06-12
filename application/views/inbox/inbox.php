@@ -65,9 +65,9 @@
 					<?php
 							foreach ($inbox as $row) {
 								$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-								$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"></span></span>');
-								$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></span>');
-								$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
+								$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"></span></span>');
+								$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></span>');
+								$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
 								?>
 					
 			
@@ -78,21 +78,23 @@
 						<div class="message-head clearfix">
 							<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a></div>
 							<div class="user-detail">
-							<h5 class="handle"><?php echo $row->SenderNumber;?></h5>
-															<div class="post-meta">
-																<div class="asker-meta">
-																	<span class="qa-message-what"></span>
-																	<span class="qa-message-when">
-																		<span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span> <?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></span>
-																	</span>
-																	<span class="qa-message-who">
-											
-																		<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
+										<div class="post-meta">
+											<div class="asker-meta">
+												<span class="qa-message-what"></span>
+												<span class="qa-message-when">
+												<h5><?php echo $row->SenderNumber;?></h5>
+												</span>
+												<span class="qa-message-who">
+						
+													<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
+												</span>
+											</div>
+											<h6><span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span>  <?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></span></h6>
+										</div>
+									</div>
+								</div>
+							
+															
 											<div class="qa-message-content"><?php
 										$cut = character_limiter(strip_tags($row->TextDecoded),10);
 										echo anchor('inbox/detail/'.$row->ID, $cut);

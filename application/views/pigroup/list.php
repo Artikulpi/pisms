@@ -6,8 +6,8 @@
 	<?php
 	foreach ($group as $row) {
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$edit = anchor('pigroup/edit/'.$row->id,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="bottom" title="Ubah"></span></span>');
-		$delete = anchor('pigroup/delete/'.$row->id,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
+		$edit = anchor('pigroup/edit/'.$row->id,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="bottom" title="Ubah"></span></span>');
+		$delete = anchor('pigroup/delete/'.$row->id,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
 		?>
 		<tr>
 			<td><?php echo anchor('pigroup/detail/'.$row->id, $row->group_name)?></td>

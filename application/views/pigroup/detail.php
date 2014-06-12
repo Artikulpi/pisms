@@ -9,7 +9,7 @@
 		foreach ($chg as $key) {
 			$cehage = $key->contact_id;
 			$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-			$delete = anchor('contactgroup/delete/'.$key->id,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
+			$delete = anchor('contactgroup/delete/'.$key->id,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
 			foreach ($contact as $con) {
 
 				if($con->id == $cehage){ ?>

@@ -40,7 +40,7 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 	<?php
 	foreach ($sentitem as $row) { 
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$delete = anchor('sentitem/delete/'.$row->ID,'<span class="glyphicon glyphicon-trash"></span>', $onclick);
+		$delete = anchor('sentitem/delete/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-trash"></span></span>', $onclick);
 		?>
 		<tr>
 			<td><?php echo $row->DestinationNumber;?></td>
