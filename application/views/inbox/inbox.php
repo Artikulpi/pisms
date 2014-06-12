@@ -74,7 +74,7 @@
 														</div>
 													</div>
 											<div class="qa-message-content"><?php
-										$cut = character_limiter(strip_tags($row->TextDecoded),100);
+										$cut = character_limiter(strip_tags($row->TextDecoded),20);
 										echo anchor('inbox/detail/'.$row->ID, $cut);
 										?>
 										</div>
