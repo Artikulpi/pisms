@@ -58,7 +58,7 @@
 						<div class="message-head clearfix">
 							<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a></div>
 							<div class="user-detail">
-							<h5 class="handle">@_<?php echo $row->SenderNumber;?></h5>
+							<h5 class="handle"><?php echo $row->SenderNumber;?></h5>
 															<div class="post-meta">
 																<div class="asker-meta">
 																	<span class="qa-message-what"></span>
@@ -67,7 +67,7 @@
 																	</span>
 																	<span class="qa-message-who">
 																		<span class="qa-message-who-pad">by </span>
-																		<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin">admin</a></span>
+																		<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
 																	</span>
 																</div>
 															</div>
@@ -78,7 +78,7 @@
 										echo anchor('inbox/detail/'.$row->ID, $cut);
 										?>
 										</div>
-										<p class="hidden-xs"></p><hr><span class="fnt-smaller fnt-lighter fnt-arial"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></p></span>
+										<small class="pull-right"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></small><br>
 											</div>
 										</div>
 									
