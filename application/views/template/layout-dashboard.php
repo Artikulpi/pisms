@@ -12,11 +12,14 @@
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>media/img/SMS.png">
 	<link href="<?php echo base_url(); ?>media/css/style.css" rel="stylesheet" type='text/css'>
 	<link href="<?php echo base_url(); ?>media/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="shortcut icon" href="media/image/Pedoman-Logo-transparant.png">
 	<link href="<?php echo base_url(); ?>media/css/dashboard.css" rel="stylesheet">
+	<link rel="shortcut icon" href="<?php echo base_url();?>media/image/Pedoman-Logo-transparant.png">
 
 	<title>piSMS - <?php echo $title?></title>
-	<script src="<?php echo base_url(); ?>media/js/jquery.min.js"></script>
+
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/bootstrap.min.js"></script>
 	
 
 </head>
@@ -27,7 +30,7 @@
 	<div class="container-fluid">	
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href=""><i class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="piSMS">piSMS</i></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href=""><i class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="piSMS"> piSMS</i></a>
 				</div>
 				
 					</div>
