@@ -7,7 +7,13 @@
 			</div></div></div>
 		</form>
 
-
+			<?php
+					foreach ($inbox as $row) {
+						$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
+						$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"></span></span>');
+						$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></span>');
+						$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
+						?>
 
 		<form action="<?php echo site_url('inbox/filter')?>" method="POST">
 			<div class="col-sm-2">
@@ -51,16 +57,8 @@
 						<div class="message-head clearfix">
 							<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a></div>
 							<div class="user-detail">
-			<?php
-					foreach ($inbox as $row) {
-						$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-						$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"></span></span>');
-						$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></span>');
-						$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
-						?>
-							<?php
-						}
-						?>
+			
+							
 											
 															<h5 class="handle">@_<?php echo $row->SenderNumber;?></h5>
 															<div class="post-meta">
@@ -88,9 +86,10 @@
 									</div>
 								</div>
 							</div>
-						
-									
-								
+							
+									<?php
+								}
+								?>
 								<div class="text-right"><?php echo $halaman?></div>
 								
 								
