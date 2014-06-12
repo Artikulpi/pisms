@@ -26,8 +26,6 @@ foreach ($contactgroup as $cg) {
 <a href="<?php echo site_url('contact')?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-phone-alt" data-toggle="tooltip" data-placement="bottom" title="Kontak"> </a>
 <a href="<?php echo site_url('sms/sendto/'.$contact->id)?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="KirimSMS"> </a>
 <a href="<?php echo site_url('contact/delete/'.$contact->id)?>" class="btn btn-success btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> </a><br>
-
-      
-       
+</div></div>
    
 	

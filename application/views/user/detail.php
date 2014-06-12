@@ -1,3 +1,4 @@
+
 <table class="table table-striped">
 	<thead>
 		<th>Username</th>
@@ -7,6 +8,7 @@
 		<th>Status</th>
 		<th>Aksi</th>
 	</thead>
+	<tbody>
 
 <tr>
 <td><?php echo $user->username;?></td>
@@ -26,3 +28,6 @@
 	<a href="<?php echo site_url('user/delete/'.$user->id)?>" class="btn btn-success btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> </a>
 </td>
 </tr>
+</tbody>
+</table>
+</div></div>
