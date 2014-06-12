@@ -115,6 +115,6 @@ class Contactgroup extends CI_Controller{
 			'module'=>'Contactgroup',
 			);
 		$this->Log_model->save($log);
-		redirect('contactgroup');
+		redirect('pigroup');
 	}
 }
