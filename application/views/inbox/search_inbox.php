@@ -6,7 +6,8 @@
 	  <button type="submit" class="btn btn-default">Submit</button>
   </div></div></div>
 	</form>
-Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kunci <strong><em><?php echo $search;?></em></strong>
+	<div class="col-sm-6 col-md-8"><p class="bg-info">
+Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kunci <strong><em><?php echo $search;?></em></strong></p></div>
 
 	<?php
 	foreach ($inbox as $row) {

@@ -99,6 +99,6 @@ echo form_open('sms/create'); ?>
 							</div>
 						</div></div>
 	                </form>
-	            </div>
+	            </div></div></div></div>
 	
 	<?php echo form_close(); ?>
