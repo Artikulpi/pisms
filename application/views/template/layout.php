@@ -32,7 +32,7 @@
 		<div class="container-fluid">
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href="<?php echo site_url('admin') ?>"><i class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="piSMS">piSMS</i></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href="<?php echo site_url('admin') ?>"><i class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="piSMS"> piSMS</i></a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
@@ -117,7 +117,8 @@
 							"Data akan dihapus !"
 						</p>
 					</div>
-				
+				</div>
+			</div>
 
 
 			<div class="footer" role="navigation">
@@ -134,5 +135,3 @@
 			</div>
 		</div>
 
-				</div>
-			</div>
