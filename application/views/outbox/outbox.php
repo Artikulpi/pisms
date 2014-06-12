@@ -20,7 +20,7 @@
 										<div class="asker-meta">
 											<span class="qa-message-what"></span>
 												<span class="qa-message-when">
-													<span class="qa-message-when-data"><?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></span>
+													<span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span> <?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></span>
 														</span>
 														<span class="qa-message-who">
 													
