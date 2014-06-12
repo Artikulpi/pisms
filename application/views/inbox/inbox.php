@@ -66,7 +66,7 @@
 																		<span class="qa-message-when-data"><?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></span>
 																	</span>
 																	<span class="qa-message-who">
-																		<span class="qa-message-who-pad">by </span>
+											
 																		<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
 																	</span>
 																</div>
