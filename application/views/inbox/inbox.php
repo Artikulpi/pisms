@@ -43,7 +43,7 @@
 							<input type="submit" value="Filter" class="btn btn-primary">
 						</div>
 					</form>
-			
+			<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-12"> 
 							<!-- Begin Listing: 218 LYNNEBROOK LN-->
@@ -81,7 +81,7 @@
 										</div>
 									</div><!-- End Listing-->
 								</div></div>
-										</div><hr>
+										</div></div><hr>
 									<?php
 								}
 								?>
