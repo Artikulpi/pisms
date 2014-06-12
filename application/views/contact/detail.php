@@ -1,10 +1,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        
-           
-			
-        <div class="col-sm-4 col-md-4">
+		<div class="col-sm-4 col-md-4">
             <blockquote>
                 <p><span class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="Detail Kontak"> Nama: <?php echo $contact->name?></span><br></p> 
             </blockquote>

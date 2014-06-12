@@ -42,7 +42,7 @@
 									<div class="navbar-content">
 										<div class="row">
 											<div class="col-md-5">
-												<blockquote><span class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="User"></blockquote><p class="text-center small">
+												<a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a><p class="text-center small">
 												<a href="#">Change Photo</a></p>
 											</div>
 											<div class="col-md-7">
