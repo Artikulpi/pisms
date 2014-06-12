@@ -7,7 +7,7 @@
             <div class="modal-content">
                 <div class="modal-header modal-header-primary">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h1><i class="glyphicon glyphicon-thumbs-up"></i> Primary Modal</h1>
+                    <h1><i class="glyphicon glyphicon-thumbs-up"></i> Pencarian Pesan Masuk</h1>
                 </div>
                 <div class="modal-body">
 					<form class="form-inline navbar-right" role="form" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
