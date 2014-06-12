@@ -43,7 +43,7 @@
 							<input type="submit" value="Filter" class="btn btn-primary">
 						</div>
 					</form>
-			
+			<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-12"> 
 							<!-- Begin Listing: 218 LYNNEBROOK LN-->
@@ -80,13 +80,10 @@
 											</div>
 										</div>
 									</div><!-- End Listing-->
-
-
-									<!-- Begin Listing: 704 SAINT GEORGES ST-->
-
-								</div>
+								</div></div>
+										</div></div><hr>
 									<?php
 								}
 								?>
-								</div></div></div></div>
+								
 								<div class="text-right"><?php echo $halaman?></div>

@@ -4,10 +4,11 @@ $(document).ready(function() {
         var len = this.value.length;
         if (len >= 160) {
             this.value = this.value.substring(0, 160);
+			
         }else{
-				$('#hitung').text(100 - len).css("color","#FF0004");
-        	 $('#hitung').text(160 - len).css("color","#00A41E");
-        };
+			 $('#hitung').text(160 - len).css("color","#FF0004");
+        	 
+        }
        
     });
 });
@@ -27,7 +28,7 @@ $(document).ready(function() {
 					          <?php echo validation_errors(); ?>
 					          <Label>Pesan Anda</Label>
 					          <textarea id="karakter" style="width: 1000px"  name="content"  class="form-control" maxlength="160" rows="5"></textarea><br>
-					          <div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung">160</span> Karakter Tersisa.</div>  
+					          <div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung" >160</span> Karakter Tersisa.</div>  
 	                        </div>
 	                    </div>
 	                    <div class="col-sm-12 col-md-6">

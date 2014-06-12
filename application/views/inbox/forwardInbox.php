@@ -1,12 +1,16 @@
 <script type="text/javascript">
 $(document).ready(function() {
-	$('#karakter').keyup(function() {
-		var len = this.value.length;
-		if (len >= 160) {
-			this.value = this.value.substring(0, 160);
-		}
-		$('#hitung').text(160 - len);
-	});
+    $('#karakter').keyup(function() {
+        var len = this.value.length;
+        if (len >= 160) {
+            this.value = this.value.substring(0, 160);
+			
+        }else{
+			 $('#hitung').text(160 - len).css("color","#FF0004");
+        	
+        }
+       
+    });
 });
 </script>
 
