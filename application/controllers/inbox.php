@@ -53,10 +53,11 @@ class Inbox extends CI_Controller{
 	function filter(){
 		if($this->session->userdata('login') == TRUE){
 			$tgl = $this->input->post('tgl');
+			$tanggal = ($tgl < 10) ? '0'.$tgl : $tgl ;
 			$bln = $this->input->post('bln');
 			$bulan = ($bln < 10) ? '0'.$bln : $bln ;
 			$thn = $this->input->post('thn');
-			$filter = $thn.'-'.$bulan.'-'.$tgl;
+			$filter = $thn.'-'.$bulan.'-'.$tanggal;
 			$data['title'] = 'Inbox';
 			$data['header'] = 'Kotak Masuk';
 			$data['contact'] = $this->Contact_model->getfor();
