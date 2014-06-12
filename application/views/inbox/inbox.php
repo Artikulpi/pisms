@@ -84,11 +84,11 @@
 									</div>
 								</div>
 							</div>
-							</div></div></div></div>
+							</div>
 									<?php }   ?>
 								<div class="text-right"><?php echo $halaman?></div>
 								
-								
+								</div></div></div>
 								
 								
 								
