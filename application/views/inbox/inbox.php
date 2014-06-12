@@ -81,10 +81,8 @@
 										<p class="hidden-xs"></p><hr><span class="fnt-smaller fnt-lighter fnt-arial"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></p></span>
 											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-							</div></div></div></div></div></div></div></div></div></div>
+									
+							
 									<?php }   ?>
 								<div class="text-right"><?php echo $halaman?></div>
 								
