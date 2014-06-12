@@ -21,34 +21,11 @@ SET time_zone = "+00:00";
 --
 
 --
--- Dumping data for table `contact`
---
-
-INSERT INTO `contact` (`id`, `name`, `phone_number`, `organisation`) VALUES
-(1, 'Muhammad', '087872446951', 'Partai Panas Adem'),
-(2, 'Yusuf', '087770618122', '');
-
---
--- Dumping data for table `pigroup`
---
-
-INSERT INTO `pigroup` (`id`, `group_name`) VALUES
-(1, 'Dinas'),
-(2, 'Keluarga');
-
---
 -- Dumping data for table `gammu`
 --
 
 INSERT INTO `gammu` (`Version`) VALUES
 (13);
-
---
--- Dumping data for table `inbox`
---
-
-INSERT INTO `inbox` (`UpdatedInDB`, `ReceivingDateTime`, `Text`, `SenderNumber`, `Coding`, `UDH`, `SMSCNumber`, `Class`, `TextDecoded`, `ID`, `RecipientID`, `Processed`) VALUES
-('2014-06-02 04:10:18', '2014-06-02 04:10:18', '', '087872446951', 'Default_No_Compression', '', '', -1, 'Hai Hai jjjjjjj jjjjjjjjjj jjjjjjjjjjjj jjjjjjjjjj jjjjjjjjjjjj jjjjjjjjjjj jjjjjjjjjjj jjjjjjjjj jjjjjjjj jjjj jjjjjjjj', 1, '', 'false');
 
 --
 -- Dumping data for table `user`
@@ -57,15 +34,6 @@ INSERT INTO `inbox` (`UpdatedInDB`, `ReceivingDateTime`, `Text`, `SenderNumber`,
 INSERT INTO `user` (`id`, `username`, `password`, `role`, `full_name`, `email`, `active`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '1', 'Muhammad Yusuf', 'myusuf.bach@gmail.com', '1'),
 (2, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', '0', 'user', 'user@gmail.com', '1');
-
---
--- Dumping data for table `log_activity`
---
-
-INSERT INTO `log_activity` (`id`, `user_id`, `activity`, `date`, `module`) VALUES
-(1, 1, 'Edit user', '2014-05-28 07:04:00', 'User'),
-(2, 1, 'Menambah grup baru', '2014-05-28 07:56:00', 'Group');
-
 
 
 

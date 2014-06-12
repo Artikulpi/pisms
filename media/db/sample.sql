@@ -25,11 +25,11 @@ SET time_zone = "+00:00";
 --
 
 INSERT INTO `contact` (`id`, `name`, `phone_number`, `organisation`) VALUES
-(3, 'Muhammad', '087872446951', ' '),
-(4, 'Yusuf', '087770618122', 'Partai'),
-(5, 'Bachtiar', '085781696079', 'Artikulpi'),
-(6, 'Ario', '085781696079', 'Artikulpi'),
-(7, 'Suwardiman', '08578875079', 'Art');
+(1, 'Muhammad', '087872446951', ' '),
+(2, 'Yusuf', '087770618122', 'Partai'),
+(3, 'Bachtiar', '085781696079', 'Artikulpi'),
+(4, 'Ario', '085781696079', 'Artikulpi'),
+(5, 'Suwardiman', '08578875079', 'Art');
 
 
 --
@@ -37,11 +37,11 @@ INSERT INTO `contact` (`id`, `name`, `phone_number`, `organisation`) VALUES
 --
 
 INSERT INTO `pigroup` (`id`, `group_name`) VALUES
-(3, 'Kerabat'),
-(4, 'Relasi'),
-(5, 'Kantor'),
-(6, 'Atasan'),
-(7, 'Bawahan');
+(1, 'Kerabat'),
+(2, 'Relasi'),
+(3, 'Kantor'),
+(4, 'Atasan'),
+(5, 'Bawahan');
 
 
 --
@@ -57,11 +57,11 @@ INSERT INTO `gammu` (`Version`) VALUES
 --
 
 INSERT INTO `inbox` (`UpdatedInDB`, `ReceivingDateTime`, `Text`, `SenderNumber`, `Coding`, `UDH`, `SMSCNumber`, `Class`, `TextDecoded`, `ID`, `RecipientID`, `Processed`) VALUES
-('2014-06-12 04:29:42', '2014-06-12 04:29:42', '', '087811111111', 'Default_No_Compression', '', '', -1, 'Ini konten sms pertama', 2, '', 'false'),
-('2014-06-12 04:30:25', '2014-06-12 04:30:25', '', '08782222222', 'Default_No_Compression', '', '', -1, 'Ini konten sms kedua', 3, '', 'false'),
-('2014-06-12 04:30:40', '2014-06-12 04:30:40', '', '07833333333', 'Default_No_Compression', '', '', -1, 'Ini konten sms ketiga', 4, '', 'false'),
-('2014-06-12 04:30:55', '2014-06-12 04:30:55', '', '08784444444', 'Default_No_Compression', '', '', -1, 'Ini konten sms keempat', 5, '', 'false'),
-('2014-06-12 04:31:07', '2014-06-12 04:31:07', '', '08785555555', 'Default_No_Compression', '', '', -1, 'Ini konten sms kelima', 6, '', 'false');
+('2014-06-12 04:29:42', '2014-06-12 04:29:42', '', '087811111111', 'Default_No_Compression', '', '', -1, 'Ini konten sms pertama', 1, '', 'false'),
+('2014-06-12 04:30:25', '2014-06-12 04:30:25', '', '08782222222', 'Default_No_Compression', '', '', -1, 'Ini konten sms kedua', 2, '', 'false'),
+('2014-06-12 04:30:40', '2014-06-12 04:30:40', '', '07833333333', 'Default_No_Compression', '', '', -1, 'Ini konten sms ketiga', 3, '', 'false'),
+('2014-06-12 04:30:55', '2014-06-12 04:30:55', '', '08784444444', 'Default_No_Compression', '', '', -1, 'Ini konten sms keempat', 4, '', 'false'),
+('2014-06-12 04:31:07', '2014-06-12 04:31:07', '', '08785555555', 'Default_No_Compression', '', '', -1, 'Ini konten sms kelima', 5, '', 'false');
 
 
 --
@@ -71,8 +71,8 @@ INSERT INTO `inbox` (`UpdatedInDB`, `ReceivingDateTime`, `Text`, `SenderNumber`,
 INSERT INTO `contact_has_group` (`id`, `contact_id`, `group_id`) VALUES
 (1, 3, 4),
 (2, 3, 5),
-(3, 4, 7),
-(4, 6, 7),
+(3, 4, 3),
+(4, 1, 2),
 (5, 5, 4);
 
 --
@@ -80,11 +80,11 @@ INSERT INTO `contact_has_group` (`id`, `contact_id`, `group_id`) VALUES
 --
 
 INSERT INTO `log_activity` (`id`, `user_id`, `activity`, `date`, `module`) VALUES
-(3, 2, 'Menghapus Pesan', '2014-06-12 04:46:43', 'SMS'),
-(4, 2, 'Menghapus Inbox', '2014-06-12 04:46:54', 'SMS'),
-(5, 1, 'Input Kontak', '2014-06-12 04:47:05', 'contact'),
-(6, 2, 'Input Group', '2014-06-12 04:47:17', 'pigroup'),
-(7, 1, 'Input kontak', '2014-06-12 04:47:39', 'kontak');
+(1, 2, 'Menghapus Pesan', '2014-06-12 04:46:43', 'SMS'),
+(2, 2, 'Menghapus Inbox', '2014-06-12 04:46:54', 'SMS'),
+(3, 1, 'Input Kontak', '2014-06-12 04:47:05', 'contact'),
+(4, 2, 'Input Group', '2014-06-12 04:47:17', 'pigroup'),
+(5, 1, 'Input kontak', '2014-06-12 04:47:39', 'kontak');
 
 --
 -- Dumping data for table `outbox`
