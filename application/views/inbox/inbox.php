@@ -54,6 +54,9 @@
 						$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></span>');
 						$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-success"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
 						?>
+							<?php
+						}
+						?>
 											<div class="message-item" id="m1">
 												<div class="message-inner">
 													<div class="message-head clearfix">
@@ -84,9 +87,7 @@
 										</div>
 						</div>
 						</div></div>
-									<?php
-								}
-								?>
+									
 								
 								<div class="text-right"><?php echo $halaman?></div>
 								
