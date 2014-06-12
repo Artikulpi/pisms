@@ -77,11 +77,12 @@
 															</div>
 														</div>
 													</div>
-													<div class="qa-message-content"><?php
+											<div class="qa-message-content"><?php
 										$cut = character_limiter(strip_tags($row->TextDecoded),100);
 										echo anchor('inbox/detail/'.$row->ID, $cut);
-										?></div>
-										<p class="hidden-xs"></p><hr><span class="fnt-smaller fnt-lighter fnt-arial"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></span>
+										?>
+										</div>
+										<p class="hidden-xs"></p><hr><span class="fnt-smaller fnt-lighter fnt-arial"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></p></span>
 											</div></div>
 			
 										</div>
