@@ -6,7 +6,7 @@ $(document).ready(function() {
             this.value = this.value.substring(0, 160);
 			
         }else{
-			 $('#hitung').text(160 - len).css("color","#FF0004");
+			 $('#hitung').text(160 - len);
         	 
         }
        

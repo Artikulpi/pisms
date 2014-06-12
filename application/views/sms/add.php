@@ -6,7 +6,7 @@ $(document).ready(function() {
             this.value = this.value.substring(0, 160);
 			
         }else{
-			 $('#hitung').text(160 - len).css("color","#FF0004");
+			 $('#hitung').text(160 - len);
         	 
         }
        
@@ -27,7 +27,7 @@ $(document).ready(function() {
 	                        <div class="form-group">
 					          <?php echo validation_errors(); ?>
 					          <Label>Pesan Anda</Label>
-					          <textarea id="karakter" style="width: 1000px"  name="content"  class="form-control" maxlength="160" rows="5"></textarea><br>
+					          <textarea id="karakter" name="content"  class="form-control" maxlength="160" rows="5"></textarea><br>
 					          <div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung" >160</span> Karakter Tersisa.</div>  
 	                        </div>
 	                    </div>

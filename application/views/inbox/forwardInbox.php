@@ -6,7 +6,7 @@ $(document).ready(function() {
             this.value = this.value.substring(0, 160);
 			
         }else{
-			 $('#hitung').text(160 - len).css("color","#FF0004");
+			 $('#hitung').text(160 - len);
         	
         }
        
@@ -27,7 +27,7 @@ echo form_open('sms/create'); ?>
 	                        <div class="form-group">
 					          <?php echo validation_errors(); ?>
 					          <Label>Isi *</Label>
-					  		<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3" style="max-width:1000px"><?php echo $sms->TextDecoded;?></textarea><br>
+					  		<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3"><?php echo $sms->TextDecoded;?></textarea><br>
 					  		<div style="width:264px;text-align: center" class="alert alert-warning"><span id="hitung">160</span> Karakter Tersisa.</div>
 	                        </div>
 	                    </div>
