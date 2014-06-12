@@ -43,7 +43,7 @@
 							<input type="submit" value="Filter" class="btn btn-primary">
 						</div>
 					</form>
-			<div class="container-fluid">
+			
 				<div class="row">
 				</div>
 				<div class="message-item" id="m1">
@@ -88,7 +88,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						
 									
 								
 								<div class="text-right"><?php echo $halaman?></div>
