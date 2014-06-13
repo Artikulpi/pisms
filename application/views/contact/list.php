@@ -19,6 +19,6 @@
 	} ?>  
 </table>
 <br>
-<small class="pull-right"><a href="<?php echo site_url('contact/add')?>" class="btn btn-info btn-md"><b>+</b> Tambah Kontak</a></small>
+<a href="<?php echo site_url('contact/add')?>" class="btn btn-info btn-md"><b>+</b> Tambah Kontak</a>
 
 <div class="text-right"><?php echo $halaman?></div>
