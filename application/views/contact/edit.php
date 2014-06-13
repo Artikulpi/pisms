@@ -34,7 +34,7 @@ echo form_open('contact/saveEdit'); ?>
 					}
 				}
 				?>
-				<input type="checkbox" name="group[]" value="<?php echo $key->id;?>" <?php echo $checked;?>><?php echo $key->group_name;?>
+				<input type="checkbox" name="group[]" value="<?php echo $key->id;?>"><?php echo $key->group_name;?>
 				<?php		} ?>
 			</form>
 		</div>

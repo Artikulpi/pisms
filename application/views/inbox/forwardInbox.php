@@ -38,16 +38,17 @@ echo form_open('sms/create'); ?>
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+										<label>
+											<input type="radio" name="optionsRadios" value="kontak" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" data-parent="#accordion"  id="optionsRadios1">
 											Masukan Nomor Telepon
-										</a>
+										</label>
 									</h4>
 								</div>
 								<div id="collapseOne" class="panel-collapse collapse">
 									<div class="panel-body">
 										<input type="text" class="form-control" name="number" />
 										<div class="col-sm-3">
-											<input type="submit" name="input_manual" class="btn btn-success" value="Kirim"/>
+											<input type="submit" name="input_manual" class="btn btn-info" value="Kirim"/>
 										</div>
 									</div>
 								</div>
@@ -55,22 +56,23 @@ echo form_open('sms/create'); ?>
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+										<label>
+											<input type="radio" name="optionsRadios" value="kontak" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" data-parent="#accordion"  id="optionsRadios1">
 											Kontak
-										</a>
+										</lebel>
 									</h4>
 								</div>
 								<div id="collapseTwo" class="panel-collapse collapse">
 									<div class="panel-body">
+										<div class="control-group">
 										<?php foreach ($contact as $row) {?>
-										<form>
 											<label>
 												<input name="contact" type="checkbox" value="<?php echo $row->phone_number?>"><?php echo $row->name?>
 											</label>
-										</form>
-										<?php } ?><hr>
+										
+										<?php } ?></div><hr>
 										<div class="col-sm-3">
-											<input type="submit" name="input_contact" class="btn btn-success" value="Kirim"/>
+											<input type="submit" name="input_contact" class="btn btn-info" value="Kirim"/>
 										</div>
 									</div>
 								</div>
@@ -78,22 +80,23 @@ echo form_open('sms/create'); ?>
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+										<label>
+											<input type="radio" name="optionsRadios" value="grup" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 											Grup
-										</a>
+										</lebel>
 									</h4>
 								</div>
 								<div id="collapseThree" class="panel-collapse collapse">
 									<div class="panel-body">
+										<div class="control-group">
 										<?php foreach ($group as $row) {?>
-										<form>
 											<label>
 												<input name="group" type="checkbox" value="<?php echo $row->id?>"><?php echo $row->group_name?>
 											</label>
-										</form>
-										<?php } ?><hr>
+										
+										<?php } ?></div><hr>
 										<div class="col-sm-3">
-											<input type="submit" name="input_group" class="btn btn-success" value="Kirim"/>
+											<input type="submit" name="input_group" class="btn btn-info" value="Kirim"/>
 										</div>
 									</div>
 								</div>
