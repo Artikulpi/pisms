@@ -40,29 +40,11 @@ echo form_open('sms/create'); ?>
 									<h4 class="panel-title">
 										<label>
 											<input type="radio" name="optionsRadios" value="kontak" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" data-parent="#accordion"  id="optionsRadios1">
-											Masukan Nomor Telepon
-										</label>
-									</h4>
-								</div>
-								<div id="collapseOne" class="panel-collapse collapse">
-									<div class="panel-body">
-										<input type="text" class="form-control" name="number" />
-										<div class="col-sm-3">
-											<input type="submit" name="input_manual" class="btn btn-info" value="Kirim"/>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<label>
-											<input type="radio" name="optionsRadios" value="kontak" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" data-parent="#accordion"  id="optionsRadios1">
 											Kontak
 										</lebel>
 									</h4>
 								</div>
-								<div id="collapseTwo" class="panel-collapse collapse">
+								<div id="collapseOne" class="panel-collapse collapse">
 									<div class="panel-body">
 										<div class="control-group">
 										<?php foreach ($contact as $row) {?>
@@ -81,12 +63,12 @@ echo form_open('sms/create'); ?>
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<label>
-											<input type="radio" name="optionsRadios" value="grup" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+											<input type="radio" name="optionsRadios" value="grup" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 											Grup
 										</lebel>
 									</h4>
 								</div>
-								<div id="collapseThree" class="panel-collapse collapse">
+								<div id="collapseTwo" class="panel-collapse collapse">
 									<div class="panel-body">
 										<div class="control-group">
 										<?php foreach ($group as $row) {?>
@@ -97,6 +79,24 @@ echo form_open('sms/create'); ?>
 										<?php } ?></div><hr>
 										<div class="col-sm-3">
 											<input type="submit" name="input_group" class="btn btn-info" value="Kirim"/>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<label>
+											<input type="radio" name="optionsRadios" value="kontak" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" data-parent="#accordion"  id="optionsRadios1">
+											Menggunakan No. Telp
+										</label>
+									</h4>
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse">
+									<div class="panel-body">
+										<input type="text" class="form-control" name="number" />
+										<div class="col-sm-3">
+											<input type="submit" name="input_manual" class="btn btn-info" value="Kirim"/>
 										</div>
 									</div>
 								</div>
