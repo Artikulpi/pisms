@@ -17,5 +17,5 @@
 	} ?>  
 </table>
 <br>
-<a href="<?php echo site_url('pigroup/add')?>" class="btn btn-success btn-md"><b>+</b> Tambah Grup</a>
+<small class="pull-right"><a href="<?php echo site_url('pigroup/add')?>" class="btn btn-info btn-md"><b>+</b> Tambah Grup</a></small>
 <div class="text-right"><?php echo $halaman?></div>
