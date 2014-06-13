@@ -31,6 +31,6 @@ echo form_open('sms/create'); ?>
 
 		<label class="control-label col-sm-3"></label>
 		<div class="col-sm-2">
-	<input type="submit" class="btn btn-success" value="Kirim"/>
+	<input type="submit" class="btn btn-info" value="Kirim"/>
 </div></div>
 <?php echo form_close(); ?>

@@ -31,5 +31,5 @@
 	} ?>
 </table>
 <br>
-<a href="<?php echo site_url('user/add')?>" class="btn btn-success btn-md"><b>+</b> Tambah User</a>
+<a href="<?php echo site_url('user/add')?>" class="btn btn-info btn-md"><b>+</b> Tambah User</a>
 <div class="text-right"><?php echo $halaman?></div>

@@ -17,7 +17,7 @@ echo form_open('user/saveReset'); ?>
 <div class="text-left">
 	<label class="control-label col-sm-3"></label>
 	<div class="col-sm-2">
-	<input type="submit" class="btn btn-success" value="Ubah"/>
+	<input type="submit" class="btn btn-info" value="Ubah"/>
 </div></div>
 <?php echo form_close(); ?>
 

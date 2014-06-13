@@ -42,6 +42,6 @@ echo form_open('contact/saveEdit'); ?>
 	<div class="text-left">
 		<label class="control-label col-sm-12"></label>
 		<div class="col-sm-2">
-			<input type="submit" class="btn btn-success" value="Edit"/>
+			<input type="submit" class="btn btn-info" value="Edit"/>
 		</div></div>
 		<?php echo form_close(); ?>

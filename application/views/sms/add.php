@@ -115,7 +115,7 @@ $(document).ready(function() {
 	                        </div>
 	                    </div>
 	                    <div class="col-md-12">
-	                        <input type="submit" class="btn btn-primary" value="Kirim">
+	                        <input type="submit" class="btn btn-info" value="Kirim">
 	                    </div>
 	                </div>
 	                </form>

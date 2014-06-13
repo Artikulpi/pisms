@@ -96,7 +96,7 @@ echo form_open('sms/create'); ?>
 										<?php } ?><hr>
 										<div class="text-left">
 											<div class="col-sm-2 col-md-2">
-											<input type="submit" name="input_group" class="btn btn-success" value="Kirim"/>
+											<input type="submit" name="input_group" class="btn btn-info" value="Kirim"/>
 										</div>
 									</div>
 								</div>
