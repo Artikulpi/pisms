@@ -25,18 +25,18 @@ echo form_open('contact/saveEdit'); ?>
 	<label class="control-label col-sm-3">Group</label>
 	<div class="col-sm-3">
 		<form>
-		<?php foreach ($group as $key) {
-			foreach ($chg as $val) {
-				if ($val->group_id == $key->id) {
-					$checked = 'checked';
-				}else{
-					$checked = NULL;
+			<?php foreach ($group as $key) {
+				foreach ($chg as $val) {
+					if ($val->group_id == $key->id) {
+						$checked = 'checked';
+					}else{
+						$checked = NULL;
+					}
 				}
-			}
-			?>
-			<input type="checkbox" name="group[]" value="<?php echo $key->id;?>" <?php echo $checked;?>><?php echo $key->group_name;?>
-			<?php		} ?>
-		</form>
+				?>
+				<input type="checkbox" name="group[]" value="<?php echo $key->id;?>" <?php echo $checked;?>><?php echo $key->group_name;?>
+				<?php		} ?>
+			</form>
 		</div>
 	</div>
 	<div class="text-left">

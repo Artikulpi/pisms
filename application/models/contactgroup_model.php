@@ -29,6 +29,16 @@ class Contactgroup_model extends CI_Model{
 		return $this->db->get_where('contact_has_group', array('contact_id'=>$id))->result();
 	}
 
+	function getIdForSend($key){
+		$this->db->select('contact.*');
+		$this->db->from('contact');
+		$this->db->select('contact_has_group.*');
+		$this->db->from('contact_has_group');
+		$this->db->where('contact.id = contact_has_group.contact_id');
+		$this->db->where('group_id', $key);
+		return $this->db->get()->result();
+	}
+
 	function getByGroup($id){
 		$this->db->where('group_id', $id);
 		return $this->db->get('contact_has_group')->result();

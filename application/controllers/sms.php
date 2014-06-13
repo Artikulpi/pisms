@@ -7,7 +7,7 @@ class Sms extends CI_Controller{
 		$this->load->helper(array('url','form','date','text'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->model(array('Sms_model','Contact_model','Log_model','Pigroup_model'));
+		$this->load->model(array('Sms_model','Contact_model','Log_model','Pigroup_model','Contactgroup_model'));
 	}
 
 	function create(){
@@ -20,6 +20,29 @@ class Sms extends CI_Controller{
 					'TextDecoded' => $this->input->post('content'),
 					);
 				$this->Sms_model->sent($data);
+				$log = array(
+					'user_id'=>$this->session->userdata('id'),
+					'activity'=>'Kirim SMS',
+					'date'=>date('Y-m-d H:i:s'),
+					'module'=>'Sms',
+					);
+				$this->Log_model->save($log);
+				if($this->input->post('draft_id')){
+					$draft_id = $this->input->post('draft_id');
+					$this->Sms_model->deleteDraft($draft_id);
+				}
+				redirect('outbox');
+			}elseif($this->form_validation->run() == TRUE AND $this->input->post('optionsRadios')=='fromgroup'){
+				foreach ($this->input->post('groupcheck') as $key) {
+					foreach ($this->Contactgroup_model->getIdForSend($key) as $value) {
+						$data = array(
+							'DestinationNumber' => $value->phone_number,
+							'TextDecoded' => $this->input->post('content'),
+							);
+						$this->Sms_model->sent($data);
+					}
+				}
+
 				$log = array(
 					'user_id'=>$this->session->userdata('id'),
 					'activity'=>'Kirim SMS',
