@@ -1,13 +1,14 @@
-				
 <form class="form-inline navbar-right" role="form" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
 	<div class="form-group">
 		<div class="well well-sm">
 			<input type="text" name="cari" class="form-control" placeholder="Search">
 			<div class="col-sm-4">
 				<button type="submit" class="btn btn-default">Submit</button>
-			</div></small></div></div>
-		</form>
-		<form action="<?php echo site_url('inbox/filter')?>" method="POST">
+			</div>
+		</div>
+	</div>
+</form>
+<form action="<?php echo site_url('inbox/filter')?>" method="POST">
 			<div class="col-sm-2">
 				<select name="tgl" class="form-control">
 					<option value="0">Tanggal</option>
@@ -18,8 +19,9 @@
 						<?php
 					}
 					?>
-				</select></div>
-				<div class="col-sm-2">
+				</select>
+			</div>
+			<div class="col-sm-2">
 					<select name="bln" class="form-control">
 						<option value="0">Bulan</option>
 						<?php $bulan = array('1'=>'Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember');
@@ -29,18 +31,20 @@
 							<?php
 						}
 						?>
-					</select></div>
+					</select>
+				</div>
 					<div class="col-sm-2">
 						<select name="thn" class="form-control">
 							<option value="0">Tahun</option>
 							<?php for($i=2010;$i<2050;$i++){?>
 							<option value="<?php echo $i?>"><?php echo $i?></option>
 							<?php } ?>
-						</select></div>
+						</select>
+					</div>
 						<div class="col-sm-2">
 							<input type="submit" value="Filter" class="btn btn-primary">
 						</div>
-					</form>
+</form>
 					
 					<?php
 							foreach ($inbox as $row) {
@@ -56,7 +60,8 @@
 				<div class="message-item" id="m1">
 					<div class="message-inner">
 						<div class="message-head clearfix">
-							<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a></div>
+							<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
+							</div>
 							<div class="user-detail">
 										<div class="post-meta">
 											<div class="asker-meta">
@@ -66,7 +71,7 @@
 												</span>
 												<span class="qa-message-who">
 						
-													<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
+							<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
 												</span>
 											</div>
 											<h6><span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span>  <?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></span></h6>
@@ -80,8 +85,9 @@
 										echo anchor('inbox/detail/'.$row->ID, $cut);
 										?>
 										</div>
-										<small class="pull-right"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></small><br>
-											</div>
+			<small class="pull-right"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></small><br>
+										
+										</div>
 										</div>
 									
 							
