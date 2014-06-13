@@ -74,8 +74,8 @@
 						<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Pesan</a>
 						<a href="<?php echo site_url('admin')?>" class="list-group-item"><i class="glyphicon glyphicon-home" data-toggle="tooltip" data-placement="bottom" title="Home"> Dashboard</i></a>
 						<a href="<?php echo site_url('sms/create')?>" class="list-group-item"><i class="glyphicon glyphicon-file" data-toggle="tooltip" data-placement="bottom" title="Tulis pesan"> Tulis Pesan</i></a>
-						<a href="<?php echo site_url('inbox/inbox')?>" class="list-group-item"><i class="glyphicon glyphicon-download-alt" data-toggle="tooltip" data-placement="bottom" title="Pesan masuk"> Kotak Masuk</i></a>
-						<a href="<?php echo site_url('outbox/outbox')?>" class="list-group-item"><i class="glyphicon glyphicon-open" data-toggle="tooltip" data-placement="bottom" title="Pesan keluar"> Kotak Keluar</i></a>
+						<a href="<?php echo site_url('inbox')?>" class="list-group-item"><i class="glyphicon glyphicon-download-alt" data-toggle="tooltip" data-placement="bottom" title="Pesan masuk"> Kotak Masuk</i></a>
+						<a href="<?php echo site_url('outbox')?>" class="list-group-item"><i class="glyphicon glyphicon-open" data-toggle="tooltip" data-placement="bottom" title="Pesan keluar"> Kotak Keluar</i></a>
 						<a href="<?php echo site_url('sentitem')?>" class="list-group-item"><i class="glyphicon glyphicon-send" data-toggle="tooltip" data-placement="bottom" title="Pesan terkirim"> Pesan Terkirim</i></a>
 						<a href="<?php echo site_url('sms/draft')?>" class="list-group-item"><i class="glyphicon glyphicon-folder-open" data-toggle="tooltip" data-placement="bottom" title="Draf"> Draft</i></a>
 						<br>

@@ -17,7 +17,7 @@ class Outbox extends CI_Controller{
 
 			$config['base_url'] = site_url('outbox/index');
 			$config['total_rows'] = $count->num_rows();
-			$config['per_page'] = 10; 
+			$config['per_page'] = 3; 
 			$config['uri_segment'] = 3;
 			$num = $config['per_page'];
 			$this->pagination->initialize($config);
