@@ -18,8 +18,7 @@ $(document).ready(function() {
 echo validation_errors();
 echo form_open('sms/create'); ?>
 
-	<div class="container-fluid">
-	    <div class="row">
+	
 	        <div class="col-md-12">
 	                <form>
 	                <div class="row">
@@ -47,18 +46,11 @@ echo form_open('sms/create'); ?>
 								<div id="collapseOne" class="panel-collapse collapse">
 									<div class="panel-body">
 										<div class="control-group">
-										<?php foreach ($contact as $row) {?>
-											<label>
-												<input name="contact" type="checkbox" value="<?php echo $row->phone_number?>"><?php echo $row->name?>
-											</label>
-										
-										<?php } ?></div><hr>
-										<div class="col-sm-3">
-											<input type="submit" name="input_contact" class="btn btn-info" value="Kirim"/>
-										</div>
+										<input type="text" class="form-control" name="fromcontact">
 									</div>
 								</div>
 							</div>
+						</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
@@ -76,9 +68,7 @@ echo form_open('sms/create'); ?>
 												<input name="group" type="checkbox" value="<?php echo $row->id?>"><?php echo $row->group_name?>
 											</label>
 										
-										<?php } ?></div><hr>
-										<div class="col-sm-3">
-											<input type="submit" name="input_group" class="btn btn-info" value="Kirim"/>
+										<?php } ?>
 										</div>
 									</div>
 								</div>
@@ -95,17 +85,17 @@ echo form_open('sms/create'); ?>
 								<div id="collapseThree" class="panel-collapse collapse">
 									<div class="panel-body">
 										<input type="text" class="form-control" name="number" />
-										<div class="col-sm-3">
-											<input type="submit" name="input_manual" class="btn btn-info" value="Kirim"/>
-										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 	                </div>
+					<div class="col-sm-12">
+						<input type="submit" name="input_manual" class="btn btn-info" value="Kirim"/>
+					</div>
 	                </form>
 	            </div>
-</div></div></div>
+</div>
 
 	
 <?php echo form_close(); ?>

@@ -63,8 +63,8 @@
 							<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
 							</div>
 							<div class="user-detail">
-										<div class="post-meta">
-											<div class="asker-meta">
+								<div class="post-meta">
+									<div class="asker-meta">
 												<span class="qa-message-what"></span>
 												<span class="qa-message-when">
 												<h5><?php echo $row->SenderNumber;?></h5>

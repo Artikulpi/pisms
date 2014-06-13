@@ -67,7 +67,7 @@ echo form_open('sms/create'); ?>
 										<?php foreach ($contact as $row) {?>
 										
 											<label>
-												<input name="contact" type="checkbox" value="<?php echo $row->phone_number?>"><?php echo $row->name?>
+											<input name="contact" type="checkbox" value="<?php echo $row->phone_number?>"><?php echo $row->name?>
 											</label>
 										
 										<?php } ?></div><hr>
