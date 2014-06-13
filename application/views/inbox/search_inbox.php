@@ -30,7 +30,7 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 	                              <a href="#" target="_parent"></a>
 
 	                                <h4 class="media-heading">
-	                                  <a href="#" target="_parent"><?php echo $row->SenderNumber;?> <span class="fnt-smaller fnt-lighter fnt-arial"></span><small class="pull-right"></small></a></h4><br>
+	                                  <h4><?php echo $row->SenderNumber;?> <span class="fnt-smaller fnt-lighter fnt-arial"></span><small class="pull-right"></small></a></h4>
 									  <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
 									    <li><?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></li>
 
@@ -40,12 +40,12 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 	                                <p class="hidden-xs"><?php
 			$cut = character_limiter(strip_tags($row->TextDecoded),100);
 			echo anchor('inbox/detail/'.$row->ID, $cut);
-			?></p><hr><span class="fnt-smaller fnt-lighter fnt-arial"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></span>
+			?></p><small class="pull-right"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></small>
 	                            </div>
 	                        </div>
 	                    </div><!-- End Listing-->
-					</div>
+						
 						<?php
 					}
 					?>
-					</div></div></div></div>
+				</div></div></div>

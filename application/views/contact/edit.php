@@ -1,6 +1,4 @@
-<?php
-echo validation_errors();
-echo form_open('contact/saveEdit'); ?>
+<?php echo validation_errors(); echo form_open('contact/saveEdit'); ?>
 
 <input type="hidden" name="id" value="<?php echo $contact->id?>">
 <div class="form-group">
@@ -34,14 +32,16 @@ echo form_open('contact/saveEdit'); ?>
 				}
 			}
 			?>
-			<input type="checkbox" name="group[]" value="<?php echo $key->id;?>" <?php echo $checked;?>><?php echo $key->group_name;?>
+			<input type="checkbox" name="group[]" value="<?php echo $key->id;?>" <?php echo $checked;?><?php echo $key->group_name;?>
+			 
 			<?php		} ?>
 		</form>
+		<div class="text-left">
+			<label class="control-label col-sm-12"></label>
+			<div class="col-sm-2">
+				<input type="submit" class="btn btn-info" value="Edit"/>
+			</div>
 		</div>
 	</div>
-	<div class="text-left">
-		<label class="control-label col-sm-12"></label>
-		<div class="col-sm-2">
-			<input type="submit" class="btn btn-success" value="Edit"/>
-		</div></div>
+	</div></div>
 		<?php echo form_close(); ?>
