@@ -8,7 +8,6 @@
 			</div></small></div></div>
 		</form>
 		<div class="col-sm-12 col-md-8">
-			<p class="bg-info"> Ditemukan <strong><?php //echo $jumlah;?></strong> hasil pencarian pada tanggal <strong><em><?php //echo $search;?></p>
 		</div>
 
 
