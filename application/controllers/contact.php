@@ -34,6 +34,21 @@ class Contact extends CI_Controller{
 		}
 	}
 
+	public function search(){
+		if($this->session->userdata('login') == TRUE){
+			$search = $this->input->post('search');
+			$data['title'] = 'Contact';
+			$data['header'] = 'Kontak';
+			$data['contact'] = $this->Contact_model->getSearch($search);
+			$data['jumlah'] = $this->Contact_model->countSearch($search);
+			$data['search'] = $search;
+			$data['page'] = 'contact/search_contact';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
+	}
+
 	public function add(){
 		if($this->session->userdata('login') == TRUE){
 			$this->form_validation->set_rules('name', 'Nama', 'required');

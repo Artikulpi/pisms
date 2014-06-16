@@ -33,6 +33,16 @@ class Contact_model extends CI_Model{
 		$this->db->update('contact', $data);
 	}
 
+	function getSearch($search){
+		$this->db->like('name', $search);
+		return $this->db->get('contact')->result();
+	}
+
+	function countSearch($search){
+		$this->db->like('name', $search);
+		return $this->db->count_all_results('contact');
+	}
+
 	function delete($id){
 		$this->db->where('id', $id);
 		$this->db->delete('contact');
