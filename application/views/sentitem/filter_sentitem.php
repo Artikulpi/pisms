@@ -14,6 +14,7 @@
 		
 		<div class="container-fluid">
 			<div class="row">
+		<div class="col-sm-12 col-md-12">
 		                    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
 		                        <div class="media">
 		                            <a class="pull-left" href="#" target="_parent">
@@ -42,15 +43,11 @@
 	</div></span>
 	                            </div>
 	                        </div>
-	                    </div><!-- End Listing-->
-
-                   
-	                    <!-- Begin Listing: 704 SAINT GEORGES ST-->
-                    
-	                </div>
-		
-		
-
+	                    </div>
+					</div>
+					</div>
+					</div>
+					</div>
 
 		<?php
 	}
