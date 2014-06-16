@@ -11,7 +11,7 @@
 			$delete = anchor('contact/delete/'.$key->id,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus kontak"> hapus</span></span>', $onclick);
 			?>	
 			<tr>
-				<td><?php echo $key->name?></td>
+				<td><?php echo anchor('contact/detail/'.$key->id, $key->name)?></td>
 				<td><?php echo $key->phone_number?></td>
 				<td><?php echo $edit.' '.$delete?></td>
 			</tr>
