@@ -29,7 +29,7 @@ $(document).ready(function() {
 								<div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung" >160</span> Karakter Tersisa.
 								</div>  
 								<strong><h5>Multiple Select</h5></strong>
-								<select id="mySel3" class="select2" multiple="multiple" style="width:400px;">
+								<select id="mySel3" class="form-control" multiple="multiple" style="width:400px;">
 									<optgroup label="Select multiple">
 										<option>One</option>
 										<option>Two</option>
