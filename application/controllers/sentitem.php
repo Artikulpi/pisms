@@ -50,18 +50,16 @@ class Sentitem extends CI_Controller{
 
 	function filter(){
 		if($this->session->userdata('login') == TRUE){
-			$tgl = $this->input->post('tgl');
-			$tanggal = ($tgl < 10) ? '0'.$tgl : $tgl ;
-			$bln = $this->input->post('bln');
-			$bulan = ($bln < 10) ? '0'.$bln : $bln ;
-			$thn = $this->input->post('thn');
-			$filter = $thn.'-'.$bulan.'-'.$tanggal;
+			$date_start = $this->input->post('date_start');
+			$date_end = $this->input->post('date_end');
+			$mesorphone = $this->input->post('mesorphone');
+			$keyword = $this->input->post('keyword');
 			$data['title'] = 'Sentitem';
 			$data['header'] = 'Berita Terkirim';
 			$data['contact'] = $this->Contact_model->getfor();
-			$data['sentitem'] = $this->Sentitem_model->getFilter($filter);
-			$data['jumlah'] = $this->Sentitem_model->countFilter($filter);
-			$data['search'] = $filter;
+			$data['sentitem'] = $this->Sentitem_model->getFilter($date_start, $date_end, $mesorphone, $keyword);
+			$data['jumlah'] = $this->Sentitem_model->countFilter($date_start, $date_end, $mesorphone, $keyword);
+			$data['search'] = $keyword;
 			$data['page'] = 'sentitem/filter_sentitem';
 			$this->load->view('template/layout', $data);
 		}else{
