@@ -33,8 +33,10 @@ class Inbox_model extends CI_Model{
 		return $query;
 	}
 
-	function getFilter($filter){
-		$this->db->like('ReceivingDateTime', $filter);
+	function getFilter($date_start, $date_end, $mesorphone, $keyword){
+		($date_start) ? $this->db->where('ReceivingDateTime >= ', $date_start.' 00:00:00') : NULL;
+		($date_end) ? $this->db->where('ReceivingDateTime <=', $date_end.' 00:00:00') : NULL;
+		($mesorphone == 'phone') ? $this->db->like('SenderNumber', $keyword) : $this->db->like('TextDecoded', $keyword);
 		return $this->db->get('inbox')->result();
 	}
 
