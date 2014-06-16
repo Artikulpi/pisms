@@ -16,7 +16,7 @@
 	<link rel="shortcut icon" href="<?php echo base_url();?>media/image/Pedoman-Logo-transparant.png">
 
 	<title>piSMS - <?php echo $title?></title>
-	
+		
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/bootstrap.min.js"></script>
@@ -125,7 +125,7 @@
 					<p class="navbar-text pull-left">&copy; Copyright pisms-2014
 					</p>
 					<div class="navbar-collapse collapse">
-						<p class="navbar-text pull-right">Diberdayakan oleh <a href="<?php echo site_url('about')?>">PISMS</a>
+						<p class="navbar-text pull-right">Diberdayakan oleh <a href="http://www.artikulpi.com">PISMS</a>
 						</p>
 						<!-- <a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/Info.png" class="img-rounded" width="20"> Bantuan
 						</p>	 -->
