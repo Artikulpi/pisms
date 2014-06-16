@@ -11,7 +11,8 @@
 			$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</span></span>', $onclick);
 			?>
 
-			 
+			 <div class="row">
+			 				<div class="col-sm-12">
 					<!-- Begin Listing: 218 LYNNEBROOK LN-->
 					<div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
 						<div class="media">
