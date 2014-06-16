@@ -12,7 +12,8 @@
 		$delete = anchor('sentitem/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus	</span></span>', $onclick);
 		?>
 		
-		
+		<div class="container-fluid">
+			<div class="row">
 		                    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
 		                        <div class="media">
 		                            <a class="pull-left" href="#" target="_parent">
@@ -48,17 +49,10 @@
                     
 	                </div>
 		
-		<tr>
-			<td><span class="label label-success"></span></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
+		
 
 
 		<?php
 	}
 	?>
-</tbody>
-</table>
 	</div></div>
