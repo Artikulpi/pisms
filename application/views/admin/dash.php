@@ -11,7 +11,7 @@
 				</div>
 				<div class="offer-content">
 					<h3 class="lead">
-						<div class="my_planPrice"><?php echo $sum_contact?></div>
+						<div class="my_planPrice"><h3>[ <?php echo $sum_contact?> ]</h3></div>
 						Jumlah kontak
 					</h3>						
 					<p>
@@ -31,7 +31,7 @@
 				</div>
 				<div class="offer-content">
 					<h3 class="lead">
-						<div class="my_planPrice"><?php echo $sum_inbox?></div>
+						<div class="my_planPrice"><h3>[ <?php echo $sum_inbox?> ]</h3></div>
 						Jumlah pesan masuk
 					</h3>						
 					<p>
@@ -51,7 +51,7 @@
 				</div>
 				<div class="offer-content">
 					<h3 class="lead">
-						<div class="my_planPrice"><?php echo $sum_sentitem?></div>
+						<div class="my_planPrice"><h3>[ <?php echo $sum_sentitem?> ]</h3></div>
 						Jumlah pesan terkirim
 					</h3>						
 					<p>
