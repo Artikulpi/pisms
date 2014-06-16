@@ -60,8 +60,8 @@ class Inbox extends CI_Controller{
 			$data['header'] = 'Kotak Masuk';
 			$data['contact'] = $this->Contact_model->getfor();
 			$data['inbox'] = $this->Inbox_model->getFilter($date_start, $date_end, $mesorphone, $keyword);
-			//$data['jumlah'] = $this->Inbox_model->countFilter($filter);
-			//$data['search'] = $filter;
+			$data['jumlah'] = $this->Inbox_model->countFilter($date_start, $date_end, $mesorphone, $keyword);
+			$data['search'] = $keyword;
 			$data['page'] = 'inbox/filter_inbox';
 			$this->load->view('template/layout', $data);
 		}else{
