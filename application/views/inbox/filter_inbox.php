@@ -1,3 +1,27 @@
+<div class="panel panel-default">
+                <div class="panel-body">
+<form action="<?php echo site_url('inbox/filter')?>" method="POST">
+	<div class="col-sm-2">
+		<select name="mesorphone" class="form-control">
+			<option value="pesan">Pesan</option>
+			<option value="phone">Kontak</option>
+		</select>
+	</div>
+	<div class="col-sm-3">
+		<input type="date" name="date_start" class="form-control" id="datepicker">
+	</div>
+	<div class="col-sm-3">
+		<input type="date" name="date_end" class="form-control" id="datepicker">
+	</div>
+	<div class="col-sm-3">
+		<input type="text" name="keyword" class="form-control" placeholder="Keyword">
+	</div>
+	<div class="col-sm-1">
+		<span data-toggle="tooltip" data-placement="bottom" title="Filter Pencarian"><input type="submit" value="Filter" class="btn btn-info"></span>
+	</div>
+</form>
+</div></div>
+
 <div class="row">
 				<div class="col-sm-12">
 			<p class="bg-info"> Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kunci	 <strong><em><?php echo $search;?></p><br>
