@@ -3,7 +3,6 @@
 <form action="<?php echo site_url('sentitem/filter')?>" method="POST">
 	<div class="col-sm-2">
 		<select name="mesorphone" class="form control">
-			<option>Pesan / Kontak</option>
 			<option value="pesan">Pesan</option>
 			<option value="phone">Kontak</option>
 		</select>
