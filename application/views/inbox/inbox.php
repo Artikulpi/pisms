@@ -8,27 +8,32 @@
 		</div>
 	</div>
 </form-->
+
+
+<div class="panel panel-default">
+                <div class="panel-body">
 <form action="<?php echo site_url('inbox/filter')?>" method="POST">
 	<div class="col-sm-2">
-		<input type="date" name="date_start" class="form-control">
-	</div>
-	<div class="col-sm-2">
-		<input type="date" name="date_end" class="form-control">
-	</div>
-	<div class="col-sm-2">
-		<select name="mesorphone">
+		<select name="mesorphone" class="form control">
 			<option>Pesan/Nomor</option>
 			<option value="pesan">Pesan</option>
 			<option value="phone">Nomor</option>
 		</select>
 	</div>
-	<div class="col-sm-2">
+	<div class="col-sm-3">
+		<input type="date" name="date_start" class="form-control" id="datepicker">
+	</div>
+	<div class="col-sm-3">
+		<input type="date" name="date_end" class="form-control" id="datepicker">
+	</div>
+	<div class="col-sm-3">
 		<input type="text" name="keyword" class="form-control" placeholder="Keyword">
 	</div>
-	<div class="col-sm-2">
-		<span data-toggle="tooltip" data-placement="bottom" title="Filter Pencarian"><input type="submit" value="Filter" class="btn btn-default"></span>
+	<div class="col-sm-1">
+		<span data-toggle="tooltip" data-placement="bottom" title="Filter Pencarian"><input type="submit" value="Filter" class="btn btn-info"></span>
 	</div>
 </form>
+</div></div>
 
 <?php
 foreach ($inbox as $row) {
