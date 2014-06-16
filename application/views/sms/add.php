@@ -1,3 +1,5 @@
+<script type="text/javascript" src="<?php echo base_url();?>media/js/select2.js"></script>
+<link href="<?php echo base_url(); ?>media/css/select2.css" rel="stylesheet" type='text/css'>
 <script type="text/javascript">
 $(document).ready(function() {
 	$('#karakter').keyup(function() {
@@ -13,6 +15,46 @@ $(document).ready(function() {
 	});
 });
 </script>
+<h3>Multiple Select</h3>
+<select id="mySel3" class="select2" multiple="multiple" style="width:400px;">
+	<optgroup label="Select multiple">
+		<option>One</option>
+		<option>Two</option>
+		<option>Three</option>
+		<option>Siz</option>
+		<option>Seven</option>
+		<option>Nine</option>
+	</optgroup>
+	<optgroup label="Select one" class="single">
+		<option>Four</option>
+		<option>Five</option>
+		<option>Six</option>
+	</optgroup>
+</select>
+<script type="text/javascript">
+function(){
+
+	$("#mySel").select2({
+		allowClear:true
+	});
+
+	$("#mySel2").select2({
+		closeOnSelect:false
+	});
+
+	$("#mySel3").select2({
+		closeOnSelect:false
+	});
+
+	$('.single option').click(function() {
+    // only affects options contained within the same optgroup
+    // and doesn't include this
+    $(this).siblings().prop('selected', false);
+});
+});
+
+</script>
+
 <div class="box">
 	<?php
 	echo form_open('sms/create');
