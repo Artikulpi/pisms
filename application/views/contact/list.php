@@ -1,3 +1,5 @@
+<div class="panel panel-default">
+                <div class="panel-body">
 <form action="<?php echo site_url('contact/search')?>" method="POST">
 	<div class="col-sm-3">
 		<input type="text" name="search" class="form-control" placeholder="Cari Kontak">
@@ -7,6 +9,7 @@
 			<input type="submit" value="Cari" class="btn btn-info"></span>
 		</div>
 	</form>
+	</div></div>
 	<table class="table table-striped">
 		<thead>
 			<th>Nama</th>
