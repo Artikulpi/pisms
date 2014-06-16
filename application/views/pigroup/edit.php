@@ -12,6 +12,6 @@ echo form_open('pigroup/saveEdit'); ?>
 <div class="text-left">
 	<label class="control-label col-sm-3"></label>
 	<div class="col-sm-2">
-	<input type="submit" class="btn btn-info" value="Edit"/>
+	<span data-toggle="tooltip" data-placement="bottom" title="Edit grup"><input type="submit" class="btn btn-default" value="Edit"/></span>
 </div></div>
 <?php echo form_close(); ?>

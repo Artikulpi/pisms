@@ -26,16 +26,16 @@
 		<input type="text" name="keyword" class="form-control" placeholder="Keyword">
 	</div>
 	<div class="col-sm-2">
-		<input type="submit" value="Filter" class="btn btn-primary">
+		<span data-toggle="tooltip" data-placement="bottom" title="Filter Pencarian"><input type="submit" value="Filter" class="btn btn-default"></span>
 	</div>
 </form>
 
 <?php
 foreach ($inbox as $row) {
 	$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-	$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"></span></span>');
-	$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></span>');
-	$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
+	$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"> replay</span></span>');
+	$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"> forward</span></span>');
+	$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</span></span>', $onclick);
 	?>
 
 
@@ -69,7 +69,7 @@ foreach ($inbox as $row) {
 			echo anchor('inbox/detail/'.$row->ID, $cut);
 			?>
 		</div>
-		<small class="pull-right"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></small><br>
+		<small class="pull-right"><?php echo $reply.' '.$forward.' '.$delete;?></small><br>
 
 	</div>
 </div>

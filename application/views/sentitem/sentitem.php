@@ -17,7 +17,7 @@
 		<input type="text" name="keyword" class="form-control" placeholder="Keyword">
 	</div>
 	<div class="col-sm-2">
-		<input type="submit" value="Filter" class="btn btn-primary">
+		<span data-toggle="tooltip" data-placement="bottom" title="Filter pencarian"><input type="submit" value="Filter" class="btn btn-default"></span>
 	</div>
 </form>						
 
@@ -25,7 +25,7 @@
 <?php
 foreach ($sentitem as $row) { 
 	$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-	$delete = anchor('sentitem/delete/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
+	$delete = anchor('sentitem/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</span></span>', $onclick);
 	?>
 
 	<div class="row">
@@ -54,7 +54,7 @@ foreach ($sentitem as $row) {
 			</div>
 			<div class="qa-message-content"><?php echo $row->TextDecoded;?>
 			</div>
-			<small class="pull-right"><?php echo $delete.' hapus';?></small><br>
+			<small class="pull-right"><?php echo $delete;?></small><br>
 		</div>
 	</div>
 

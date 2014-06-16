@@ -44,7 +44,7 @@
 	<div class="text-left">
 		<label class="control-label col-sm-12"></label>
 		<div class="col-sm-2">
-			<input type="submit" class="btn btn-info" value="Edit"/>
+			<span data-toggle="tooltip" data-placement="bottom" title="Edit kontak"><input type="submit" class="btn btn-default" value="Edit"/>
 		</div>
 	</div>
 		<?php echo form_close(); ?>

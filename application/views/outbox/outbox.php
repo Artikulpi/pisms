@@ -2,7 +2,7 @@
 	<?php
 	foreach ($outbox as $row) { 
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$delete = anchor('outbox/delete/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
+		$delete = anchor('outbox/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</span></span>', $onclick);
 		?>
 		
 
@@ -15,7 +15,7 @@
 								<a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
 							</div>
 							<div class="user-detail">
-							<h5 class="handle"><?php echo $row->DestinationNumber;?></h5>
+							<font color="#080808"><h5 class="handle"><?php echo $row->DestinationNumber;?></h5></font>
 									<div class="post-meta">
 										<div class="asker-meta">
 											<span class="qa-message-what"></span>
@@ -32,7 +32,7 @@
 														</div>
 							<div class="qa-message-content"><?php echo $row->TextDecoded;?>
 							</div>
-							<small class="pull-right"><?php echo $delete.' hapus';?></small><br>
+							<small class="pull-right"><?php echo $delete;?></small><br>
 											</div>
 											</div>
 				

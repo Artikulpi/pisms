@@ -47,8 +47,8 @@ echo form_open('sms/create'); ?>
 										<div class="text-left">
 											<div class="col-sm-3 col-md-8">
 											<input type="hidden" name="draft_id" value="<?php echo $draft->id;?>">
-											<input type="submit" name="input_manual" class="btn btn-info" value="Kirim"/>
-											<input type="submit" name="draft" class="btn btn-info" value="Simpan ke Draft"/>
+											<input type="submit" name="input_manual" class="btn btn-default" value="Kirim"/>
+											<input type="submit" name="draft" class="btn btn-default" value="Simpan ke Draft"/>
 										</div>
 									</div>
 								</div>
@@ -73,7 +73,7 @@ echo form_open('sms/create'); ?>
 										<?php } ?></div><hr>
 										<div class="text-left">
 											<div class="col-sm-2 col-md-3">
-											<input type="submit" name="input_contact" class="btn btn-info" value="Kirim"/>
+											<input type="submit" name="input_contact" class="btn btn-default" value="Kirim"/>
 										</div>
 									</div>
 								</div>
@@ -98,7 +98,7 @@ echo form_open('sms/create'); ?>
 										<?php } ?></div><hr>
 										<div class="text-left">
 											<div class="col-sm-2 col-md-2">
-											<input type="submit" name="input_group" class="btn btn-info" value="Kirim"/>
+											<span data-toggle="tooltip" data-placement="bottom" title="kirim"><input type="submit" name="input_group" class="btn btn-default" value="Kirim"/>
 										</div>
 									</div>
 								</div>

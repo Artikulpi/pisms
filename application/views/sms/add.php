@@ -15,54 +15,10 @@ $(document).ready(function() {
 	});
 });
 </script>
-<h3>Multiple Select</h3>
-<select id="mySel3" class="select2" multiple="multiple" style="width:400px;">
-	<optgroup label="Select multiple">
-		<option>One</option>
-		<option>Two</option>
-		<option>Three</option>
-		<option>Siz</option>
-		<option>Seven</option>
-		<option>Nine</option>
-	</optgroup>
-	<optgroup label="Select one" class="single">
-		<option>Four</option>
-		<option>Five</option>
-		<option>Six</option>
-	</optgroup>
-</select>
-<script type="text/javascript">
-function(){
-
-	$("#mySel").select2({
-		allowClear:true
-	});
-
-	$("#mySel2").select2({
-		closeOnSelect:false
-	});
-
-	$("#mySel3").select2({
-		closeOnSelect:false
-	});
-
-	$('.single option').click(function() {
-    // only affects options contained within the same optgroup
-    // and doesn't include this
-    $(this).siblings().prop('selected', false);
-});
-});
-
-</script>
-
-<div class="box">
-	<?php
-	echo form_open('sms/create');
-	?>
-	
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
+
 				<form>
 					<div class="row">
 						<div class="col-sm-12 col-md-12">
@@ -70,10 +26,56 @@ function(){
 								<?php echo validation_errors(); ?>
 								<Label>Pesan Anda</Label>
 								<textarea id="karakter" name="content"  class="form-control" maxlength="160" rows="5"></textarea><br>
-								<div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung" >160</span> Karakter Tersisa.</div>  
-							</div>
+								<div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung" >160</span> Karakter Tersisa.
+								</div>  
+								<strong><h5>Multiple Select</h5></strong>
+								<select id="mySel3" class="select2" multiple="multiple" style="width:400px;">
+									<optgroup label="Select multiple">
+										<option>One</option>
+										<option>Two</option>
+										<option>Three</option>
+										<option>Siz</option>
+										<option>Seven</option>
+										<option>Nine</option>
+									</optgroup>
+									<optgroup label="Select one" class="single">
+										<option>Four</option>
+										<option>Five</option>
+										<option>Six</option>
+									</optgroup>
+								</select>
+								<script type="text/javascript">
+								function(){
+
+									$("#mySel").select2({
+										allowClear:true
+									});
+
+									$("#mySel2").select2({
+										closeOnSelect:false
+									});
+
+									$("#mySel3").select2({
+										closeOnSelect:false
+									});
+
+									$('.single option').click(function() {
+								    // only affects options contained within the same optgroup
+								    // and doesn't include this
+								    $(this).siblings().prop('selected', false);
+								});
+								});
+
+								</script>
+
+								<div class="box">
+									<?php
+									echo form_open('sms/create');
+									?>
+								</div>
 						</div>
 						<div class="col-sm-12 col-md-6">
+						<div class="row">
 							<div class="form-group">
 								<label>Kirim Berdasarkan :</label>
 
@@ -153,12 +155,12 @@ function(){
 							</div>
 						</div>
 					</div>
-					<div class="col-md-12">
-						<input type="submit" class="btn btn-info" value="Kirim">
-					</div>
 				</div>
+					<div class="col-md-12">
+						<input type="submit" class="btn btn-default" value="Kirim">
+					</div>
 			</form>
-		</div> </div>
+		</div></div></div>
 
 		<?php
 		form_close();

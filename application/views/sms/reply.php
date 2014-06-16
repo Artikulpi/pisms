@@ -32,7 +32,7 @@ echo form_open('sms/create'); ?>
 							 	
 							 		<input type="text"class="form-control" name="contact" value="<?php echo $sms->SenderNumber;?>" style="max-width:1000px">
 			                    <div class="col-md-12">
-			                        <input type="submit" class="btn btn-info" value="Kirim"/>
+			                        <input type="submit" class="btn btn-default" value="Kirim"/>
 			                    </div>
 							                  </div>
 							              </div>
@@ -45,6 +45,6 @@ echo form_open('sms/create'); ?>
 	                    
 	                </div>
 	                </form>
-	            </div>
+	            </div></div>
 
 <?php echo form_close(); ?>

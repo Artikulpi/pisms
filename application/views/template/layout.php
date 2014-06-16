@@ -125,8 +125,8 @@
 					<p class="navbar-text pull-left">&copy; Copyright pisms-2014
 					</p>
 					<div class="navbar-collapse collapse">
-						<a href="<?php echo site_url('about')?>"><p class="navbar-text pull-right">Tentang Kami
-						</a></p>
+						<p class="navbar-text pull-right">Diberdayakan oleh <a href="<?php echo site_url('about')?>">PISMS</a>
+						</p>
 						<!-- <a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/Info.png" class="img-rounded" width="20"> Bantuan
 						</p>	 -->
 					</div>

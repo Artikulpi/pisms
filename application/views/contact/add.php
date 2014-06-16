@@ -31,7 +31,7 @@
 	<div class="text-left">
 		<label class="control-label col-sm-12"></label>
 		<div class="col-sm-2">
-			<input type="submit" class="btn btn-info" value="Tambah"/>
+			<span data-toggle="tooltip" data-placement="bottom" title="Tambah kontak"><input type="submit" class="btn btn-default" value="Tambah"/></span>
 		</div>
 	</div>
 		<?php echo form_close(); ?>

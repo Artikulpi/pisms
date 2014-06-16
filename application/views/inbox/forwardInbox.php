@@ -27,7 +27,53 @@ echo form_open('sms/create'); ?>
 					          <?php echo validation_errors(); ?>
 					          <Label>Isi *</Label>
 					  		<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3"><?php echo $sms->TextDecoded;?></textarea><br>
-					  		<div style="width:264px;text-align: center" class="alert alert-warning"><span id="hitung">160</span> Karakter Tersisa.</div>
+					  		<div style="width:264px;text-align: center" class="alert alert-warning"><span id="hitung">160</span> Karakter Tersisa.
+							</div>
+							<strong><h5>Multiple Select</h5></strong>
+							<select id="mySel3" class="select2" multiple="multiple" style="width:400px;">
+								<optgroup label="Select multiple">
+									<option>One</option>
+									<option>Two</option>
+									<option>Three</option>
+									<option>Siz</option>
+									<option>Seven</option>
+									<option>Nine</option>
+								</optgroup>
+								<optgroup label="Select one" class="single">
+									<option>Four</option>
+									<option>Five</option>
+									<option>Six</option>
+								</optgroup>
+							</select>
+							<script type="text/javascript">
+							function(){
+
+								$("#mySel").select2({
+									allowClear:true
+								});
+
+								$("#mySel2").select2({
+									closeOnSelect:false
+								});
+
+								$("#mySel3").select2({
+									closeOnSelect:false
+								});
+
+								$('.single option').click(function() {
+							    // only affects options contained within the same optgroup
+							    // and doesn't include this
+							    $(this).siblings().prop('selected', false);
+							});
+							});
+
+							</script>
+
+							<div class="box">
+								<?php
+								echo form_open('sms/create');
+								?>
+							</div>
 	                        </div>
 	                    </div>
 	                  <label class="col-sm-12">Kirim Berdasarkan :</label>
@@ -91,7 +137,7 @@ echo form_open('sms/create'); ?>
 						</div>
 	                </div>
 					<div class="col-sm-12">
-						<input type="submit" name="input_manual" class="btn btn-info" value="Kirim"/>
+						<input type="submit" name="input_manual" class="btn btn-default" value="Kirim"/>
 					</div>
 	                </form>
 	            </div>
