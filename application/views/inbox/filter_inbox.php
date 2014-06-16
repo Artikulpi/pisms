@@ -11,41 +11,44 @@
 			$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</span></span>', $onclick);
 			?>
 
-			 <div class="row">
-			 				<div class="col-sm-12">
-					<!-- Begin Listing: 218 LYNNEBROOK LN-->
-					<div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
-						<div class="media">
-							<a class="pull-left" href="#" target="_parent">
-								<div class="clearfix visible-sm"></div>
+							
+								<div class="row">
+								</div>
+								<div class="message-item" id="m1">
+									<div class="message-inner">
+										<div class="message-head clearfix">
+											<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
+											</div>
+											<div class="user-detail">
+												<div class="post-meta">
+													<div class="asker-meta">
+														<span class="qa-message-what"></span>
+														<span class="qa-message-when">
+															<h5><?php echo $row->SenderNumber;?></h5>
+														</span>
+														<span class="qa-message-who">
 
-								<div class="media-body fnt-smaller">
-									<a href="#" target="_parent"></a>
+															<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
+														</span>
+													</div>
+													<h6><span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span>  <?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></span></h6>
+												</div>
+											</div>
+										</div>
 
-									<h4 class="media-heading">
-										<font color="#080808"><p>Pengirim </font><small><?php echo $row->SenderNumber;?></small> <span class="fnt-smaller fnt-lighter fnt-arial"></span></p>
-									</h4>
-										<ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
-											<li><h4 class="media-heading"><font color="#080808">Tanggal </font><small><?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></small></h4></li>
 
-
-										</ul>
-
-										<p class="hidden-xs"><span class="label label-info">Isi</span>
-											<div class="well well-sm">
-												<?php
+										<div class="qa-message-content"><?php
 												$cut = character_limiter(strip_tags($row->TextDecoded),6);
 												echo anchor('inbox/detail/'.$row->ID, $cut);
 												?>
-											</div>
-										</p>
-											<span class="fnt-smaller fnt-lighter fnt-arial"><div class="text-right">
-											<?php echo $reply.' '.$forward.' '.$delete;?><br>
-											</span><br>
-										</div>
 									</div>
+									<small class="pull-right"><?php echo $reply.' '.$forward.' '.$delete;?></small><br>
+
 								</div>
-							</div><!-- End Listing-->
+							</div>
+							
+							
+							
 						</div>
 </div>
 						<?php
