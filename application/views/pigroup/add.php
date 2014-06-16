@@ -11,6 +11,6 @@ echo form_open('pigroup/add'); ?>
 <div class="text-left">
 	<label class="control-label col-sm-3"></label>
 	<div class="col-sm-2">
-        <input type="submit" class="btn btn-info" value="Tambah"/>
+        <input type="submit" class="btn btn-default" value="Tambah"/>
 </div></div>
 <?php echo form_close(); ?>

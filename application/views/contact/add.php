@@ -19,14 +19,18 @@
 </div>
 <div class="form-group">
 	<label class="control-label col-sm-3">Group</label>
-	<div class="col-sm-3">
+	<div class="col-sm-9">
+		<div class="panel panel-default">
+		                <div class="panel-body">
 	<form>
 		<?php foreach ($group as $key) {
 			?>
-			<input type="checkbox" name="group[]" value="<?php echo $key->id;?>"><?php echo $key->group_name;?>
+			<label>
+			<input type="checkbox" name="group[]" value="<?php echo $key->id;?>"> <?php echo $key->group_name;?>
+		</label>
 			<?php 		} ?>
 	</form>
-	</div>
+	</div></div></div>
 </div>
 	<div class="text-left">
 		<label class="control-label col-sm-12"></label>

@@ -23,8 +23,9 @@
 </div>
 
 	<label class="control-label col-sm-3">Group</label>
-	<div class="col-sm-3">
-		<div class="form-group">
+	<div class="col-sm-9">
+		<div class="panel panel-default">
+		                <div class="panel-body">
 		
 			<?php foreach ($group as $key) {
 				foreach ($chg as $val) {
@@ -40,7 +41,7 @@
 			
 		</div>
 	</div>
-	
+	</div>
 	<div class="text-left">
 		<label class="control-label col-sm-12"></label>
 		<div class="col-sm-2">

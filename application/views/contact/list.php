@@ -4,6 +4,7 @@
 		<th>Nama</th>
 		<th>Aksi</th>
 	</thead>
+	<tbody>
 	<?php
 	foreach ($contact as $row) {
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
@@ -20,5 +21,5 @@
 </table>
 <br>
 <span data-toggle="tooltip" data-placement="bottom" title="Tambah kontak"><a href="<?php echo site_url('contact/add')?>" class="btn btn-default btn-md"><b>+</b> Tambah Kontak</a>
-
+<tbody></table>
 <div class="text-right"><?php echo $halaman?></div>
