@@ -14,7 +14,7 @@
                 <div class="panel-body">
 <form action="<?php echo site_url('inbox/filter')?>" method="POST">
 	<div class="col-sm-2">
-		<select name="mesorphone" class="form control">
+		<select name="mesorphone" class="form-control">
 			<option value="pesan">Pesan</option>
 			<option value="phone">Kontak</option>
 		</select>
