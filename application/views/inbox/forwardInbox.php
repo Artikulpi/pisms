@@ -108,17 +108,17 @@ echo form_open('sms/create'); ?>
 								</div>
 								<div id="collapseTwo" class="panel-collapse collapse">
 									<div class="panel-body">
-										<div class="control-group">
 										<?php foreach ($group as $row) {?>
-											<label>
-												<input name="group" type="checkbox" value="<?php echo $row->id?>"><?php echo $row->group_name?>
-											</label>
+											
+												<div class="col-sm-3">
+												<input name="group" type="checkbox" value="<?php echo $row->id?>"> <?php echo $row->group_name?>	</div>
+										
 										
 										<?php } ?>
 										</div>
 									</div>
 								</div>
-							</div>
+							
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">

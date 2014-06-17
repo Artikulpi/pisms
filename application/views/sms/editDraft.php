@@ -88,17 +88,16 @@ echo form_open('sms/create'); ?>
 								</div>
 								<div id="collapseThree" class="panel-collapse collapse">
 									<div class="panel-body">
-										<div class="control-group">
 										<?php foreach ($group as $row) {?>
 										
-											<label>
-												<input name="group" type="checkbox" value="<?php echo $row->id?>"><?php echo $row->group_name?>
-											</label>
+											<div class="col-sm-3">
+												<input name="group" type="checkbox" value="<?php echo $row->id?>"> <?php echo $row->group_name?>
+											</div>
 										
-										<?php } ?></div><hr>
+										<?php } ?></div>
 										<div class="text-left">
 											<div class="col-sm-2 col-md-2">
-											<span data-toggle="tooltip" data-placement="bottom" title="kirim"><input type="submit" name="input_group" class="btn btn-default" value="Kirim"/>
+											<span data-toggle="tooltip" data-placement="bottom" title="kirim"><input type="submit" name="input_group" class="btn btn-default" value="Kirim"><hr>
 										</div>
 									</div>
 								</div>

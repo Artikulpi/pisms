@@ -112,13 +112,15 @@ $(document).ready(function() {
 											</h4>
 										</div>
 										<div id="partai" class="panel-collapse collapse">
-											<div class="panel-body">
-												<div class="control-group">
+											
+												
+		                							<div class="panel-body">
 													<?php
 													if (!empty($group)) {
 														foreach ($group as $row):
 															?>
-														<input type="checkbox" value="<?php echo $row->id; ?>" name="groupcheck[]"> <?php echo $row->group_name; ?>
+															<div class="col-sm-3">
+														<input type="checkbox" value="<?php echo $row->id; ?>" name="groupcheck[]"> <?php echo $row->group_name; ?></div>
 														<?php
 														endforeach;
 													}
@@ -126,8 +128,8 @@ $(document).ready(function() {
 												</div>
 											</div>
 										</div>
-									</div>
-
+									
+									
 									<div class="panel panel-default">
 										<div class="panel-heading">
 											<h4 class="panel-title">
