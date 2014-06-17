@@ -112,14 +112,12 @@ $(document).ready(function() {
 											</h4>
 										</div>
 										<div id="partai" class="panel-collapse collapse">
-											
-												
-		                							<div class="panel-body">
+											<div class="panel-body">
 													<?php
 													if (!empty($group)) {
 														foreach ($group as $row):
 															?>
-															<div class="col-sm-3">
+															<div class="col-sm-4">
 														<input type="checkbox" value="<?php echo $row->id; ?>" name="groupcheck[]"> <?php echo $row->group_name; ?></div>
 														<?php
 														endforeach;

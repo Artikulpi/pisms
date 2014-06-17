@@ -110,7 +110,7 @@ echo form_open('sms/create'); ?>
 									<div class="panel-body">
 										<?php foreach ($group as $row) {?>
 											
-												<div class="col-sm-3">
+												<div class="col-sm-4">
 												<input name="group" type="checkbox" value="<?php echo $row->id?>"> <?php echo $row->group_name?>	</div>
 										
 										
