@@ -87,7 +87,7 @@ echo form_open('sms/create'); ?>
 							<div id="phone" class="panel-collapse collapse">
 								<div class="panel-body">
 									<div class="control-group">
-										<input type="text" class="form-control" name="contact" value="<?php echo $contact->phone_number;?>">
+										<input type="text" class="form-control" name="contact" value="<?php echo $contact->phone_number;?>" disabled="disabled">
 										</div>
 										<div class="control-group">
 											<span>&nbsp;</span>
