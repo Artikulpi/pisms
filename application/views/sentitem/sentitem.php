@@ -34,7 +34,7 @@ foreach ($sentitem as $row) {
 		<div class="message-inner">
 			<div class="message-head clearfix">
 				<div class="avatar pull-left">
-					<a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
+					<a href="./index.php?qa=user&qa_1=admin"><img src="<?php echo base_url();?>media/img/images.jpeg"></a>
 				</div>
 				<div class="user-detail">
 					<font color="#080808"><h5 class="handle"><?php echo $row->DestinationNumber;?></h5></font>

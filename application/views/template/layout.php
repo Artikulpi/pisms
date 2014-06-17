@@ -42,7 +42,7 @@
 									<div class="navbar-content">
 										<div class="row">
 											<div class="col-md-5">
-												<a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a><p class="text-center small">
+												<a href="./index.php?qa=user&qa_1=admin"><img src="<?php echo base_url();?>media/img/images.jpeg"></a><p class="text-center small">
 												<a href="#">Change Photo</a></p>
 											</div>
 											<div class="col-md-7">

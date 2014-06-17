@@ -40,7 +40,7 @@
 								<div class="message-item" id="m1">
 									<div class="message-inner">
 										<div class="message-head clearfix">
-											<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
+											<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="<?php echo base_url();?>media/img/images.jpeg"></a>
 											</div>
 											<div class="user-detail">
 												<div class="post-meta">
