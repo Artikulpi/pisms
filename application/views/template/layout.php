@@ -120,7 +120,7 @@
 			</div>
 
 
-			<div class="footer" role="navigation">
+			<div class="panel-footer" role="navigation">
 				<div class="container-fluid">
 					<p class="navbar-text pull-left">&copy; Copyright pisms-2014
 					</p>
