@@ -10,6 +10,8 @@
 		</div>
 	</form>
 	</div></div>
+		<div class="col-sm-12 col-md-12"><p class="bg-info">
+	Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kunci <strong><em><?php echo $search;?></em></strong></p></div>
 <table class="table table-striped">
 	<thead>
 		<th>Nama</th>
