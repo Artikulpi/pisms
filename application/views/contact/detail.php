@@ -1,7 +1,7 @@
 
 <div class="container-fluid">
     <div class="row">
-		<div class="col-sm-4 col-md-4">
+		<div class="col-sm-12 col-md-12">
             <blockquote>
                 <p><span class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="Detail Kontak"> Nama: <?php echo $contact->name?></span><br></p> 
             </blockquote>
@@ -19,6 +19,7 @@ foreach ($contactgroup as $cg) {
 	}
 }
 ?></p>
+
 <small class="pull-left">
 <a href="<?php echo site_url('contact')?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-phone-alt" data-toggle="tooltip" data-placement="bottom" title="Kontak"> kontak</a>
 <a href="<?php echo site_url('sms/sendto/'.$contact->id)?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="KirimSMS"> kirim sms</a>
