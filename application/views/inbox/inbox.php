@@ -8,10 +8,10 @@
 		</select>
 	</div>
 	<div class="col-sm-3">
-		<input type="date" name="date_start" class="form-control" id="tanggal">
+		<input type="text" name="date_start" class="form-control" id="datepicker1" placeholder="tanggal">
 	</div>
 	<div class="col-sm-3">
-		<input type="date" name="date_end" class="form-control" id="tanggal">
+		<input type="text" name="date_end" class="form-control" id="datepicker2" placeholder="tanggal">
 	</div>
 	<div class="col-sm-3">
 		<input type="text" name="keyword" class="form-control" placeholder="Keyword">
