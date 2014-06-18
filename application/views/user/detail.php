@@ -13,7 +13,7 @@
 <tr>
 <td><?php echo $user->username;?></td>
 
-<td><?php echo $user->role;?></td>
+<td><?php echo ($user->role == 1) ? 'Admin' : 'User';?></td>
 
 <td><?php echo $user->full_name;?></td>
 
