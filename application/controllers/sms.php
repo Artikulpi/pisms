@@ -15,11 +15,15 @@ class Sms extends CI_Controller{
 			$this->form_validation->set_rules('content', 'Isi', 'required');
 			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
 			if($this->form_validation->run() == TRUE AND $this->input->post('optionsRadios')=='frominput'){
-				$data = array(
-					'DestinationNumber' => $this->input->post('no_tujuan'),
-					'TextDecoded' => $this->input->post('content'),
-					);
-				$this->Sms_model->sent($data);
+				$number = $this->input->post('no_tujuan');
+				$arr_number = explode(',', $number);
+				foreach ($arr_number as $key) {	
+					$data = array(
+						'DestinationNumber' => $key,
+						'TextDecoded' => $this->input->post('content'),
+						);
+					$this->Sms_model->sent($data);
+				}
 				$log = array(
 					'user_id'=>$this->session->userdata('id'),
 					'activity'=>'Kirim SMS',
