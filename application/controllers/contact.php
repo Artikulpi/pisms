@@ -169,7 +169,7 @@ class Contact extends CI_Controller{
 			$data['contactgroup'] = $this->Contactgroup_model->getfor();
 			$data['contact'] = $this->Contact_model->getById($id);
 			$data['title'] = 'Detail Contact';
-			$data['header'] = 'Rinci Kontak';
+			$data['header'] = 'Rincian Kontak';
 			$data['page'] = 'contact/detail';
 			$this->load->view('template/layout', $data);
 		}else{

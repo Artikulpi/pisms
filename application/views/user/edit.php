@@ -10,7 +10,7 @@ echo form_open('user/saveEdit'); ?>
         </div>
 </div>
 <div class="form-group">
-        <label class="control-label col-sm-3">Role *</label>
+        <label class="control-label col-sm-3">Peran *</label>
         <div class="col-sm-9">
                 <?php $selected = ($user->role == 1) ? 'selected' : NULL ; ?>
                 <select class="form-control" name="role">
@@ -30,7 +30,7 @@ echo form_open('user/saveEdit'); ?>
         </div>
 </div>
 <div class="form-group">
-        <label class="control-label col-sm-3">Fullname *</label>
+        <label class="control-label col-sm-3">Nama Lengkap *</label>
         <div class="col-sm-9">
                 <input type="text" class="form-control span5" name="full_name" value="<?php echo $user->full_name?>">
         </div>

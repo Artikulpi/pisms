@@ -14,8 +14,8 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 	<?php
 	foreach ($inbox as $row) {
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"></span></span>');
-		$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"></span></span>');
+		$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Reply"></span></span>');
+		$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Teruskan"></span></span>');
 		$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-info"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></span></span>', $onclick);
 		?>
 

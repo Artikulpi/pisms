@@ -4,7 +4,7 @@
 		<th>Username</th>
 		<th>Nama Lengkap</th>
 		<th>Email</th>
-		<th>Role</th>
+		<th>Peran</th>
 		<th>Status</th>
 		<th>Aksi</th>
 	</thead>

@@ -51,7 +51,7 @@
 											<h4 class="panel-title">
 												<label>
 													<input type="radio" name="optionsRadios" value="fromgroup" data-toggle="collapse" data-parent="#accordion" id="optionsRadios2" data-target="#partai">
-													Group
+													Grup
 												</label>
 											</h4>
 										</div>

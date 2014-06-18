@@ -2,7 +2,7 @@
 <table class="table table-striped">
 	<thead>
 		<th>Username</th>
-		<th>Role</th>
+		<th>Peran</th>
 		<th>Nama Lengkap</th>
 		<th>Email</th>
 		<th>Status</th>

@@ -21,7 +21,7 @@ echo form_open('user/add'); ?>
         </div>
 </div>
 <div class="form-group">
-        <label class="control-label col-sm-3">Role *</label>
+        <label class="control-label col-sm-3">Peran *</label>
         <div class="col-sm-9">
                 <select class="form-control" name="role">
                         <option value="0">User</option>
@@ -30,7 +30,7 @@ echo form_open('user/add'); ?>
         </div>
 </div>
 <div class="form-group">
-        <label class="control-label col-sm-3">Fullname *</label>
+        <label class="control-label col-sm-3">Nama Lengkap *</label>
         <div class="col-sm-9">
                 <input type="text" class="form-control span5" name="full_name" placeholder="Nama Lengkap">
         </div>
