@@ -13,7 +13,7 @@ jQuery.fn.limitCharacters = function(options){
 		$.extend(settings, options);
 	}
 
-	this.after("<div style='width:264px;text-align: center' class='alert alert-warning' ><span id='CharsLeft' class='' style='margin-left:10px'></span></div>");
+	this.after("<div style='width:100%; text-align: center;margin-top: 5px;' class='alert alert-warning'><span id='CharsLeft' class='remainingChars alert remainingCharsWarn' style='margin-left:10px'>160 Karakter lagi</span></div>");
 
 	this.bind("change keyup focus input propertychange", function(event){
 		var len = $(this).val().length;
