@@ -148,24 +148,32 @@ class Contact extends CI_Controller{
 	}
 
 	function delete($id){
-		$this->Contact_model->delete($id);
-		$log = array(
-			'user_id'=>$this->session->userdata('id'),
-			'activity'=>'Hapus kontak',
-			'date'=>date('Y-m-d H:i:s'),
-			'module'=>'Contact',
-			);
-		$this->Log_model->save($log);
-		redirect('contact');
+		if($this->session->userdata('login') == TRUE){
+			$this->Contact_model->delete($id);
+			$log = array(
+				'user_id'=>$this->session->userdata('id'),
+				'activity'=>'Hapus kontak',
+				'date'=>date('Y-m-d H:i:s'),
+				'module'=>'Contact',
+				);
+			$this->Log_model->save($log);
+			redirect('contact');
+		}else{
+			redirect('auth');
+		}
 	}
 
 	function detail($id){
-		$data['group'] = $this->Pigroup_model->getfor();
-		$data['contactgroup'] = $this->Contactgroup_model->getfor();
-		$data['contact'] = $this->Contact_model->getById($id);
-		$data['title'] = 'Detail Contact';
-		$data['header'] = 'Rinci Kontak';
-		$data['page'] = 'contact/detail';
-		$this->load->view('template/layout', $data);
+		if($this->session->userdata('login') == TRUE){
+			$data['group'] = $this->Pigroup_model->getfor();
+			$data['contactgroup'] = $this->Contactgroup_model->getfor();
+			$data['contact'] = $this->Contact_model->getById($id);
+			$data['title'] = 'Detail Contact';
+			$data['header'] = 'Rinci Kontak';
+			$data['page'] = 'contact/detail';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
 	}
 }
