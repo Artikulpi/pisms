@@ -13,8 +13,6 @@ $(document).ready(function() {
 	});
 });
 </script-->
-
-<?php //$this->load->view('sms/limiter') ?>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -23,7 +21,9 @@ $(document).ready(function() {
 					<div class="form-group">
 						<?php echo validation_errors(); ?>
 						<Label>Pesan Anda</Label>
-
+						<?php
+						echo form_open('sms/create');
+						?>
 						<script type="text/javascript">
 						jQuery.fn.limitCharacters = function(options){
 							if (this.length == 0) return;
@@ -47,6 +47,7 @@ $(document).ready(function() {
 									this.value = this.value.substring(0, settings.charLimit);
 								}
 
+
 								var charsLeft = settings.charLimit - len;
 								if(charsLeft < 0){
 									charsLeft = 0;
@@ -67,17 +68,12 @@ $(document).ready(function() {
 								}
 								return this;
 							});
-							
 						}
 						$(document).ready(function() {
-							$('#limitCharacters').limitCharacters();
+							$('#limit').limitCharacters();
 						});
 						</script>
-
-						<?php
-						echo form_open('sms/create');
-						?>
-						<textarea id="limitCharacters" name="content" class="form-control" maxlength="160" rows="3"></textarea><br>
+						<textarea id="limit" name="content" class="form-control" maxlength="160" rows="3"></textarea><br>
 						<div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung" >160</span> Karakter Tersisa.</div>
 						<div class="box">
 
