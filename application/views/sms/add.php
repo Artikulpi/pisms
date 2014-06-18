@@ -2,7 +2,7 @@
 <script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.tagsinput.js"></script>
 
 <?php $this->load->view('sms/limiter')?>
-<div class="container-fluid">
+
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
@@ -102,11 +102,13 @@
 						</div>
 					</div>
 					<div class="col-md-12">
+						<div class="panel-footer">
 						<input type="submit" class="btn btn-default" value="Kirim">
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			
 
 		<?php
 		form_close();
