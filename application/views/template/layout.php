@@ -11,15 +11,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>media/img/SMS.png">
 	<link href="<?php echo base_url(); ?>media/css/style.css" rel="stylesheet" type='text/css'>
+	<link href="<?php echo base_url(); ?>media/css/jquery.ui.all.css" rel="stylesheet" type='text/css'>
 	<link href="<?php echo base_url(); ?>media/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>media/css/dashboard.css" rel="stylesheet">
 	<link rel="shortcut icon" href="<?php echo base_url();?>media/image/Pedoman-Logo-transparant.png">
 
 	<title>piSMS - <?php echo $title?></title>
-		
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.ui.datepicker.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery1.js"></script>	
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+ 
+	$("document").ready(function(){ 
+	$("#tanggal").datepicker({ 
+	dateFormat:"dd MM yy",  
+	changeMonth:true, 
+	changeYear:true, 
+	showOn:"button", 
+	buttonImage:
+ 
+	"develop/demos/datepicker/images/calendar.gif", 
+ 
+	buttonImageOnly:true 
+	}); 
+	}); 
+	</script>
+ 
+	
 	<style type="text/css">
 	body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}
 
@@ -127,8 +150,6 @@
 					<div class="navbar-collapse collapse">
 						<p class="navbar-text pull-right">Diberdayakan oleh <a href="http://www.artikulpi.com">PISMS</a>
 						</p>
-						<!-- <a href="#"><p class="navbar-text pull-right"><img src="<?php echo base_url();?>media/img/Info.png" class="img-rounded" width="20"> Bantuan
-						</p>	 -->
 					</div>
 				</div>
 			</div>

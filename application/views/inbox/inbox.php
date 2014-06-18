@@ -1,15 +1,3 @@
-<!--form class="form-inline navbar-right" role="form" action="<?php echo site_url('inbox/search')?>" role="search" method="POST">
-	<div class="form-group">
-		<div class="well well-sm">
-			<input type="text" name="cari" class="form-control" placeholder="Search">
-			<div class="col-sm-4">
-				<button type="submit" class="btn btn-default">Submit</button>
-			</div>
-		</div>
-	</div>
-</form-->
-
-
 <div class="panel panel-default">
                 <div class="panel-body">
 <form action="<?php echo site_url('inbox/filter')?>" method="POST">
@@ -20,10 +8,10 @@
 		</select>
 	</div>
 	<div class="col-sm-3">
-		<input type="date" name="date_start" class="form-control" id="datepicker">
+		<input type="date" name="date_start" class="form-control" id="tanggal">
 	</div>
 	<div class="col-sm-3">
-		<input type="date" name="date_end" class="form-control" id="datepicker">
+		<input type="date" name="date_end" class="form-control" id="tanggal">
 	</div>
 	<div class="col-sm-3">
 		<input type="text" name="keyword" class="form-control" placeholder="Keyword">
