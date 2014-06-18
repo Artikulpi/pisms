@@ -6,7 +6,7 @@
 	<tbody>
 		<div class="panel panel-default">
 		                <div class="panel-body">
-		<font color="#080808"><h4>Nama Grup : <?php
+		<font color="#080808"><h4>Grup : <?php
 		echo $group->group_name.' ';
 		foreach ($chg as $key) {
 			$cehage = $key->contact_id;
