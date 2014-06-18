@@ -7,7 +7,7 @@ class Sentitem_model extends CI_Model{
 	}
 
 	function getSentitems($num, $offset){
-		$this->db->order_by('id', 'ASC');
+		$this->db->order_by('id', 'DESC');
 		return $this->db->get('sentitems', $num, $offset)->result();
 	}
 

@@ -7,7 +7,7 @@ class Inbox_model extends CI_Model{
 	}
 
 	function getInbox($num, $offset){
-		$this->db->order_by('id', 'ASC');
+		$this->db->order_by('id', 'DESC');
 		return $this->db->get('inbox', $num, $offset)->result();
 	}
 	function deleteInbox($id){

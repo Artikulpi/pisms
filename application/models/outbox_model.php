@@ -7,7 +7,7 @@ class Outbox_model extends CI_Model{
 	}
 
 	function getOutbox($num, $offset){
-		$this->db->order_by('id', 'ASC');
+		$this->db->order_by('id', 'DESC');
 		return $this->db->get('outbox', $num, $offset)->result();
 	}
 
