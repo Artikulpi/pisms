@@ -14,7 +14,7 @@ $(document).ready(function() {
 echo validation_errors();
 echo form_open('sms/create'); ?>
 
-	<div class="container-fluid">
+	
 		<div class="row">
 			<div class="col-md-12">
 
@@ -73,41 +73,22 @@ echo form_open('sms/create'); ?>
 									?>
 								</div>
 						</div>
+				
+					<div class="row">
 						<div class="col-sm-12 col-md-6">
-						<div class="row">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<label>
-										<input type="radio" name="optionsRadios" value="frominput" data-toggle="collapse" data-parent="#accordion" id="optionsRadios3" data-target="#phone">
-										Menggunakan No. Telp
-									</label>
-								</h4>
-							</div>
-							<div id="phone" class="panel-collapse collapse">
-								<div class="panel-body">
-									<div class="control-group">
+								
+								
 										<input type="text" class="form-control" name="contact" value="<?php echo $contact->phone_number;?>" disabled="disabled">
-										</div>
-										<div class="control-group">
-											<span>&nbsp;</span>
-										</div>
-									</div>
-								</div>
-									</div>
-								</div>
-
-
-									</div>
-								</div>
-							</div>
+							
 						</div>
 					</div>
-				</div>
-					<div class="col-md-12">
+				</form>
+				
+					
+						<div class="panel-footer">
 						<input type="submit" class="btn btn-default" value="Kirim">
 					</div>
-			</form>
-		</div></div></div>
+						
+		</div></div>
 		
 <?php echo form_close(); ?>
