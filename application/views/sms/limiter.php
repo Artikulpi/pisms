@@ -1,4 +1,8 @@
 <script type="text/javascript">
+/**
+* Script untuk character limiter
+*/
+
 jQuery.fn.limitCharacters = function(options){
 	if (this.length == 0) return;
 
@@ -51,6 +55,7 @@ $(document).ready(function() {
 /**
 * Script untuk multi input
 */
+
 function onAddTag(tag) {
 	alert("Added a tag: " + tag);
 }
