@@ -1,5 +1,6 @@
-<script type="text/javascript" src="<?php echo base_url();?>media/js/select2.js"></script>
-<link href="<?php echo base_url(); ?>media/css/select2.css" rel="stylesheet" type='text/css'>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>media/css/jquery.tagsinput.css" />
+<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.tagsinput.js"></script>
+
 <?php $this->load->view('sms/limiter')?>
 <div class="container-fluid">
 	<div class="row">
@@ -35,7 +36,8 @@
 										<div id="wilayah" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="control-group">
-													<input type="text" class="form-control" name="fromcontact">
+													<input id="contact" type="text" class="tags" name="fromcontact" value="" />
+													<p class="text-right"><em>Gunakan tanda koma (,) sebagai pemisah</em></p>
 												</div>
 											</div>
 											<div class="control-group">
@@ -84,7 +86,8 @@
 													<div class="control-group">
 
 														<div class="control-group">
-															<input  type="text" maxlength="12" class="form-control" name="no_tujuan" placeholder="No.Telp Tujuan">
+															<input id="no_tujuan" type="text" class="tags" name="no_tujuan" value=""/>
+															<p class="text-right"><em>Gunakan tanda koma (,) sebagai pemisah</em></p>
 														</div>
 														<div class="control-group">
 															<span>&nbsp;</span>

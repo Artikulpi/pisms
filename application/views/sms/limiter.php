@@ -46,4 +46,24 @@ jQuery.fn.limitCharacters = function(options){
 $(document).ready(function() {
 	$('#limit').limitCharacters();
 });
+
+
+/**
+* Script untuk multi input
+*/
+function onAddTag(tag) {
+	alert("Added a tag: " + tag);
+}
+function onRemoveTag(tag) {
+	alert("Removed a tag: " + tag);
+}
+function onChangeTag(input,tag) {
+	alert("Changed a tag: " + tag);
+}
+$(function() {
+	$('#contact').tagsInput({width:'auto'});
+});
+$(function() {
+	$('#no_tujuan').tagsInput({width:'auto'});
+});
 </script>
