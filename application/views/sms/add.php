@@ -9,9 +9,7 @@ $(document).ready(function() {
 			
 		}else{
 			$('#hitung').text(160 - len);
-
 		}
-
 	});
 });
 </script-->
@@ -25,6 +23,7 @@ $(document).ready(function() {
 					<div class="form-group">
 						<?php echo validation_errors(); ?>
 						<Label>Pesan Anda</Label>
+
 						<script type="text/javascript">
 						jQuery.fn.limitCharacters = function(options){
 							if (this.length == 0) return;
@@ -68,13 +67,18 @@ $(document).ready(function() {
 								}
 								return this;
 							});
+							
 						}
+						$(document).ready(function() {
+							$('#limitCharacters').limitCharacters();
+						});
 						</script>
+
 						<?php
 						echo form_open('sms/create');
 						?>
 						<textarea id="limitCharacters" name="content" class="form-control" maxlength="160" rows="3"></textarea><br>
-						<div style="width:264px;text-align: center" class="alert alert-warning" ><span id="charsLeft" >160</span> Karakter Tersisa.</div>
+						<div style="width:264px;text-align: center" class="alert alert-warning" ><span id="hitung" >160</span> Karakter Tersisa.</div>
 						<div class="box">
 
 						</div>
@@ -164,11 +168,10 @@ $(document).ready(function() {
 					<div class="col-md-12">
 						<input type="submit" class="btn btn-default" value="Kirim">
 					</div>
-				</form>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<?php
-	form_close();
-	?>
+		<?php
+		form_close();
+		?>
