@@ -75,7 +75,7 @@ echo form_open('sms/create'); ?>
 						</div>
 				
 					<div class="row">
-						<div class="col-sm-12 col-md-6">
+						<div class="col-sm-12 col-md-5">
 								
 								
 										<input type="text" class="form-control" name="contact" value="<?php echo $contact->phone_number;?>" disabled="disabled">
