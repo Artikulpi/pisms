@@ -2,7 +2,7 @@
 <link href="<?php echo base_url(); ?>media/css/signin.css" rel="stylesheet">
 <div class="container">
 	<div class="row centered-form">
-		<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+		<div class="col-xs-12 col-sm-10 col-md-4 col-sm-offset-4 col-md-offset-4">
 			<div class="panel panel-default">
 				<div style="background-color: #eeeeee;" class="panel-heading">
 					<h3 class="panel-title">Login piSMS<small></small></h3>
@@ -12,7 +12,7 @@
 					<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12">
 						<div class="form-group">
-							<p class="bg-danger">
+							<p class="bg-warning"> 
 							<?php echo validation_errors();
 							if(isset($error)){echo $error;}
 							?>

@@ -17,12 +17,6 @@
 	<link rel="shortcut icon" href="<?php echo base_url();?>media/image/Pedoman-Logo-transparant.png">
 
 	<title>piSMS - <?php echo $title?></title>
-	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.ui.widget.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.ui.datepicker.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.ui.core.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery1.js"></script>	
-	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.js"></script>
-	<!--script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script-->
 	
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery-ui-1.10.4.min.js"></script>
