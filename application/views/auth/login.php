@@ -1,6 +1,4 @@
-<?php echo validation_errors();
-if(isset($error)){echo $error;}
-?>
+
 <link href="<?php echo base_url(); ?>media/css/signin.css" rel="stylesheet">
 <div class="container">
 	<div class="row centered-form">
@@ -14,6 +12,11 @@ if(isset($error)){echo $error;}
 					<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12">
 						<div class="form-group">
+							<p class="bg-danger">
+							<?php echo validation_errors();
+							if(isset($error)){echo $error;}
+							?>
+							</p>
 							<input type="text" name="user" id="user" class="form-control input-sm" placeholder="Username">
 							<input type="password" class="form-control input-sm" placeholder="Password" name="pass" id="pass">
 						</div>

@@ -48,7 +48,7 @@ foreach ($inbox as $row) {
 	<div class="message-item" id="m1">
 		<div class="message-inner">
 			<div class="message-head clearfix">
-				<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="<?php echo base_url();?>media/img/images.jpeg"></a>
+				<div class="avatar pull-left"><img src="<?php echo base_url();?>media/img/images.jpeg">
 				</div>
 				<div class="user-detail">
 					<div class="post-meta">
@@ -59,7 +59,7 @@ foreach ($inbox as $row) {
 							</span>
 							<span class="qa-message-who">
 
-								<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
+								<span class="qa-message-who-data"></span>
 							</span>
 						</div>
 						<h6><span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span>  <?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></span></h6>

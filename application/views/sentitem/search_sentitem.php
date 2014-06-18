@@ -22,7 +22,7 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 		<div class="message-item" id="m1">
 			<div class="message-inner">
 				<div class="message-head clearfix">
-					<div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=admin"><img src="<?php echo base_url();?>media/img/images.jpeg"></a></div>
+					<div class="avatar pull-left"><img src="<?php echo base_url();?>media/img/images.jpeg"></div>
 					<div class="user-detail">
 								<div class="post-meta">
 									<div class="asker-meta">
@@ -32,7 +32,7 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 										</span>
 										<span class="qa-message-who">
 				
-											<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
+											<span class="qa-message-who-data"></span>
 										</span>
 									</div>
 									<h6><span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span>  <?php echo $row->SendingDateTime;?></span></h6>

@@ -36,13 +36,13 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('user');?> <b class="caret"></b></a>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->session->userdata('user');?> <b class="caret"></b>&nbsp;&nbsp;&nbsp;&nbsp;</a>
 							<ul class="dropdown-menu">
-								<li align="center" class="well">
+								&nbsp;&nbsp;<li align="center" class="well">
 									<div class="navbar-content">
 										<div class="row">
 											<div class="col-md-5">
-												<a href="./index.php?qa=user&qa_1=admin"><img src="<?php echo base_url();?>media/img/images.jpeg"></a><p class="text-center small">
+												<img src="<?php echo base_url();?>media/img/images.jpeg"><p class="text-center small">
 												<a href="#">Change Photo</a></p>
 											</div>
 											<div class="col-md-7">
