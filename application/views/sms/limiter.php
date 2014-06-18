@@ -13,14 +13,14 @@ jQuery.fn.limitCharacters = function(options){
 		$.extend(settings, options);
 	}
 
-	this.after("<span id='CharsLeft' style='margin-left:10px'></span>");
+	this.after("<div style='width:264px;text-align: center' class='alert alert-warning' ><span id='CharsLeft' class='' style='margin-left:10px'></span></div>");
 
 	this.bind("change keyup focus input propertychange", function(event){
 		var len = $(this).val().length;
 		if(len > settings.charLimit){
 			this.value = this.value.substring(0, settings.charLimit);
 		}
-		
+
 
 		var charsLeft = settings.charLimit - len;
 		if(charsLeft < 0){
@@ -43,4 +43,7 @@ jQuery.fn.limitCharacters = function(options){
 		return this;
 	});
 }
+$(document).ready(function() {
+	$('#limit').limitCharacters();
+});
 </script>
