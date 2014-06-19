@@ -32,6 +32,7 @@ echo form_open('contactgroup/add'); ?>
 <div class="text-left">
 	<label class="control-label col-sm-3"></label>
 	<div class="col-sm-2">
-        <input type="submit" class="btn btn-success" value="Tambah"/>
-</div></div>
+                <input type="submit" class="btn btn-success" value="Tambah"/>
+        </div>
+</div>
 <?php echo form_close(); ?>
