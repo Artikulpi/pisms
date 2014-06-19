@@ -144,6 +144,8 @@ class Contact extends CI_Controller{
 			}else{
 				redirect('contact/edit/'.$id);
 			}
+		}else{
+			redirect('auth');
 		}
 	}
 

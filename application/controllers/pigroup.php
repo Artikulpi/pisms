@@ -107,18 +107,24 @@ class Pigroup extends CI_Controller{
 			}else{
 				redirect('pigroup/edit/'.$id);
 			}
+		}else{
+			redirect('auth');
 		}
 	}
 
 	function delete($id){
-		$this->Pigroup_model->delete($id);
-		$log = array(
-			'user_id'=>$this->session->userdata('id'),
-			'activity'=>'Hapus grup',
-			'date'=>date('Y-m-d H:i:s'),
-			'module'=>'Pigroup',
-			);
-		$this->Log_model->save($log);
-		redirect('pigroup');
+		if($this->session->userdata('login') == TRUE){
+			$this->Pigroup_model->delete($id);
+			$log = array(
+				'user_id'=>$this->session->userdata('id'),
+				'activity'=>'Hapus grup',
+				'date'=>date('Y-m-d H:i:s'),
+				'module'=>'Pigroup',
+				);
+			$this->Log_model->save($log);
+			redirect('pigroup');
+		}else{
+			redirect('auth');
+		}
 	}
 }

@@ -103,18 +103,24 @@ class Contactgroup extends CI_Controller{
 			}else{
 				redirect('contact/edit/'.$id);
 			}
+		}else{
+			redirect('auth');
 		}
 	}
 
 	function delete($id){
-		$this->Contactgroup_model->delete($id);
-		$log = array(
-			'user_id'=>$this->session->userdata('id'),
-			'activity'=>'Hapus anggota grup',
-			'date'=>date('Y-m-d H:i:s'),
-			'module'=>'Contactgroup',
-			);
-		$this->Log_model->save($log);
-		redirect('pigroup');
+		if($this->session->userdata('login') == TRUE){
+			$this->Contactgroup_model->delete($id);
+			$log = array(
+				'user_id'=>$this->session->userdata('id'),
+				'activity'=>'Hapus anggota grup',
+				'date'=>date('Y-m-d H:i:s'),
+				'module'=>'Contactgroup',
+				);
+			$this->Log_model->save($log);
+			redirect('pigroup');
+		}else{
+			redirect('auth');
+		}
 	}
 }
