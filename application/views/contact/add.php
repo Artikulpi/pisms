@@ -1,5 +1,7 @@
 <?php echo validation_errors(); echo form_open('contact/add'); ?>
 
+
+
 <div class="form-group">
 	<label class="control-label col-sm-3">Nama *</label>
 	<div class="col-sm-9">
@@ -37,11 +39,14 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="col-md-12">
+					<div class="panel-footer">
+			<span data-toggle="tooltip" data-placement="bottom" title="Tambah kontak">
+				<input type="submit" class="btn btn-default" value="Tambah"/></span>
+			</div>
+			</div>
 	</div>
-	<div class="text-left">
-		<label class="control-label col-sm-12"></label>
-		<div class="col-sm-2">
-			<span data-toggle="tooltip" data-placement="bottom" title="Tambah kontak"><input type="submit" class="btn btn-default" value="Tambah"/></span>
-		</div>
-	</div>
-	<?php echo form_close(); ?>
+	
+		
+		<?php echo form_close(); ?>
