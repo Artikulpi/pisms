@@ -52,4 +52,4 @@ echo form_open('user/saveEdit'); ?>
                 <input type="submit" class="btn btn-default" value="Ubah"/>
         </div>
 </div>
-        <?php echo form_close(); ?>
+<?php echo form_close(); ?>

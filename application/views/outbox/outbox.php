@@ -20,10 +20,13 @@ foreach ($outbox as $row) {
 							<span class="qa-message-when">
 								<span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span> <?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></span>
 							</span>
+
 							<span class="qa-message-who">
-								
-								<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
+							<span class="qa-message-who-data">
+								<a href="./index.php?qa=user&qa_1=admin"></a>
 							</span>
+							</span>
+							
 						</div>
 					</div>
 				</div>

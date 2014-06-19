@@ -54,8 +54,7 @@
 </head>
 <body>
 
-		<!-- /Header
-		================================================= -->
+		
 		<div class="container-fluid">
 			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
@@ -92,7 +91,7 @@
 			</div>
 			
 			<div class="login"></div>
-			<!-- List Menu -->
+			
 			
 			<div class="list">
 				

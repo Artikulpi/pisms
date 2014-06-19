@@ -4,9 +4,7 @@ echo validation_errors();
 echo form_open('sms/create'); ?>
 
 
-<div class="row">
-	<div class="col-md-12">
-		<div class="col-sm-12 col-md-12">
+<div class="col-sm-12 col-md-12">
 			<div class="form-group">
 				<?php echo validation_errors(); ?>
 				<Label>Pesan Anda</Label>
@@ -28,5 +26,5 @@ echo form_open('sms/create'); ?>
 		</div>	
 		</div>
 	</div>
-</div>
+
 <?php echo form_close(); ?>

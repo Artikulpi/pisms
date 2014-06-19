@@ -93,9 +93,7 @@
 												</div>
 											</div>
 										</div>
-									</div><!-- div class="pannel default" -->
-
-
+									</div>
 								</div>
 							</div>
 						</div>
