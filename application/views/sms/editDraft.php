@@ -5,7 +5,7 @@ $this->load->view('sms/limiter');
 echo validation_errors();
 echo form_open('sms/create'); 
 ?>
-<div class="col-md-12">
+
 	<div class="row">
 		<div class="col-sm-12 col-md-12">
 			<div class="form-group">
@@ -14,7 +14,7 @@ echo form_open('sms/create');
 			</div>
 		</div>
 	</div>
-</div>
+	
 <div class="col-sm-12 col-md-6">
 	<div class="row">
 		<div class="form-group">

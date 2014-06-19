@@ -3,8 +3,6 @@
 
 <?php $this->load->view('sms/limiter')?>
 
-<div class="row">
-	<div class="col-md-12">
 		<div class="row">
 			<div class="col-sm-12 col-md-12">
 				<div class="form-group">
@@ -95,20 +93,22 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div><!-- div class="pannel default" -->
+
+
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="col-md-12">
 					<div class="panel-footer">
 						<input type="submit" class="btn btn-default" value="Kirim">
 						<input type="submit" class="btn btn-default" name="draft" value="Simpak ke draf">
 					</div>
 				</div>
-			</div>
-		</div>
+			
 		
 
 		<?php

@@ -5,6 +5,7 @@
 		<th>Tanggal</th>
 		<th>Modul</th>
 	</thead>
+	<tbody>
 	<?php
 	foreach ($log as $row) { ?>
 	<tr>
@@ -24,6 +25,7 @@
 <?php
 }
 ?>
+</tbody>
 </table>
 
 <div class="text-right"><?php echo $halaman?></div>

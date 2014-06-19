@@ -5,6 +5,8 @@
 		<th>Grup</th>
 		<th>Aksi</th>
 	</thead>
+	
+	<tbody>
 	<?php
 	$no=1;
 	foreach ($contactgroup as $row) {
@@ -36,7 +38,8 @@
 		</tr>
 		<?php
 		$no++;
-	} ?>  
+	} ?> 
+	</tbody> 
 </table>
 <br>
 <a href="<?php echo site_url('contactgroup/add')?>" class="btn btn-success btn-md"><b>+</b> Tambah Anggota Grup</a>

@@ -35,6 +35,7 @@ echo form_open('contactgroup/saveEdit'); ?>
 <div class="text-left">
 	<label class="control-label col-sm-3"></label>
 	<div class="col-sm-2">
-        <input type="submit" class="btn btn-success" value="Edit"/>
-</div></div>
-<?php echo form_close(); ?>
+                <input type="submit" class="btn btn-success" value="Edit"/>
+        </div>
+</div>
+        <?php echo form_close(); ?>

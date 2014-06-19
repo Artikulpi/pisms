@@ -7,6 +7,7 @@
 				<div style="background-color: #eeeeee;" class="panel-heading">
 					<h3 class="panel-title">Login piSMS<small></small></h3>
 				</div>
+
 				<div class="panel-body">
 					<?php echo form_open('auth/login');?>
 					<div class="row">
@@ -17,6 +18,7 @@
 									if(isset($error)){echo $error;}
 									?>
 								</p>
+								
 								<input type="text" name="user" id="user" class="form-control input-sm" placeholder="Username">
 								<input type="password" class="form-control input-sm" placeholder="Password" name="pass" id="pass">
 							</div>
@@ -28,4 +30,5 @@
 				</div>
 			</div>
 		</div>
-		
+	</div>
+</div>

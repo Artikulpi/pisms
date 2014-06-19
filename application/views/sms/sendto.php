@@ -18,14 +18,14 @@ echo form_open('sms/create'); ?>
 				echo form_open('sms/create');
 				?>
 			</div>
-		</div>
-		<div class="row">
+			<div class="row">
 			<div class="col-sm-12 col-md-5">
 				<input type="text" class="form-control" name="contact" value="<?php echo $contact->phone_number;?>">
 			</div>
 		</div>
 		<div class="panel-footer">
 			<input type="submit" name="sendto" class="btn btn-default" value="Kirim">
+		</div>	
 		</div>
 	</div>
 </div>

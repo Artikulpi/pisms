@@ -6,8 +6,6 @@ foreach ($outbox as $row) {
 	?>
 	
 
-	<div class="row">
-	</div>
 	<div class="message-item" id="m1">
 		<div class="message-inner">
 			<div class="message-head clearfix">
@@ -18,7 +16,7 @@ foreach ($outbox as $row) {
 					<font color="#080808"><h5 class="handle"><?php echo $row->DestinationNumber;?></h5></font>
 					<div class="post-meta">
 						<div class="asker-meta">
-							<span class="qa-message-what"></span>
+							
 							<span class="qa-message-when">
 								<span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span> <?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></span>
 							</span>
