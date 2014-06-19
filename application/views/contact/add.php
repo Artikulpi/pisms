@@ -1,4 +1,5 @@
-<?php echo validation_errors(); echo form_open('contact/add'); ?>
+<?php echo validation_errors();
+echo form_open('contact/add'); ?>
 
 
 
@@ -41,12 +42,12 @@
 		</div>
 		
 		<div class="col-md-12">
-					<div class="panel-footer">
-			<span data-toggle="tooltip" data-placement="bottom" title="Tambah kontak">
-				<input type="submit" class="btn btn-default" value="Tambah"/></span>
+			<div class="panel-footer">
+				<span data-toggle="tooltip" data-placement="bottom" title="Tambah kontak">
+					<input type="submit" class="btn btn-default" value="Tambah"/></span>
+				</div>
 			</div>
-			</div>
-	</div>
-	
+		</div>
+
 		
 		<?php echo form_close(); ?>

@@ -5,16 +5,16 @@ $this->load->view('sms/limiter');
 echo validation_errors();
 echo form_open('sms/create'); 
 ?>
-
-	<div class="row">
-		<div class="col-sm-12 col-md-12">
-			<div class="form-group">
-				<label>Isi *</label>
-				<textarea class="form-control" id="limit" maxlength="160" name="content" rows="3"><?php echo $draft->content;?></textarea><br>
-			</div>
+<input type="hidden" value="<?php echo $draft->id?>" name="draft_id">
+<div class="row">
+	<div class="col-sm-12 col-md-12">
+		<div class="form-group">
+			<label>Isi *</label>
+			<textarea class="form-control" id="limit" maxlength="160" name="content" rows="3"><?php echo $draft->content;?></textarea><br>
 		</div>
 	</div>
-	
+</div>
+
 <div class="col-sm-12 col-md-6">
 	<div class="row">
 		<div class="form-group">

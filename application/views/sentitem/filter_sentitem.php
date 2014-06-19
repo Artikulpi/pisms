@@ -30,8 +30,6 @@
 	<?php
 	foreach ($sentitem as $row) {
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Replay"> replay</span></span>');
-		$forward = anchor('sentitem/forward/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Forward"> forward</span></span>');
 		$delete = anchor('sentitem/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus	</span></span>', $onclick);
 		?>
 		
@@ -65,7 +63,7 @@
 				echo anchor('inbox/detail/'.$row->ID, $cut);
 				?>
 			</div>
-			<small class="pull-right"><?php echo $reply.' '.$forward.' '.$delete;?></small><br>
+			<small class="pull-right"><?php echo $delete;?></small><br>
 
 		</div>
 	</div>

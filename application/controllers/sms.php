@@ -65,6 +65,10 @@ class Sms extends CI_Controller{
 					'content'=> $content,
 					);
 				$this->Sms_model->saveDraft($data);
+				if($this->input->post('draft_id')){
+					$draft_id = $this->input->post('draft_id');
+					$this->Sms_model->deleteDraft($draft_id);
+				}
 				redirect('sms/draft');
 			}elseif($this->form_validation->run() == TRUE AND $this->input->post('sendto')){
 				$data = array(
