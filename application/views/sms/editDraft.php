@@ -1,145 +1,105 @@
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#karakter').keyup(function() {
-        var len = this.value.length;
-        if (len >= 160) {
-            this.value = this.value.substring(0, 160);
-			
-        }else{
-			 $('#hitung').text(160 - len);
-        	 
-        }
-       
-    });
-});
-</script>
-
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>media/css/jquery.tagsinput.css" />
+<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.tagsinput.js"></script>
 <?php
+$this->load->view('sms/limiter');
 echo validation_errors();
-echo form_open('sms/create'); ?>
-	
-	        <div class="col-md-12">
-	                <form>
-	                <div class="row">
-	                    <div class="col-sm-12 col-md-12">
-	                        <div class="form-group">
-								<label>Isi *</label>
-							<textarea class="form-control" id="karakter" maxlength="160" name="content" rows="3"><?php echo $draft->content;?></textarea><br>
-							<div style="width:264px;text-align: center" class="alert alert-warning"><span id="hitung">160</span> Karakter Tersisa.</div>
-	                        </div>
-	                    
-							<strong><h5>Multiple Select</h5></strong>
-							<select id="mySel3" class="form-control" multiple="multiple" style="width:400px;">
-								<optgroup label="Select multiple">
-									<option>One</option>
-									<option>Two</option>
-									<option>Three</option>
-									<option>Siz</option>
-									<option>Seven</option>
-									<option>Nine</option>
-								</optgroup>
-								<optgroup label="Select one" class="single">
-									<option>Four</option>
-									<option>Five</option>
-									<option>Six</option>
-								</optgroup>
-							</select>
-							<script type="text/javascript">
-							function(){
+echo form_open('sms/create'); 
+?>
+<div class="col-md-12">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div class="form-group">
+				<label>Isi *</label>
+				<textarea class="form-control" id="limit" maxlength="160" name="content" rows="3"><?php echo $draft->content;?></textarea><br>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-sm-12 col-md-6">
+	<div class="row">
+		<div class="form-group">
+			<label>Kirim Berdasarkan :</label>
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<label>
+								<input type="radio" name="optionsRadios" value="kontak" data-toggle="collapse" data-parent="#accordion"  id="optionsRadios1"  data-target="#wilayah">
+								Kontak
+							</label>
+						</h4>
+					</div>
+					<div id="wilayah" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="control-group">
+								<input id="contact" type="text" class="tags" name="fromcontact" value="" />
+								<p class="text-right"><em>Gunakan tanda koma (,) sebagai pemisah</em></p>
+							</div>
+						</div>
+						<div class="control-group">
+							<span>&nbsp;</span>
+						</div>
+					</div>
+				</div>
 
-								$("#mySel").select2({
-									allowClear:true
-								});
-
-								$("#mySel2").select2({
-									closeOnSelect:false
-								});
-
-								$("#mySel3").select2({
-									closeOnSelect:false
-								});
-
-								$('.single option').click(function() {
-							    // only affects options contained within the same optgroup
-							    // and doesn't include this
-							    $(this).siblings().prop('selected', false);
-							});
-							});
-
-							</script><br>
-
-							<div class="box">
-								<?php
-								echo form_open('sms/create');
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<label>
+								<input type="radio" name="optionsRadios" value="fromgroup" data-toggle="collapse" data-parent="#accordion" id="optionsRadios2" data-target="#partai">
+								Grup
+							</label>
+						</h4>
+					</div>
+					<div id="partai" class="panel-collapse collapse">
+						<div class="panel-body">
+							<?php
+							if (!empty($group)) {
+								foreach ($group as $row):
+									?>
+								<div class="col-sm-4">
+									<input type="checkbox" value="<?php echo $row->id; ?>" name="groupcheck[]"> <?php echo $row->group_name; ?></div>
+									<?php
+									endforeach;
+								}
 								?>
 							</div>
-	                        </div>
-	                    </div></div>
-							                  <label class="col-sm-12">Kirim Berdasarkan :</label>
-							                        <div class="form-group">
-													<div class="col-sm-12 col-md-6">
-												<div class="panel-group" id="accordion">
-													<div class="panel panel-default">
-														<div class="panel-heading">
-															<h4 class="panel-title">
-																<label>
-																	<input type="radio" name="optionsRadios" value="kontak" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" data-parent="#accordion"  id="optionsRadios1">
-																	Kontak
-																</lebel>
-															</h4>
-														</div>
-														<div id="collapseOne" class="panel-collapse collapse">
-															<div class="panel-body">
-																<div class="control-group">
-																<input type="text" class="form-control" name="fromcontact">
-															</div>
-														</div>
-													</div>
-												</div>
-													<div class="panel panel-default">
-														<div class="panel-heading">
-															<h4 class="panel-title">
-																<label>
-																	<input type="radio" name="optionsRadios" value="grup" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-																	Grup
-																</lebel>
-															</h4>
-														</div>
-														<div id="collapseTwo" class="panel-collapse collapse">
-															<div class="panel-body">
-																<?php foreach ($group as $row) {?>
-											
-																		<div class="col-sm-4">
-																		<input name="group" type="checkbox" value="<?php echo $row->id?>"> <?php echo $row->group_name?>	</div>
-										
-										
-																<?php } ?>
-																</div>
-															</div>
-														</div>
-							
-													<div class="panel panel-default">
-														<div class="panel-heading">
-															<h4 class="panel-title">
-																<label>
-																	<input type="radio" name="optionsRadios" value="kontak" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" data-parent="#accordion"  id="optionsRadios1">
-																	Menggunakan No. Telp
-																</label>
-															</h4>
-														</div>
-														<div id="collapseThree" class="panel-collapse collapse">
-															<div class="panel-body">
-																<input type="text" class="form-control" name="number" />
-															</div>
-														</div>
-													</div>
-												</div>
-							                </div>
-											<div class="col-sm-12">
-												<input type="submit" name="input_manual" class="btn btn-default" value="Kirim"/>
-											</div>
-							                </form>
-							            </div>
 						</div>
-	
-	<?php echo form_close(); ?>
+					</div>
+
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<label>
+									<input type="radio" name="optionsRadios" value="frominput" data-toggle="collapse" data-parent="#accordion" id="optionsRadios3" data-target="#phone">
+									Menggunakan No. Telp
+								</label>
+							</h4>
+						</div>
+						<div id="phone" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="control-group">
+
+									<div class="control-group">
+										<input id="no_tujuan" type="text" class="tags" name="no_tujuan" value=""/>
+										<p class="text-right"><em>Gunakan tanda koma (,) sebagai pemisah</em></p>
+									</div>
+									<div class="control-group">
+										<span>&nbsp;</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="panel-footer">
+	<input type="submit" class="btn btn-default" value="Kirim">
+	<input type="submit" class="btn btn-default" name="draft" value="Simpak ke draf">
+</div>
+
+<?php echo form_close(); ?>
