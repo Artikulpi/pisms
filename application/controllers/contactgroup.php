@@ -1,3 +1,13 @@
+/**
+ * PiSMS
+ * Web based SMS management
+ *
+ * @package    PiSMS
+ * @author      Artikulpi
+ * @license      http://pisms.artikulpi.com
+ * @link           http://pisms.artikulpi.com
+ */
+
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Contactgroup extends CI_Controller{
