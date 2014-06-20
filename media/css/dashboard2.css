@@ -5,12 +5,12 @@
  /* Move down content because we have a fixed navbar that is 50px tall */
  @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 body {
-    padding-top: 50px;
+    padding-top: 15px;
     padding-left: 65px;
 }
 .navbar-twitch {
   position: fixed;
-  top: 51px;
+  top: 50px;
   left: 0px;
   width: 50px;
   height: 100%;
@@ -18,7 +18,6 @@ body {
   border: 0px;
     z-index: 1030;
 }
-
 .navbar-twitch.open {
   width: 240px;
 }
@@ -32,8 +31,6 @@ body {
   display: block;
   width: 100%;
   margin: 0px;
-  
-
 }
 .navbar-twitch .navbar-brand {
     height: 50px;   
@@ -65,17 +62,15 @@ body {
 }
 .navbar-twitch > .container .full-nav {
   display: none;
-  padding: 0px
 }
 .navbar-twitch.open > .container .full-nav {
   display: block;
-  padding: 5px
 }
 .navbar-twitch.open > .container .small-nav {
   display: none;
 }
 .navbar-twitch .navbar-collapse {
-  padding: 10px;
+  padding: 0px;
 }
 .navbar-twitch .navbar-nav {
   float: none;
@@ -88,7 +83,6 @@ body {
   display: block;
   font-size: 16pt;
   padding: 13px 15px 13px 12px;
-  
 }
 .navbar-twitch .tooltip,
 .navbar-twitch .tooltip .tooltip-inner {
@@ -97,7 +91,7 @@ body {
 }
 .navbar-twitch-toggle {
   position: fixed;
-  top: 55px;
+  top: 5px;
   left: 55px;
 }
 .navbar-twitch ~ .navbar-twitch-toggle > .nav-open {
@@ -115,10 +109,8 @@ body {
 .navbar-twitch.open ~ .navbar-twitch-toggle > .nav-close {
   display: inline-block;
 }
-.navbar-inverse {
-  padding: 0px;
-  background-color: #004A54;
-}
+
+
 .btn-purple,
 .btn-purple:hover,
 .btn-purple:focus,
@@ -158,36 +150,6 @@ body {
 .navbar-purple .navbar-nav > .active > a:focus {
     background-color: rgb(111, 84, 153);
     color: rgb(255, 255, 255);
-}
-/** The Magic **/
-.btn-breadcrumb .btn:not(:last-child):after {
-  content: " ";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 10px solid white;
-  position: absolute;
-  top: 50%;
-  margin-top: -17px;
-  left: 100%;
-  z-index: 3;
-}
-.btn-breadcrumb .btn:not(:last-child):before {
-  content: " ";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 10px solid rgb(173, 173, 173);
-  position: absolute;
-  top: 50%;
-  margin-top: -17px;
-  margin-left: 1px;
-  left: 100%;
-  z-index: 3;
 }
 
 
