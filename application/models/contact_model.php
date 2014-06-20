@@ -35,11 +35,13 @@ class Contact_model extends CI_Model{
 
 	function getSearch($search){
 		$this->db->like('name', $search);
+		$this->db->or_like('phone_number', $search);
 		return $this->db->get('contact')->result();
 	}
 
 	function countSearch($search){
 		$this->db->like('name', $search);
+		$this->db->or_like('phone_number', $search);
 		return $this->db->count_all_results('contact');
 	}
 

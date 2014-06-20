@@ -35,30 +35,38 @@ foreach ($sentitem as $row) {
 					<a href="./index.php?qa=user&qa_1=admin"><img src="<?php echo base_url();?>media/img/images.jpeg"></a>
 				</div>
 				<div class="user-detail">
-					<font color="#080808"><h5 class="handle"><?php echo $row->DestinationNumber;?></h5></font>
-					<div class="post-meta">
-						<div class="asker-meta">
-							<span class="qa-message-what"></span>
-							<span class="qa-message-when">
-								<span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span> <?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></span>
-							</span>
-							<span class="qa-message-who">
+					<font color="#080808"><h5 class="handle">
+						<?php
+						foreach ($contact as $key) {
+							if($key->phone_number == $row->DestinationNumber){
+								echo $key->name;
+							}
+						}
+						?>
+						<?php echo $row->DestinationNumber;?></h5></font>
+						<div class="post-meta">
+							<div class="asker-meta">
+								<span class="qa-message-what"></span>
+								<span class="qa-message-when">
+									<span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span> <?php echo $row->SendingDateTime;//date ("D, d M Y H:i:s",strtotime($row->SendingDateTime));?></span>
+								</span>
+								<span class="qa-message-who">
 
-								<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
-							</span>
+									<span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=admin"></a></span>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="qa-message-content"><?php echo $row->TextDecoded;?>
+				</div>
+				<small class="pull-right"><?php echo $delete;?></small><br>
 			</div>
-			<div class="qa-message-content"><?php echo $row->TextDecoded;?>
-			</div>
-			<small class="pull-right"><?php echo $delete;?></small><br>
 		</div>
-	</div>
 
-	<?php
-}
-?>
+		<?php
+	}
+	?>
 
-<div class="text-right"><?php echo $halaman?></div>
+	<div class="text-right"><?php echo $halaman?></div>
 

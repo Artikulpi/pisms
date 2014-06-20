@@ -24,6 +24,7 @@ class Outbox extends CI_Controller{
 			$data['halaman'] = $this->pagination->create_links();
 			$data['title'] = 'Outbox';
 			$data['header'] = 'Kotak Keluar';
+			$data['contact'] = $this->Contact_model->getfor();
 			$data['outbox'] = $this->Outbox_model->getOutbox($num, $offset);
 			$data['page'] = 'outbox/outbox';
 			$this->load->view('template/layout', $data);

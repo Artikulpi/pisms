@@ -24,6 +24,7 @@ class Sentitem extends CI_Controller{
 			$data['halaman'] = $this->pagination->create_links();
 			$data['title'] = 'Sent Item';
 			$data['header'] = 'Terkirim';
+			$data['contact'] = $this->Contact_model->getfor();
 			$data['sentitem'] = $this->Sentitem_model->getSentitems($num, $offset);
 			$data['page'] = 'sentitem/sentitem';
 			$this->load->view('template/layout', $data);

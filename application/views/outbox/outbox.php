@@ -13,7 +13,16 @@ foreach ($outbox as $row) {
 					<a href="./index.php?qa=user&qa_1=admin"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a>
 				</div>
 				<div class="user-detail">
-					<font color="#080808"><h5 class="handle"><?php echo $row->DestinationNumber;?></h5></font>
+					<font color="#080808"><h5 class="handle">
+						<?php
+						foreach ($contact as $key) {
+							if($key->phone_number == $row->DestinationNumber){
+								echo $key->name;
+							}
+						}
+						?>
+						<?php echo $row->DestinationNumber;?>
+					</h5></font>
 					<div class="post-meta">
 						<div class="asker-meta">
 							
@@ -22,9 +31,9 @@ foreach ($outbox as $row) {
 							</span>
 
 							<span class="qa-message-who">
-							<span class="qa-message-who-data">
-								<a href="./index.php?qa=user&qa_1=admin"></a>
-							</span>
+								<span class="qa-message-who-data">
+									<a href="./index.php?qa=user&qa_1=admin"></a>
+								</span>
 							</span>
 							
 						</div>

@@ -23,34 +23,41 @@
 	</div>
 </div>
 
-	<?php
-	foreach ($inbox as $row) {
-		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Reply"> reply</span></span>');
-		$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Teruskan"> teruskan</span></span>');
-		$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</span></span>', $onclick);
-		?>
+<?php
+foreach ($inbox as $row) {
+	$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
+	$reply = anchor('sms/reply/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Reply"> reply</span></span>');
+	$forward = anchor('inbox/forward/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Teruskan"> teruskan</span></span>');
+	$delete = anchor('inbox/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</span></span>', $onclick);
+	?>
 
 
-		
-		<div class="message-item" id="m1">
-			<div class="message-inner">
-				<div class="message-head clearfix">
-					<div class="avatar pull-left"><img src="<?php echo base_url();?>media/img/images.jpeg">
-					</div>
-					<div class="user-detail">
-						<div class="post-meta">
-							<div class="asker-meta">
-								<span class="qa-message-when">
-									<h5><?php echo $row->SenderNumber;?></h5>
-								</span>
 
-								<span class="qa-message-who">
-									<span class="qa-message-who-data"></span>
-								</span>
-							</div>
-							<h6>
-								<span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span>  <?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></span></h6>
+	<div class="message-item" id="m1">
+		<div class="message-inner">
+			<div class="message-head clearfix">
+				<div class="avatar pull-left"><img src="<?php echo base_url();?>media/img/images.jpeg">
+				</div>
+				<div class="user-detail">
+					<div class="post-meta">
+						<div class="asker-meta">
+							<span class="qa-message-when">
+								<?php
+								foreach ($contact as $key) {
+									if($key->phone_number == $row->SenderNumber){
+										echo $key->name;
+									}
+								}
+								?>
+								<h5><?php echo $row->SenderNumber;?></h5>
+							</span>
+
+							<span class="qa-message-who">
+								<span class="qa-message-who-data"></span>
+							</span>
+						</div>
+						<h6>
+							<span class="qa-message-when-data"><span class="glyphicon glyphicon-time"></span>  <?php echo $row->ReceivingDateTime;//date ("D, d M Y H:i:s",strtotime($row->ReceivingDateTime));?></span></h6>
 						</div>
 					</div>
 				</div>
@@ -60,7 +67,7 @@
 				$cut = character_limiter(strip_tags($row->TextDecoded),10);
 				echo anchor('inbox/detail/'.$row->ID, $cut);
 				?>
-			    </div>
+			</div>
 			<small class="pull-right"><?php echo $reply.' '.$forward.' '.$delete;?></small><br>
 
 		</div>
