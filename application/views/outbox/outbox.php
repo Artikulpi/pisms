@@ -17,7 +17,7 @@ foreach ($outbox as $row) {
 						<?php
 						foreach ($contact as $key) {
 							if($key->phone_number == $row->DestinationNumber){
-								echo $key->name;
+								echo anchor('contact/detail/'.$key->id, $key->name);
 							}
 						}
 						?>
