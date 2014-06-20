@@ -1,10 +1,23 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>media/css/jquery.tagsinput.css" />
 <script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.tagsinput.js"></script>
+<script src="<?php echo base_url();?>media/js/chosen.jquery.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>media/js/prism.js" type="text/javascript" charset="utf-8"></script>
+<!--link rel="stylesheet" href="<?php echo base_url();?>media/css/style_ac.css"-->
+<link rel="stylesheet" href="<?php echo base_url();?>media/css/prism.css">
+<link rel="stylesheet" href="<?php echo base_url();?>media/css/chosen.css">
+<?php $this->load->view('sms/limiter')?>
 <?php
-$this->load->view('sms/limiter');
 echo validation_errors();
 echo form_open('sms/create'); 
 ?>
+<select name="fromcontact[]" data-placeholder="Pilih dari kontak" class="chosen-select" multiple style="width:1000px;" tabindex="2">
+	<?php foreach ($contact as $key) {
+		?>
+		<option value="<?php echo $key->phone_number;?>"><?php echo $key->name?></option>
+		<?php
+	}?>
+</select>
+<?php $this->load->view('sms/autocomplete')?>
 <input type="hidden" value="<?php echo $draft->id?>" name="draft_id">
 <div class="row">
 	<div class="col-sm-12 col-md-12">
@@ -32,8 +45,7 @@ echo form_open('sms/create');
 					<div id="wilayah" class="panel-collapse collapse">
 						<div class="panel-body">
 							<div class="control-group">
-								<input id="contact" type="text" class="tags" name="fromcontact" value="" />
-								<p class="text-right"><em>Gunakan tanda koma (,) sebagai pemisah</em></p>
+								
 							</div>
 						</div>
 						<div class="control-group">
