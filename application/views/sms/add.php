@@ -19,18 +19,18 @@ echo form_open('sms/create');
 <?php $this->load->view('sms/autocomplete')?>
 
 <div class="row">
-	<div class="col-sm-12 col-md-12">
-		<div class="form-group">
+	<div class="col-sm-12 col-sm-offset-12 col-md-10 col-md-offset-1 main">
+			<div class="form-group">
 			<?php echo validation_errors(); ?>
 			<Label>Pesan Anda</Label>
 			
 
-			<textarea id="limit" name="content" class="form-control" maxlength="160" rows="3"></textarea><br>
+			<textarea id="limit" name="content" class="form-control" maxlength="160" rows="3"></textarea>
 			<div class="box">
 
 			</div>
 		</div>
-		<div class="col-sm-12 col-md-6">
+		<div class="col-sm-12 col-md-12">
 			<div class="row">
 				<div class="form-group">
 					<label>Kirim Berdasarkan :</label>
@@ -108,14 +108,15 @@ echo form_open('sms/create');
 				</div>
 			</div>
 		</div>
+		</div>
 
-		<div class="col-md-12">
+		<center><div class="col-md-12">
 			<div class="panel-footer">
 				<input type="submit" class="btn btn-default" value="Kirim">
 				<input type="submit" class="btn btn-default" name="draft" value="Simpak ke draf">
 			</div>
-		</div>
-
+		</div></center>
+</div>
 
 
 		<?php
