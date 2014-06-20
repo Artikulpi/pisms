@@ -1,4 +1,4 @@
-<?php 
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * PiSMS
  * Web based SMS management
@@ -8,10 +8,6 @@
  * @license      http://pisms.artikulpi.com
  * @link           http://pisms.artikulpi.com
  */ 
-?>
-
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 class Contact_model extends CI_Model{
 
 	function get(){
