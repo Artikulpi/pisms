@@ -22,7 +22,7 @@ echo form_open('sms/create'); ?>
 	
 	<center><div class="panel-footer">
 		<input type="submit" name="sendto" class="btn btn-default" value="Kirim">
-		<input type="submit" class="btn btn-default" name="draft" value="Simpak ke draf">
+		<input type="submit" class="btn btn-default" name="draft" value="Simpan ke draf">
 	</div>	</center>
 </div>
 </div>

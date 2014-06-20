@@ -32,7 +32,7 @@ foreach ($sentitem as $row) {
 		<div class="message-inner">
 			<div class="message-head clearfix">
 				<div class="avatar pull-left">
-					<a href="./index.php?qa=user&qa_1=admin"><img src="<?php echo base_url();?>media/img/images.jpeg"></a>
+					<img src="<?php echo base_url();?>media/img/images.jpeg">
 				</div>
 				<div class="user-detail">
 					<font color="#080808"><h5 class="handle">
