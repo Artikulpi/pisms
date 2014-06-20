@@ -17,7 +17,7 @@ echo form_open('sms/create'); ?>
 		?>
 	</div>
 		
-			<input type="text" class="form-control" name="contact" value="<?php echo $contact->phone_number;?>">
+			<input type="text" class="form-control" name="contact" value="<?php echo $contact->phone_number;?>" disabled>
 		
 	
 	<center><div class="panel-footer">
