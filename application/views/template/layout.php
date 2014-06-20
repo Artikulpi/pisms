@@ -110,8 +110,9 @@
 				<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><i class="glyphicon glyphicon-indent-left" data-toggle="tooltip" data-placement="bottom" title="Daftar grup"> Grup</i></a>
 				<br>
 				<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Pengaturan</a>
-				<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="bottom" title="Log"> Log Aktivitas</i></a>
+
 				<?php if($this->session->userdata('role')==1){?>
+				<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="bottom" title="Log"> Log Aktivitas</i></a>
 				<a href="<?php echo site_url('user')?>" class="list-group-item"><i class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="User"> Daftar Pengguna</i></a>
 				<?php
 			}
