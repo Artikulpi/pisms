@@ -90,6 +90,28 @@ class Sms extends CI_Controller{
 					$this->Sms_model->deleteDraft($draft_id);
 				}
 				redirect('outbox');
+			}elseif($this->form_validation->run() == TRUE AND $this->input->post('optionsRadios')=='kontak'){
+				$kontak = $this->input->post('fromcontact');
+				foreach ($kontak as $key) {
+					$data = array(
+						'DestinationNumber'=>$key,
+						'TextDecoded'=> $this->input->post('content')
+						);
+					$this->Sms_model->sent($data);
+				}
+				$log = array(
+					'user_id'=>$this->session->userdata('id'),
+					'activity'=>'Kirim SMS',
+					'date'=>date('Y-m-d H:i:s'),
+					'module'=>'Sms',
+					);
+				
+				$this->Log_model->save($log);
+				if($this->input->post('draft_id')){
+					$draft_id = $this->input->post('draft_id');
+					$this->Sms_model->deleteDraft($draft_id);
+				}
+				redirect('outbox');
 			}else{
 				$data['contact'] = $this->Contact_model->getfor();
 				$data['group'] = $this->Pigroup_model->getfor();

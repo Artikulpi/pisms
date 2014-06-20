@@ -2,15 +2,17 @@
 <script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.tagsinput.js"></script>
 <script src="<?php echo base_url();?>media/js/chosen.jquery.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>media/js/prism.js" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" href="<?php echo base_url();?>media/css/style_ac.css">
+<!--link rel="stylesheet" href="<?php echo base_url();?>media/css/style_ac.css"-->
 <link rel="stylesheet" href="<?php echo base_url();?>media/css/prism.css">
 <link rel="stylesheet" href="<?php echo base_url();?>media/css/chosen.css">
 <?php $this->load->view('sms/limiter')?>
-
-<select data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:1000px;" tabindex="2">
+<?php
+echo form_open('sms/create');
+?>
+<select name="fromcontact[]" data-placeholder="Pilih dari kontak" class="chosen-select" multiple style="width:1000px;" tabindex="2">
 	<?php foreach ($contact as $key) {
 		?>
-		<option value="<?php echo $key->id?>"><?php echo $key->name?></option>
+		<option value="<?php echo $key->phone_number;?>"><?php echo $key->name?></option>
 		<?php
 	}?>
 </select>
@@ -21,9 +23,7 @@
 		<div class="form-group">
 			<?php echo validation_errors(); ?>
 			<Label>Pesan Anda</Label>
-			<?php
-			echo form_open('sms/create');
-			?>
+			
 
 			<textarea id="limit" name="content" class="form-control" maxlength="160" rows="3"></textarea><br>
 			<div class="box">
