@@ -21,11 +21,11 @@
 	</p>
 		<span class="pull">
 			<div class="panel-footer">
-				<a href="<?php echo site_url('contact')?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-phone-alt" data-toggle="tooltip" data-placement="bottom" title="Kontak"> kontak</a>
-				<a href="<?php echo site_url('sms/sendto/'.$contact->id)?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="KirimSMS"> kirim sms</a>
+				<a href="<?php echo site_url('contact')?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-phone-alt" data-toggle="tooltip" data-placement="bottom" title="Kontak"> Kontak</a>
+				<a href="<?php echo site_url('sms/sendto/'.$contact->id)?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-envelope" data-toggle="tooltip" data-placement="bottom" title="KirimSMS"> Kirim sms</a>
 				<a href="<?php echo site_url('contact/edit/'.$contact->id)?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="bottom" title="Ubah"> Ubah</a>
 				<a href="<?php echo site_url('contact/delete/'.$contact->id)?>" class="btn btn-default btn-xs" onclick="return confirm('Are you sure you want to delete this item?');">
-				<span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</a>
+				<span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> Hapus</a>
 			</div>
 			
 

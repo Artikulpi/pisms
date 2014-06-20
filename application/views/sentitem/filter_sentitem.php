@@ -30,7 +30,7 @@
 	<?php
 	foreach ($sentitem as $row) {
 		$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-		$delete = anchor('sentitem/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus	</span></span>', $onclick);
+		$delete = anchor('sentitem/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> Hapus</span></span>', $onclick);
 		?>
 		
 

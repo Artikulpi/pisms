@@ -43,7 +43,7 @@ Ditemukan <strong><?php echo $jumlah;?></strong> hasil pencarian dengan kata kun
 													
 									<div class="qa-message-content"><?php echo $row->TextDecoded;?>
 								</div>
-								<small class="pull-right"><?php echo $delete.' hapus';?></small><br>
+								<small class="pull-right"><?php echo $delete.' Hapus';?></small><br>
 									</div>
 								</div>
 		

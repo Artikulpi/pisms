@@ -43,7 +43,7 @@ foreach ($inbox as $row) {
 								<p class="hidden-xs"><?php
 								$cut = character_limiter(strip_tags($row->TextDecoded),100);
 								echo anchor('inbox/detail/'.$row->ID, $cut);
-								?></p><small class="pull-right"><?php echo $reply.' replay '.$forward.' forward '.$delete.' hapus';?></small>
+								?></p><small class="pull-right"><?php echo $reply.' Replay '.$forward.' Forward '.$delete.' Hapus';?></small>
 							</div>
 						</div>
 					</div>

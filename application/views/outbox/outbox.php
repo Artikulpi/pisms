@@ -2,7 +2,7 @@
 <?php
 foreach ($outbox as $row) { 
 	$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-	$delete = anchor('outbox/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus</span></span>', $onclick);
+	$delete = anchor('outbox/delete/'.$row->ID,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> Hapus</span></span>', $onclick);
 	?>
 	
 

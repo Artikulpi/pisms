@@ -21,9 +21,9 @@
  </div>
  <span class="fnt-smaller fnt-lighter fnt-arial">
     <div class="text-right">
-     <a href="<?php echo site_url('sms/reply/'.$sms->ID)?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Balas"> balas</span></a>
-     <a href="<?php echo site_url('inbox/forward/'.$sms->ID)?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Teruskan"> teruskan</span></a>
-     <a href="<?php echo site_url('inbox/delete/'.$sms->ID)?>" class="btn btn-default btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> hapus<span></a>
+     <a href="<?php echo site_url('sms/reply/'.$sms->ID)?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-share" data-toggle="tooltip" data-placement="bottom" title="Balas"> Balas</span></a>
+     <a href="<?php echo site_url('inbox/forward/'.$sms->ID)?>" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="bottom" title="Teruskan"> Teruskan</span></a>
+     <a href="<?php echo site_url('inbox/delete/'.$sms->ID)?>" class="btn btn-default btn-xs" onclick="return confirm('Are you sure you want to delete this item?');"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"> Hapus<span></a>
  </span>
 </div>
 

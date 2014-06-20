@@ -22,8 +22,8 @@
 				<?php
 				foreach ($contact as $row) {
 					$onclick = array('onclick'=>"return confirm('Anda yakin ingin menghapus?')");
-					$edit = anchor('contact/edit/'.$row->id,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="bottom" title="Ubah kontak"> ubah</span></span>');
-					$delete = anchor('contact/delete/'.$row->id,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus kontak"> hapus</span></span>', $onclick);
+					$edit = anchor('contact/edit/'.$row->id,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-edit" data-toggle="tooltip" data-placement="bottom" title="Ubah kontak"> Ubah</span></span>');
+					$delete = anchor('contact/delete/'.$row->id,'<span class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus kontak"> Hapus</span></span>', $onclick);
 					?>
 					<tr>
 						<td><span data-toggle="tooltip" data-placement="bottom" title="Detail kontak"><i class="glyphicon glyphicon-user"></i> <?php echo anchor('contact/detail/'.$row->id,$row->name)?></span></td>
