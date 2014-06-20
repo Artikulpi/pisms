@@ -48,10 +48,17 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+<<<<<<< HEAD
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['database'] = 'pismsv1';
+=======
+$db['default']['hostname'] = '';
+$db['default']['username'] = '';
+$db['default']['password'] = '';
+$db['default']['database'] = '';
+>>>>>>> 482a16e2dc7b0e859845283ece9145f671b7bfa5
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

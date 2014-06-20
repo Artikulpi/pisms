@@ -16,9 +16,6 @@ class Pigroup extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
-		if($this->session->userdata('login')== FALSE){
-			redirect('auth');
-		}
 		$this->load->helper(array('url','form','date'));
 		$this->load->library('session');
 		$this->load->library('form_validation');
@@ -26,96 +23,120 @@ class Pigroup extends CI_Controller{
 	}
 
 	public function index($offset = NULL){
-		$this->load->library('pagination');
-		$count = $this->Pigroup_model->get();
+		if($this->session->userdata('login') == TRUE){
+			$this->load->library('pagination');
+			$count = $this->Pigroup_model->get();
 
-		$config['base_url'] = site_url('pigroup/index');
-		$config['total_rows'] = $count->num_rows();
-		$config['per_page'] = 10; 
-		$config['uri_segment'] = 3;
-		$num = $config['per_page'];
-		$this->pagination->initialize($config);
-		$data['halaman'] = $this->pagination->create_links();
-		$data['title'] = 'List Group';
-		$data['header'] = 'Daftar Grup';
-		$data['group'] = $this->Pigroup_model->getAll($num, $offset);
-		$data['page'] = 'pigroup/list';
-		$this->load->view('template/layout', $data);
+			$config['base_url'] = site_url('pigroup/index');
+			$config['total_rows'] = $count->num_rows();
+			$config['per_page'] = 10; 
+			$config['uri_segment'] = 3;
+			$num = $config['per_page'];
+			$this->pagination->initialize($config);
+			$data['halaman'] = $this->pagination->create_links();
+			$data['title'] = 'List Group';
+			$data['header'] = 'Daftar Grup';
+			$data['group'] = $this->Pigroup_model->getAll($num, $offset);
+			$data['page'] = 'pigroup/list';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
 	}
 
 	public function detail($id){
-		$data['title'] = 'Detail Group';
-		$data['header'] = 'Rinci Grup';
-		$data['chg'] = $this->Contactgroup_model->getByGroup($id);
-		$data['group'] = $this->Pigroup_model->getById($id);
-		$data['contact'] = $this->Contact_model->getfor();
-		$data['page'] = 'pigroup/detail';
-		$this->load->view('template/layout', $data);
+		if($this->session->userdata('login') == TRUE){
+			$data['title'] = 'Detail Group';
+			$data['header'] = 'Rinci Grup';
+			$data['chg'] = $this->Contactgroup_model->getByGroup($id);
+			$data['group'] = $this->Pigroup_model->getById($id);
+			$data['contact'] = $this->Contact_model->getfor();
+			$data['page'] = 'pigroup/detail';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
 	}
 
 	public function add(){
-		$this->form_validation->set_rules('group', 'Grup', 'required');
-		$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
-		if($this->form_validation->run() == TRUE){
-			$data = array(
-				'group_name' => $this->input->post('group'),
-				);
-			$this->Pigroup_model->save($data);
-			$log = array(
-				'user_id'=>$this->session->userdata('id'),
-				'activity'=>'Menambah grup baru',
-				'date'=>date('Y-m-d H:i:s'),
-				'module'=>'Pigroup',
-				);
-			$this->Log_model->save($log);
-			redirect('pigroup');
+		if($this->session->userdata('login') == TRUE){
+			$this->form_validation->set_rules('group', 'Grup', 'required');
+			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
+			if($this->form_validation->run() == TRUE){
+				$data = array(
+					'group_name' => $this->input->post('group'),
+					);
+				$this->Pigroup_model->save($data);
+				$log = array(
+					'user_id'=>$this->session->userdata('id'),
+					'activity'=>'Menambah grup baru',
+					'date'=>date('Y-m-d H:i:s'),
+					'module'=>'Pigroup',
+					);
+				$this->Log_model->save($log);
+				redirect('pigroup');
+			}else{
+				$data['title'] = 'Add Group';
+				$data['header'] = 'Tambah Grup';
+				$data['page'] = 'pigroup/add';
+				$this->load->view('template/layout', $data);
+			}
 		}else{
-			$data['title'] = 'Add Group';
-			$data['header'] = 'Tambah Grup';
-			$data['page'] = 'pigroup/add';
-			$this->load->view('template/layout', $data);
+			redirect('auth');
 		}
 	}
 
 	function edit($id){
-		$data['group'] = $this->Pigroup_model->getById($id);
-		$data['title'] = 'Edit Group';
-		$data['header'] = 'Sunting Grup';
-		$data['page'] = 'pigroup/edit';
-		$this->load->view('template/layout', $data);
+		if($this->session->userdata('login') == TRUE){
+			$data['group'] = $this->Pigroup_model->getById($id);
+			$data['title'] = 'Edit Group';
+			$data['header'] = 'Sunting Grup';
+			$data['page'] = 'pigroup/edit';
+			$this->load->view('template/layout', $data);
+		}else{
+			redirect('auth');
+		}
 	}
 
 	function saveEdit(){
-		$this->form_validation->set_rules('group', 'Grup', 'required');
-		$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
-		$id = $this->input->post('id');
-		if($this->form_validation->run() == TRUE){
-			$data = array(
-				'group_name' => $this->input->post('group'),
-				);
-			$this->Pigroup_model->saveEdit($id, $data);
+		if($this->session->userdata('login') == TRUE){
+			$this->form_validation->set_rules('group', 'Grup', 'required');
+			$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
+			$id = $this->input->post('id');
+			if($this->form_validation->run() == TRUE){
+				$data = array(
+					'group_name' => $this->input->post('group'),
+					);
+				$this->Pigroup_model->saveEdit($id, $data);
+				$log = array(
+					'user_id'=>$this->session->userdata('id'),
+					'activity'=>'Sunting grup',
+					'date'=>date('Y-m-d H:i:s'),
+					'module'=>'Pigroup',
+					);
+				$this->Log_model->save($log);
+				redirect('pigroup');
+			}else{
+				redirect('pigroup/edit/'.$id);
+			}
+		}else{
+			redirect('auth');
+		}
+	}
+
+	function delete($id){
+		if($this->session->userdata('login') == TRUE){
+			$this->Pigroup_model->delete($id);
 			$log = array(
 				'user_id'=>$this->session->userdata('id'),
-				'activity'=>'Sunting grup',
+				'activity'=>'Hapus grup',
 				'date'=>date('Y-m-d H:i:s'),
 				'module'=>'Pigroup',
 				);
 			$this->Log_model->save($log);
 			redirect('pigroup');
 		}else{
-			redirect('pigroup/edit/'.$id);
+			redirect('auth');
 		}
-	}
-
-	function delete($id){
-		$this->Pigroup_model->delete($id);
-		$log = array(
-			'user_id'=>$this->session->userdata('id'),
-			'activity'=>'Hapus grup',
-			'date'=>date('Y-m-d H:i:s'),
-			'module'=>'Pigroup',
-			);
-		$this->Log_model->save($log);
-		redirect('pigroup');
 	}
 }
