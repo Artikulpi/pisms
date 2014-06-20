@@ -69,7 +69,7 @@
 								<div class="row">
 									<div class="col-md-5">
 										<img src="<?php echo base_url();?>media/img/images.jpeg"><p class="text-center small">
-										<a href="#">Ganti</a></p>
+										<a href="#"></a></p>
 									</div>
 									<div class="col-md-7">
 										<span><?php echo $this->session->userdata('user');?></span>
@@ -110,15 +110,14 @@
 				<a href="<?php echo site_url('pigroup')?>" class="list-group-item"><i class="glyphicon glyphicon-indent-left" data-toggle="tooltip" data-placement="bottom" title="Daftar grup"> Grup</i></a>
 				<br>
 				<a style="background-color: #006E7D; border-color:transparent;" class="list-group-item active">Pengaturan</a>
-
-				<?php if($this->session->userdata('role')==1){?>
 				<a href="<?php echo site_url('log_activity')?>" class="list-group-item"><i class="glyphicon glyphicon-list-alt" data-toggle="tooltip" data-placement="bottom" title="Log"> Log Aktivitas</i></a>
+				<?php if($this->session->userdata('role')==1){?>
 				<a href="<?php echo site_url('user')?>" class="list-group-item"><i class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="User"> Daftar Pengguna</i></a>
 				<?php
 			}
 			?>
-			<a href="<?php echo site_url('about')?>" class="list-group-item"><i class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="bottom" title="User"> Tentang pisms</i></a>
-
+			<a href="<?php echo site_url('about')?>" class="list-group-item"><i class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="bottom" title="Tentang pisms"> Tentang pisms</i></a>
+			<a href="<?php echo site_url('user/detail/'.$this->session->userdata('id'));?>" class="list-group-item"><i class="glyphicon glyphicon-user" data-toggle="tooltip" data-placement="bottom" title="Profil"> Profil</i></a>
 		</div>
 	</div>
 
