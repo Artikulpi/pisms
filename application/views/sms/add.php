@@ -20,7 +20,6 @@
 <?php
 echo form_open('sms/create');
 ?>
-<h2 id="theme">Facebook Theme</h2>
 <div>
 	<input type="text" id="demo-input-facebook-theme" name="blah2" />
 	<script type="text/javascript">
