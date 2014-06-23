@@ -1,22 +1,44 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>media/css/jquery.tagsinput.css" />
+<link rel="stylesheet" href="<?php echo base_url()?>media/css/autocomplete/token-input.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo base_url()?>media/css/autocomplete/token-input-facebook.css" type="text/css" />
+
 <script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.tagsinput.js"></script>
 <script src="<?php echo base_url();?>media/js/chosen.jquery.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>media/js/prism.js" type="text/javascript" charset="utf-8"></script>
-<!--link rel="stylesheet" href="<?php echo base_url();?>media/css/style_ac.css"-->
-<link rel="stylesheet" href="<?php echo base_url();?>media/css/prism.css">
-<link rel="stylesheet" href="<?php echo base_url();?>media/css/chosen.css">
+
+<script src="<?php echo base_url();?>media/js/autocomplete/jquery.ui.autocomplete.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo base_url();?>media/js/autocomplete/jquery.ui.core.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo base_url();?>media/js/autocomplete/jquery.ui.menu.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo base_url();?>media/js/autocomplete/jquery.ui.position.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo base_url();?>media/js/autocomplete/jquery.ui.widget.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo base_url()?>media/js/autocomplete/jquery.tokeninput.js"></script>
+
+
+
+
 <?php $this->load->view('sms/limiter')?>
 <?php
 echo form_open('sms/create');
 ?>
-<input id="birds" size="50">
+<h2 id="theme">Facebook Theme</h2>
+<div>
+	<input type="text" id="demo-input-facebook-theme" name="blah2" />
+	<script type="text/javascript">
+	$(document).ready(function() {
+	//	$("#demo-input-facebook-theme").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
+		$("#demo-input-facebook-theme").tokenInput("<?php echo site_url('sms/autocomplete')?>", {
+			theme: "facebook",
+			preventDuplicates: true
+		});
+	});
+	</script>
+</div>
+
 <div class="row">
 	<div class="col-sm-12 col-sm-offset-12 col-md-10 col-md-offset-1 main">
 		<div class="form-group">
 			<?php echo validation_errors(); ?>
 			<Label>Pesan Anda</Label>
-			
-
 			<textarea id="limit" name="content" class="form-control" maxlength="160" rows="3"></textarea>
 			<div class="box">
 

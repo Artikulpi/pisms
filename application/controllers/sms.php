@@ -21,6 +21,10 @@ class Sms extends CI_Controller{
 		$this->load->model(array('Sms_model','Contact_model','Log_model','Pigroup_model','Contactgroup_model'));
 	}
 
+	function autocomplete(){
+		
+	}
+
 	function create(){
 		$this->form_validation->set_rules('content', 'Isi', 'required');
 		$this->form_validation->set_error_delimiters('<div class="alert alert-warning">', '</div>');
