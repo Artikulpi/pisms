@@ -95,8 +95,8 @@ class Inbox extends CI_Controller{
 		$this->load->view('template/layout', $data);
 	}
 
-	function deleteInbox($id){
-		$this->Sms_model->deleteInbox($id);
+	function delete($id){
+		$this->Inbox_model->deleteInbox($id);
 		$log = array(
 			'user_id'=>$this->session->userdata('id'),
 			'activity'=>'Hapus Inbox',

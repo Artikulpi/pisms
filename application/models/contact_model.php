@@ -41,6 +41,11 @@ class Contact_model extends CI_Model{
 		$this->db->update('contact', $data);
 	}
 
+	function getAc($term){
+		$this->db->like('name', $term);
+		return $this->db->get('contact')->result();
+	}
+
 	function getSearch($search){
 		$this->db->like('name', $search);
 		$this->db->or_like('phone_number', $search);

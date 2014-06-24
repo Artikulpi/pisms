@@ -22,7 +22,18 @@ class Sms extends CI_Controller{
 	}
 
 	function autocomplete(){
-		
+		$this->load->helper('json');
+		$term = $this->input->post('term');
+		$contact = $this->Contact_model->getAc($term);
+		$json = array();
+		foreach ($contact as $key) {
+			$json = array(
+				'label'=>$key->name,
+				'value'=>$key->id
+				);
+			return json_encode($json);
+		}
+
 	}
 
 	function create(){
@@ -97,7 +108,7 @@ class Sms extends CI_Controller{
 				'date'=>date('Y-m-d H:i:s'),
 				'module'=>'Sms',
 				);
-			
+
 			$this->Log_model->save($log);
 			if($this->input->post('draft_id')){
 				$draft_id = $this->input->post('draft_id');
@@ -119,7 +130,7 @@ class Sms extends CI_Controller{
 				'date'=>date('Y-m-d H:i:s'),
 				'module'=>'Sms',
 				);
-			
+
 			$this->Log_model->save($log);
 			if($this->input->post('draft_id')){
 				$draft_id = $this->input->post('draft_id');

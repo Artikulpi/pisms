@@ -25,7 +25,7 @@ echo form_open('sms/create');
 	<script type="text/javascript">
 	$(document).ready(function() {
 	//	$("#demo-input-facebook-theme").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
-		$("#demo-input-facebook-theme").tokenInput("<?php echo site_url('sms/autocomplete')?>", {
+		$("#demo-input-facebook-theme").tokenInput("<?php echo site_url('sms/autocomplete');?>", {
 			theme: "facebook",
 			preventDuplicates: true
 		});
