@@ -14,7 +14,7 @@
 	<link href="<?php echo base_url(); ?>media/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>media/css/dashboard.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>media/css/jquery-ui-1.10.4.css" rel="stylesheet">
-	
+	<link rel="shortcut icon" href="<?php echo base_url();?>media/img/logo.png">
 
 	<title>piSMS - <?php echo $title?></title>
 	
