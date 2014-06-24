@@ -13,7 +13,7 @@
 	<link href="<?php echo base_url(); ?>media/css/style.css" rel="stylesheet" type='text/css'>
 	<link href="<?php echo base_url(); ?>media/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>media/css/dashboard.css" rel="stylesheet">
-	<link rel="shortcut icon" href="<?php echo base_url();?>media/image/Pedoman-Logo-transparant.png">
+	
 
 	<title>piSMS - <?php echo $title?></title>
 
