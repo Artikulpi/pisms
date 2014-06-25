@@ -118,11 +118,13 @@ class Sms extends CI_Controller{
 			$kontak = $this->input->post('fromcontact');
 			$arr_contact = explode(', ', $kontak);
 			foreach ($arr_contact as $key) {
-				$data = array(
-					'DestinationNumber'=>$key,
-					'TextDecoded'=> $this->input->post('content')
-					);
-				$this->Sms_model->sent($data);
+				if($key != NULL){
+					$data = array(
+						'DestinationNumber'=>$key,
+						'TextDecoded'=> $this->input->post('content')
+						);
+					$this->Sms_model->sent($data);
+				}
 			}
 			$log = array(
 				'user_id'=>$this->session->userdata('id'),
