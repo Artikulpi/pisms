@@ -43,7 +43,7 @@ foreach ($inbox as $row) {
 						<?php
 						foreach ($contact as $key) {
 							if($key->phone_number == $row->SenderNumber){
-								echo anchor('contact/detail/'.$key->id, $key->name.' ');
+								echo anchor('contact/detail/'.$key->id, $key->name).' ';
 							}
 						}
 						?>
