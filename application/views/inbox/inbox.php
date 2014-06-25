@@ -41,12 +41,12 @@ foreach ($inbox as $row) {
 				<div class="user-detail">
 					<font color="#080808"><h5 class="handle">
 						<?php
-								foreach ($contact as $key) {
-									if($key->phone_number == $row->SenderNumber){
-										echo anchor('contact/detail/'.$key->id, $key->name);
-									}
-								}
-								?>
+						foreach ($contact as $key) {
+							if($key->phone_number == $row->SenderNumber){
+								echo anchor('contact/detail/'.$key->id, $key->name.' ');
+							}
+						}
+						?>
 						<?php echo $row->SenderNumber;?></h5></font>
 						<div class="post-meta">
 							<div class="asker-meta">
@@ -66,10 +66,10 @@ foreach ($inbox as $row) {
 				$cut = character_limiter(strip_tags($row->TextDecoded),10);
 				echo anchor('inbox/detail/'.$row->ID, $cut);
 				?>
-				</div>
-				<small class="pull-right"><?php echo $reply.' '.$forward.' '.$delete;?></small><br>
 			</div>
+			<small class="pull-right"><?php echo $reply.' '.$forward.' '.$delete;?></small><br>
 		</div>
+	</div>
 
 	<?php }   ?>
 	<div class="text-right"><?php echo $halaman?></div>
