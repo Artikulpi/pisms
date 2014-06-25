@@ -43,7 +43,7 @@
 		});
 	});
 	</script>
-	<a href="http://www.publicdomainpictures.net/pictures/10000/nahled/1-1249480650QT9U.jpg"></a>
+	<!--a href="http://www.publicdomainpictures.net/pictures/10000/nahled/1-1249480650QT9U.jpg"></a-->
 	<style type="text/css">
 	body 
 	{

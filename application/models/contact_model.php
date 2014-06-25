@@ -43,7 +43,7 @@ class Contact_model extends CI_Model{
 
 	function getAc($term){
 		$this->db->like('name', $term);
-		return $this->db->get('contact')->result();
+		return $this->db->get('contact');
 	}
 
 	function getSearch($search){

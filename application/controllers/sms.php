@@ -22,18 +22,17 @@ class Sms extends CI_Controller{
 	}
 
 	function autocomplete(){
-		$this->load->helper('json');
-		$term = $this->input->post('term');
+		if (isset($_GET['term'])){
+			$term = strtolower($_GET['term']);
+		}
 		$contact = $this->Contact_model->getAc($term);
 		$json = array();
-		foreach ($contact as $key) {
-			$json = array(
-				'label'=>$key->name,
-				'value'=>$key->id
-				);
-			return json_encode($json);
+		foreach ($contact->result_array() as $row){
+			$new_row['label']=htmlentities(stripslashes($row['name']));
+			$new_row['value']=htmlentities(stripslashes($row['phone_number']));
+			$row_set[] = $new_row;
 		}
-
+		echo json_encode($row_set);
 	}
 
 	function create(){
@@ -42,7 +41,7 @@ class Sms extends CI_Controller{
 		if($this->form_validation->run() == TRUE AND $this->input->post('optionsRadios')=='frominput'){
 			$number = $this->input->post('no_tujuan');
 			$arr_number = explode(',', $number);
-			foreach ($arr_number as $key) {	
+			foreach ($arr_number as $key) { 
 				$data = array(
 					'DestinationNumber' => $key,
 					'TextDecoded' => $this->input->post('content'),
@@ -117,7 +116,8 @@ class Sms extends CI_Controller{
 			redirect('outbox');
 		}elseif($this->form_validation->run() == TRUE AND $this->input->post('optionsRadios')=='kontak'){
 			$kontak = $this->input->post('fromcontact');
-			foreach ($kontak as $key) {
+			$arr_contact = explode(', ', $kontak);
+			foreach ($arr_contact as $key) {
 				$data = array(
 					'DestinationNumber'=>$key,
 					'TextDecoded'=> $this->input->post('content')
