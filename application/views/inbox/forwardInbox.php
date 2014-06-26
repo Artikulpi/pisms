@@ -36,7 +36,7 @@ echo form_open('sms/create'); ?>
 			</div>
 			<div id="wilayah" class="panel-collapse collapse">
 				<div class="panel-body">
-					<input id="kontak" size="50" name="fromcontact">
+					<input id="kontak" size="50" class="form-control" name="fromcontact">
 				</div>
 			</div>
 		</div>
@@ -58,7 +58,8 @@ echo form_open('sms/create'); ?>
 					foreach ($group as $row):
 						?>
 					<div class="col-sm-4">
-						<input type="checkbox" value="<?php echo $row->id; ?>" name="groupcheck[]"> <?php echo $row->group_name; ?></div>
+						<input type="checkbox" value="<?php echo $row->id; ?>" name="groupcheck[]"> <?php echo $row->group_name; ?>
+					</div>
 						<?php
 						endforeach;
 					}
@@ -94,10 +95,11 @@ echo form_open('sms/create'); ?>
 		</div>
 	</div>
 </div>
-<center><div class="col-md-12">
+<center>
+	<div class="col-md-12">
 	<div class="panel-footer">
 		<input type="submit" class="btn btn-default" value="Kirim">
 		<input type="submit" class="btn btn-default" name="draft" value="Simpan ke draf">
-	</div></center>
-</div>
+	</div></div></center>
+
 <?php echo form_close(); ?>

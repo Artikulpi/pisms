@@ -34,7 +34,7 @@ echo form_open('sms/create');
 				<div id="wilayah" class="panel-collapse collapse">
 					<div class="panel-body">
 						<div class="control-group">
-							<input id="kontak" size="50" name="fromcontact">								
+							<input id="kontak" size="50" class="form-control" name="fromcontact">								
 						</div>
 					</div>
 					<div class="control-group">
@@ -101,6 +101,6 @@ echo form_open('sms/create');
 <center><div class="panel-footer">
 	<input type="submit" class="btn btn-default" value="Kirim">
 	<input type="submit" class="btn btn-default" name="draft" value="Simpan ke draf">
-</div></center>
+</div></div></center>
 
 <?php echo form_close(); ?>
